@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   repo: Addie1212/aelc-website
   branch: main
-  identity_url: https://auth.decapbridge.com/
+  identity_url: https://auth.decapbridge.com
 
 media_folder: "images"
 public_folder: "/images"
