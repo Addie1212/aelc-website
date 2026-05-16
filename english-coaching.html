@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>English Coaching | AELC - Speaking, Writing, Grammar</title><meta name="description" content="Expert English coaching for all classes. Improve speaking, writing, grammar & literature. Book your free demo now!"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800;900&family=Caveat:wght@500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><style>:root {
+  --coral: #FF6B6B;
+  --coral-dark: #E05555;
+  --sky: #4ECDC4;
+  --sky-dark: #36b5ac;
+  --sun: #FFD93D;
+  --mint: #6BCB77;
+  --lavender: #A78BFA;
+  --rose: #FF8FAB;
+  --peach: #FFB347;
+  --ink: #1E2235;
+  --ink-light: #3D4464;
+  --muted: #7A7F9A;
+  --border: #E8EBF5;
+  --bg-warm: #FFFBF5;
+  --bg-cream: #FFF8F0;
+  --white: #FFFFFF;
+  --font-display: 'Baloo 2', cursive;
+  --font-body: 'Nunito Sans', sans-serif;
+  --r: 1.25rem;
+  --r-lg: 2rem;
+  --sh: 0 10px 40px rgba(0,0,0,0.10);
+  --tr: all 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px;}
+body {
+  font-family: var(--font-body);
+  background: var(--bg-warm);
+  color: var(--ink);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: var(--font-body); }
+ul { list-style: none; }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+  background: rgba(255,251,245,0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 2px solid transparent;
+  transition: var(--tr);
+}
+
+nav.scrolled {
+  height: 64px;
+  border-bottom-color: var(--border);
+  box-shadow: var(--sh);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight:700;
+  font-size:1.1rem;
+}
+
+.nav-logo-mark {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, var(--rose), var(--coral));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--rose);
+}
+
+.nav-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn-enroll-nav {
+  background: var(--rose);
+  color: white;
+  border: none;
+  border-radius: 99px;
+  padding: 12px 22px;
+  font-weight: 700;
+  box-shadow: 0 6px 0 rgba(255,143,171,0.6);
+  transition: var(--tr);
+}
+
+.btn-enroll-nav:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 0 rgba(255,143,171,0.6);
+}
+
+section {
+  padding: 80px 5vw;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--ink);
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.btn-primary {
+  background: var(--rose);
+  color: white;
+  border: none;
+  border-radius: var(--r);
+  padding: 14px 28px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  box-shadow: 0 8px 0 rgba(255,143,171,0.6), 0 12px 32px rgba(255,143,171,0.3);
+  transition: var(--tr);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 0 rgba(255,143,171,0.6), 0 16px 40px rgba(255,143,171,0.35);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--rose);
+  border: 2px solid var(--rose);
+  border-radius: var(--r);
+  padding: 12px 26px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  transition: var(--tr);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,143,171,0.1);
+  transform: translateY(-2px);
+}
+
+footer {
+  background: var(--ink);
+  color: white;
+  padding: 60px 5vw 20px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-top h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.footer-top a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+  transition: color 0.3s;
+}
+
+.footer-top a:hover {
+  color: var(--rose);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.hero {
+  padding-top: 130px;
+  padding-bottom: 60px;
+  background: linear-gradient(135deg, rgba(255,143,171,0.1), rgba(255,179,71,0.1));
+}
+
+.feature-grid {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 24px;
+  margin: 60px 0;
+}
+
+.feature-card {
+  background: white; flex: 1 1 280px; max-width: 310px; border-radius: var(--r-lg);
+  padding: 32px;
+  box-shadow: var(--sh);
+  border-top: 4px solid var(--rose);
+  transition: var(--tr);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.feature-card h3 {
+  color: var(--rose);
+  margin-bottom: 12px;
+}
+
+.subject-list {
+  list-style: none;
+  margin: 24px 0;
+}
+
+.subject-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.subject-list li:before {
+  content: '';
+  color: var(--rose);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  nav .nav-links,
+  nav .nav-right {
+    display: none;
+  }
+
+  section {
+    padding: 60px 4vw;
+  }
+
+  .footer-top {
+    }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+</style><link rel="stylesheet" href="admin-assets/site-theme.css">
+<link rel="stylesheet" href="admin-assets/animations.css"></head><body><!-- NAVBAR --><nav id="nav"><a href="index.html" class="nav-logo"><div class="nav-logo-mark"></div><div>AELC</div></a><div class="nav-links"><a href="index.html#about">About</a><a href="index.html#programs">Programs</a><a href="index.html#contact">Contact</a></div><div class="nav-right"><a href="tel:9667897249" style="font-weight:700"> 9667897249</a><a href="index.html#contact" class="btn-enroll-nav"> Book Demo</a></div></nav><!-- HERO --><section class="hero"><div class="section-inner"><div class="text-center"><p style="color: var(--rose); font-weight: 700; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase;"> Language Mastery</p><h1 style="color: var(--rose)">Master English<br>Speaking & Writing</h1><p style="max-width: 700px; margin: 20px auto; font-size: 1.1rem;">Expert coaching in spoken English, creative writing, grammar, and literature for all classes. Build confidence and fluency.</p><div style="margin-top: 30px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;"><a href="index.html#contact" class="btn-primary"><i class="fa-solid fa-calendar-check"></i> Book Free Demo</a><a href="#features" class="btn-secondary"><i class="fa-solid fa-compass"></i> Explore More</a></div></div></div></section><!-- FEATURES --><section id="features"><div class="section-inner"><div class="text-center" style="margin-bottom: 50px;"><h2>English Coaching Programs</h2><p>Comprehensive English learning for confidence & excellence.</p></div><div class="feature-grid"><div class="feature-card"><h3><i class="fa-solid fa-microphone"></i> Spoken English</h3><p>Accent training, fluency building, and confident conversation practice.</p><ul class="subject-list"><li>Pronunciation & Accent</li><li>Conversation Practice</li><li>Public Speaking</li><li>Confidence Building</li></ul></div><div class="feature-card" style="border-top-color: var(--sky);"><h3 style="color: var(--sky)"><i class="fa-solid fa-pen-nib"></i> Creative Writing</h3><p>Essay writing, stories, poetry, and expressive writing skills.</p><ul class="subject-list"><li>Essay & Article Writing</li><li>Story & Poetry</li><li>Creative Expression</li><li>Editing & Proofreading</li></ul></div><div class="feature-card" style="border-top-color: var(--mint);"><h3 style="color: var(--mint)"><i class="fa-solid fa-book"></i> Grammar & Literature</h3><p>Strong grammatical foundation and literary analysis skills.</p><ul class="subject-list"><li>Parts of Speech</li><li>Tenses & Clauses</li><li>Literary Analysis</li><li>Poetry & Prose</li></ul></div><div class="feature-card" style="border-top-color: var(--lavender);"><h3 style="color: var(--lavender)"><i class="fa-solid fa-lightbulb"></i> Board Exam Prep</h3><p>CBSE-focused coaching for Class 10 & 12 English exams.</p><ul class="subject-list"><li>Question Pattern Practice</li><li>Comprehension Skills</li><li>Language Conventions</li><li>Score Optimization</li></ul></div></div></div></section><!-- WHY CHOOSE --><section style="background: white;"><div class="section-inner"><h2 class="text-center" style="margin-bottom: 40px;">Why Learn English at AELC?</h2><div class="feature-grid"><div class="feature-card"><h3> Personalized Approach</h3><p>Customized lessons based on individual learning style and goals.</p></div><div class="feature-card"><h3> Expert Teachers</h3><p>Native & fluent English speakers with years of teaching experience.</p></div><div class="feature-card"><h3> Interactive Sessions</h3><p>Conversation-based learning with regular speaking practice.</p></div><div class="feature-card"><h3> Progress Tracking</h3><p>Regular assessments and detailed feedback on improvements.</p></div></div></div></section><!-- CTA --><section style="background: linear-gradient(135deg, rgba(255,143,171,0.1), rgba(255,179,71,0.1));"><div class="section-inner text-center"><h2>Ready to Speak English Confidently?</h2><p style="max-width: 600px; margin: 20px auto;">Join our English coaching program and transform your speaking, writing, and language skills.</p><a href="index.html#contact" class="btn-primary" style="margin-top: 20px;"><i class="fa-solid fa-calendar-check"></i> Book Your Free Demo
+    </a></div></section><!-- FOOTER --><footer><div class="footer-top"><div><div style="font-weight: 700; margin-bottom: 16px; font-size: 1.2rem;"> AELC</div><p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">Asha Early Learning Centre - Vikaspuri's most trusted home for all learning needs since 2012.</p></div><div><h4>Quick Links</h4><a href="index.html">Home</a><a href="index.html#programs">Programs</a><a href="index.html#contact">Contact</a></div><div><h4>Contact</h4><a href="tel:9667897249"> 9667897249</a><a href="tel:9318320049"> 9318320049</a><a href="https://wa.me/919667897249" target="_blank"> WhatsApp</a></div><div><h4>Address</h4><p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;"> DG-2/115A, Ground Floor<br>Vikaspuri, New Delhi - 110018</p></div></div><div class="footer-bottom"><p>(c) 2025 Asha Early Learning Centre (AELC)  -  All rights reserved  -  Designed with  for excellence</p></div></footer><script>// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('nav');
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+</script><script src="admin-assets/animations.js" defer></script>
+</body></html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[AELC INFO: Hero Headline - e.g., "Where Little Learners Grow & Shine"]</title>
+  <meta name="description" content="[AELC INFO: Meta Description - e.g., 'Play-based preschool and expert tuition for confident, curious kids.']">
+  <meta name="keywords" content="[AELC INFO: Keywords]">
+  <meta property="og:title" content="[AELC INFO: OG Title]">
+  <meta property="og:description" content="[AELC INFO: OG Description]">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Nunito:wght@400;600;700;800;900&family=Caveat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ═══════════════════════════════════════════════════════════════
+       AELC PLAYSCHOOL & TUITION CENTRE - 3D WEBSITE
+       ═══════════════════════════════════════════════════════════════ */
+
+    /* ─── DESIGN SYSTEM: WARM WONDER FOR EARLY EDUCATION ─── */
+    :root {
+      /* Primary Palette */
+      --coral:       #FF6B6B;    /* Warm, inviting, playful */
+      --coral-dark:  #E05555;
+      --sky:         #4ECDC4;    /* Calm, safe blue-green */
+      --sky-dark:    #36b5ac;
+      --sun:         #FFD93D;    /* Cheerful, energetic */
+      --sun-dark:    #E8C22A;
+      --mint:        #6BCB77;    /* Fresh, growth-oriented */
+      --mint-dark:   #50a85a;
+      --lavender:    #A78BFA;    /* Soft, creative */
+      --peach:       #FFB347;    /* Warm, friendly */
+      --rose:        #FF8FAB;    /* Gentle, nurturing */
+
+      /* Neutrals */
+      --ink:         #1E2235;
+      --ink-light:   #3D4464;
+      --muted:       #7A7F9A;
+      --border:      #E8EBF5;
+      --bg-warm:     #FFFBF5;
+      --bg-cream:    #FFF8F0;
+      --white:       #FFFFFF;
+
+      /* Typography */
+      --font-display: 'Poppins', sans-serif;
+      --font-body:    'Nunito', sans-serif;
+      --font-accent:  'Caveat', cursive;
+
+      /* Spacing & Shape */
+      --r-sm:  0.75rem;
+      --r:     1.25rem;
+      --r-lg:  2rem;
+      --r-xl:  3rem;
+
+      /* Shadows */
+      --sh-sm: 0 4px 20px rgba(0,0,0,0.07);
+      --sh:    0 10px 40px rgba(0,0,0,0.10);
+      --sh-lg: 0 20px 60px rgba(0,0,0,0.12);
+
+      /* Transitions */
+      --tr: all 0.35s cubic-bezier(0.4,0,0.2,1);
+      --tr-bounce: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    /* ─── RESET ─── */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-warm);
+      color: var(--ink);
+      overflow-x: hidden;
+      line-height: 1.6;
+      perspective: 1000px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      font-family: var(--font-body);
+      border: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ─── SCROLLBAR ─── */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f5f5f5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--coral);
+      border-radius: 4px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       STICKY FLOATING CTASSISTANT
+    ═════════════════════════════════════════════════════════════════ */
+    #sticky-enroll {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9997;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .sticky-wa {
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: white;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+      animation: waBounce 2.5s ease-in-out infinite;
+      transition: var(--tr);
+    }
+
+    .sticky-wa:hover {
+      transform: scale(1.12);
+    }
+
+    @keyframes waBounce {
+      0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45); }
+      50% { box-shadow: 0 6px 40px rgba(37,211,102,0.7), 0 0 0 12px rgba(37,211,102,0.1); }
+    }
+
+    .sticky-call {
+      background: var(--coral);
+      color: white;
+      border-radius: 99px;
+      padding: 12px 22px;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      box-shadow: 0 6px 0 var(--coral-dark), 0 10px 30px rgba(255,107,107,0.35);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: fadeInUp 1s 2s both;
+      transition: var(--tr);
+    }
+
+    .sticky-call:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 0 var(--coral-dark), 0 14px 36px rgba(255,107,107,0.4);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       NAVBAR
+    ═════════════════════════════════════════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9000;
+      padding: 0 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      background: rgba(255, 251, 245, 0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 2px solid transparent;
+      transition: var(--tr);
+    }
+
+    #nav.scrolled {
+      height: 64px;
+      border-bottom-color: var(--border);
+      box-shadow: var(--sh-sm);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-mark {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, var(--coral), var(--peach));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 0 var(--coral-dark), 0 6px 16px rgba(255,107,107,0.3);
+      transition: var(--tr-bounce);
+      flex-shrink: 0;
+      transform-style: preserve-3d;
+    }
+
+    .nav-logo:hover .nav-logo-mark {
+      transform: rotateY(15deg) rotateZ(15deg) scale(1.08);
+    }
+
+    .nav-logo-text {
+      line-height: 1;
+    }
+
+    .nav-logo-name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-logo-sub {
+      font-size: 0.62rem;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--ink-light);
+      padding: 7px 13px;
+      border-radius: 99px;
+      transition: var(--tr);
+    }
+
+    .nav-links a:hover {
+      color: var(--coral);
+      background: rgba(255,107,107,0.08);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--ink);
+      padding: 8px 14px;
+      border-radius: 99px;
+      border: 2px solid var(--border);
+      transition: var(--tr);
+    }
+
+    .nav-phone:hover {
+      border-color: var(--sky);
+      color: var(--sky-dark);
+    }
+
+    .nav-phone i {
+      color: var(--sky);
+    }
+
+    .btn-enroll-nav {
+      background: var(--coral);
+      color: white;
+      border-radius: 99px;
+      padding: 10px 22px;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      box-shadow: 0 5px 0 var(--coral-dark);
+      transition: var(--tr);
+      display: inline-block;
+    }
+
+    .btn-enroll-nav:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 0 var(--coral-dark);
+      color: white;
+    }
+
+    .btn-enroll-nav:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 var(--coral-dark);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       HERO SECTION - WITH 3D ELEMENTS
+    ═════════════════════════════════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      padding: 120px 5vw 80px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      perspective: 1200px;
+    }
+
+    /* Animated background blobs */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .hero-blob {
+      position: absolute;
+      border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
+      opacity: 0.15;
+      animation: blobMorph 15s ease-in-out infinite alternate;
+    }
+
+    .hb1 {
+      width: 700px;
+      height: 700px;
+      top: -200px;
+      right: -150px;
+      background: var(--coral);
+      animation-duration: 16s;
+    }
+
+    .hb2 {
+      width: 500px;
+      height: 500px;
+      bottom: -100px;
+      left: -80px;
+      background: var(--sky);
+      animation-duration: 12s;
+      animation-delay: -5s;
+    }
+
+    .hb3 {
+      width: 350px;
+      height: 350px;
+      top: 40%;
+      left: 55%;
+      background: var(--sun);
+      animation-duration: 18s;
+      animation-delay: -3s;
+    }
+
+    @keyframes blobMorph {
+      0%   { border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%; transform: translate(0,0) rotate(0deg); }
+      50%  { border-radius: 30% 70% 40% 60% / 70% 30% 60% 40%; transform: translate(15px,-20px) rotate(4deg); }
+      100% { border-radius: 50% 50% 30% 70% / 40% 70% 30% 60%; transform: translate(-10px,12px) rotate(-3deg); }
+    }
+
+    /* Floating emoji decorations */
+    .hero-floats {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .hf {
+      position: absolute;
+      font-size: 2.5rem;
+      animation: floatDrift 8s ease-in-out infinite;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+    }
+
+    .hf:nth-child(1) { top: 14%; left: 4%; animation-delay: 0s; animation-duration: 9s; font-size: 2.8rem; }
+    .hf:nth-child(2) { top: 24%; right: 6%; animation-delay: 1.2s; animation-duration: 7s; }
+    .hf:nth-child(3) { top: 65%; left: 5%; animation-delay: 0.8s; animation-duration: 10s; font-size: 2rem; }
+    .hf:nth-child(4) { bottom: 22%; right: 7%; animation-delay: 2s; animation-duration: 8.5s; font-size: 3rem; }
+    .hf:nth-child(5) { top: 75%; left: 50%; animation-delay: 1.5s; animation-duration: 6.5s; font-size: 2.2rem; }
+
+    @keyframes floatDrift {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      33% { transform: translateY(-18px) rotate(5deg); }
+      66% { transform: translateY(10px) rotate(-4deg); }
+    }
+
+    /* Content area */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      flex: 0 1 45%;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border: 2px solid var(--border);
+      border-radius: 99px;
+      padding: 7px 16px 7px 10px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--ink-light);
+      margin-bottom: 24px;
+      box-shadow: var(--sh-sm);
+      animation: fadeInUp 0.7s 0.3s both;
+    }
+
+    .hero-pill-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--mint);
+      border-radius: 50%;
+      animation: pillPulse 1.5s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pillPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(107,203,119,0.7); }
+      50% { box-shadow: 0 0 0 6px rgba(107,203,119,0); }
+    }
+
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 6.5vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -2px;
+      color: var(--ink);
+      margin-bottom: 24px;
+      animation: fadeInUp 0.8s 0.5s both;
+    }
+
+    .hero-h1 .accent {
+      color: var(--coral);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-h1 .accent::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--sun);
+      border-radius: 3px;
+      animation: underlineGrow 0.8s 1.3s both;
+      transform-origin: left;
+    }
+
+    @keyframes underlineGrow {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    .hero-sub {
+      font-size: clamp(0.95rem, 1.8vw, 1.12rem);
+      font-weight: 600;
+      color: var(--muted);
+      line-height: 1.85;
+      max-width: 560px;
+      margin-bottom: 36px;
+      animation: fadeInUp 0.8s 0.7s both;
+    }
+
+    .hero-sub strong {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+      animation: fadeInUp 0.8s 0.9s both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--coral);
+      color: white;
+      border-radius: var(--r-xl);
+      padding: 16px 36px;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      box-shadow: 0 8px 0 var(--coral-dark), 0 12px 32px rgba(255,107,107,0.35);
+      transition: var(--tr);
+      transform-style: preserve-3d;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px) translateZ(10px);
+      box-shadow: 0 12px 0 var(--coral-dark), 0 16px 40px rgba(255,107,107,0.4);
+      color: white;
+    }
+
+    .btn-primary:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 var(--coral-dark);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: var(--ink);
+      border: 2.5px solid var(--ink);
+      border-radius: var(--r-xl);
+      padding: 14px 32px;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      box-shadow: 0 6px 0 rgba(0,0,0,0.12), 0 10px 24px rgba(0,0,0,0.07);
+      transition: var(--tr);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 0 rgba(0,0,0,0.12), 0 14px 32px rgba(0,0,0,0.09);
+      color: var(--ink);
+    }
+
+    /* Hero 3D Image Card */
+    .hero-img-card {
+      position: relative;
+      flex: 0 1 45%;
+      animation: heroImgIn 1s 0.6s both;
+    }
+
+    @keyframes heroImgIn {
+      from { opacity: 0; transform: translateY(-40%) translateX(40px) rotateX(20deg); }
+      to { opacity: 1; transform: translateY(0) translateX(0) rotateX(0); }
+    }
+
+    .hic-main {
+      position: relative;
+      background: linear-gradient(135deg, #FFE5E5, #FFF3E0, #E8F5E9);
+      border-radius: 2rem;
+      padding: 32px;
+      box-shadow: var(--sh-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10rem;
+      line-height: 1;
+      border: 3px solid white;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transition: transform 0.6s var(--tr-bounce);
+    }
+
+    .hic-main:hover {
+      transform: rotateY(-8deg) rotateX(5deg) scale(1.02);
+    }
+
+    .hic-main::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF6B6B' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Decorative pills on image card */
+    .hic-pill {
+      position: absolute;
+      background: white;
+      border-radius: 99px;
+      padding: 8px 16px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: var(--sh-sm);
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    .hic-pill-1 { top: -14px; left: 20px; }
+    .hic-pill-2 { bottom: -14px; right: 20px; }
+    .hic-pill-3 { top: 50%; right: -16px; transform: translateY(-50%); }
+
+    /* ═══════════════════════════════════════════════════════════════
+       PROGRAMS SECTION - 3D GRID
+    ═════════════════════════════════════════════════════════════════ */
+    #programs {
+      background: var(--ink);
+      padding: 90px 5vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #programs::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1.5px, transparent 1.5px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .prog-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .sec-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,107,107,0.1);
+      color: var(--coral);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+    }
+
+    .sec-h {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      color: var(--sun);
+    }
+
+    .sec-sub {
+      font-size: 1rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .prog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .prog-card {
+      background: rgba(255,255,255,0.05);
+      border: 2px solid rgba(255,255,255,0.08);
+      border-radius: var(--r-lg);
+      padding: 28px;
+      cursor: pointer;
+      transition: var(--tr);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transform-style: preserve-3d;
+      min-height: 400px;
+    }
+
+    .prog-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--coral), var(--sky));
+      border-radius: var(--r-lg) var(--r-lg) 0 0;
+    }
+
+    .prog-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-12px) rotateX(5deg) rotateZ(-2deg);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .prog-icon-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--r);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+      margin-bottom: 18px;
+      transition: transform 0.4s var(--tr-bounce);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .prog-card:hover .prog-icon-wrap {
+      transform: rotate(12deg) scale(1.15);
+    }
+
+    .prog-age {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+      background: rgba(255,217,61,0.2);
+      color: var(--sun);
+    }
+
+    .prog-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .prog-card p {
+      font-size: 0.87rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .prog-feats {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .prog-feat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .prog-feat i {
+      width: 16px;
+      font-size: 0.7rem;
+    }
+
+    .prog-cta-row {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      width: 100%;
+    }
+
+    .prog-cta-btn {
+      width: 100%;
+      border: 2px solid rgba(255,255,255,0.2);
+      background: none;
+      color: white;
+      border-radius: 99px;
+      padding: 10px;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: var(--tr);
+    }
+
+    .prog-card:hover .prog-cta-btn {
+      border-color: var(--coral);
+      background: var(--coral);
+      color: white;
+      transform: translateZ(20px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ABOUT / PHILOSOPHY SECTION
+    ═════════════════════════════════════════════════════════════════ */
+    #about {
+      background: var(--white);
+      padding: 90px 5vw;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-left .sec-sub {
+      max-width: 100%;
+    }
+
+    .about-philosophy {
+      background: linear-gradient(135deg, rgba(255,107,107,0.08), rgba(255,179,71,0.08));
+      border-left: 4px solid var(--coral);
+      border-radius: 0 var(--r) var(--r) 0;
+      padding: 24px 28px;
+      margin: 28px 0;
+      position: relative;
+    }
+
+    .about-philosophy p {
+      font-family: var(--font-accent);
+      font-size: 1.4rem;
+      color: var(--ink);
+      line-height: 1.6;
+      font-weight: 600;
+    }
+
+    .about-checkmarks {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .about-check {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink-light);
+    }
+
+    .ac-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--mint), var(--sky));
+      color: white;
+    }
+
+    .about-visual {
+      position: relative;
+      perspective: 1200px;
+    }
+
+    .about-card-big {
+      background: linear-gradient(145deg, #FFE9E9, #FFF5E6, #E9F9EF);
+      border-radius: 2rem;
+      padding: 48px 40px;
+      text-align: center;
+      box-shadow: var(--sh-lg);
+      border: 3px solid white;
+      position: relative;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transition: transform 0.6s var(--tr-bounce);
+    }
+
+    .about-card-big:hover {
+      transform: rotateX(8deg) rotateY(-5deg) translateZ(20px);
+    }
+
+    .about-card-big::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(255,107,107,0.12), transparent);
+      border-radius: 50%;
+    }
+
+    .about-main-emoji {
+      font-size: 8rem;
+      display: block;
+      margin-bottom: 16px;
+      line-height: 1;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.12));
+    }
+
+    .about-card-big h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .about-card-big p {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       HOW IT WORKS / ENROLLMENT PROCESS
+    ═════════════════════════════════════════════════════════════════ */
+    #process {
+      background: linear-gradient(135deg, var(--coral), #FF8E53);
+      padding: 90px 5vw;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #process::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.08) 2px, transparent 2px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+
+    .process-header {
+      text-align: center;
+      margin-bottom: 56px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-header .sec-h {
+      color: white;
+    }
+
+    .process-header .sec-sub {
+      color: rgba(255,255,255,0.7);
+      margin: 0 auto;
+    }
+
+    .steps-track {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      z-index: 1;
+    }
+
+    .steps-track::before {
+      content: '';
+      position: absolute;
+      top: 44px;
+      left: 15%;
+      right: 15%;
+      height: 3px;
+      background: rgba(255,255,255,0.25);
+      z-index: 0;
+      border-radius: 99px;
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-num {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      box-shadow: 0 8px 0 rgba(0,0,0,0.12), 0 12px 32px rgba(0,0,0,0.15);
+      margin-bottom: 18px;
+      position: relative;
+      transition: transform 0.4s var(--tr-bounce);
+      transform-style: preserve-3d;
+    }
+
+    .step:hover .step-num {
+      transform: scale(1.15) rotateY(-10deg) rotateZ(-5deg);
+    }
+
+    .step h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    .step p {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       HIGHLIGHT PROGRAMME BANNER
+    ═════════════════════════════════════════════════════════════════ */
+    #highlight {
+      background: linear-gradient(135deg, var(--sky), var(--mint));
+      padding: 80px 5vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .highlight-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      color: white;
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+
+    .highlight-content p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.8;
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+
+    .highlight-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: var(--sky-dark);
+      border-radius: 99px;
+      padding: 14px 32px;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      box-shadow: 0 8px 0 rgba(0,0,0,0.15);
+      transition: var(--tr);
+    }
+
+    .highlight-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 0 rgba(0,0,0,0.15);
+      color: var(--sky-dark);
+    }
+
+    .highlight-visual {
+      position: relative;
+      perspective: 1200px;
+    }
+
+    .highlight-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 2rem;
+      padding: 40px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 350px;
+      transform-style: preserve-3d;
+      transition: transform 0.6s var(--tr-bounce);
+    }
+
+    .highlight-card:hover {
+      transform: rotateX(-5deg) rotateY(8deg) translateZ(30px);
+    }
+
+    .highlight-emoji {
+      font-size: 6rem;
+      margin-bottom: 16px;
+      display: block;
+      line-height: 1;
+    }
+
+    .highlight-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .highlight-card p {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FOOTER
+    ═════════════════════════════════════════════════════════════════ */
+    #footer {
+      background: var(--ink);
+      padding: 60px 5vw 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #footer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.02) 1.5px, transparent 1.5px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .footer-logo-mark {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--coral), var(--peach));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: white;
+    }
+
+    .footer-logo-text {
+      line-height: 1;
+    }
+
+    .footer-logo-name {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: white;
+    }
+
+    .footer-logo-sub {
+      font-size: 0.6rem;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.6);
+      transition: var(--tr);
+    }
+
+    .footer-links a:hover {
+      color: var(--coral);
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 32px 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       RESPONSIVE DESIGN
+    ═════════════════════════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      #hero {
+        flex-direction: column;
+        padding: 100px 5vw 60px;
+      }
+
+      .hero-content {
+        flex: 1;
+        max-width: 100%;
+        margin-bottom: 40px;
+      }
+
+      .hero-img-card {
+        flex: 1;
+        width: 100%;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .prog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-track {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-track::before {
+        width: 3px;
+        height: auto;
+        top: 0;
+        left: 44px;
+        right: auto;
+        bottom: 0;
+      }
+
+      .step {
+        padding: 30px 20px;
+      }
+
+      .highlight-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-links {
+        gap: 16px;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       SCROLL REVEAL ANIMATIONS
+    ═════════════════════════════════════════════════════════════════ */
+    .rv {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .rv.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .rv-l {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .rv-l.in {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .rv-r {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .rv-r.in {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .d1 { transition-delay: 0.08s; }
+    .d2 { transition-delay: 0.16s; }
+    .d3 { transition-delay: 0.24s; }
+    .d4 { transition-delay: 0.32s; }
+    .d5 { transition-delay: 0.40s; }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY FLOATING CTAs -->
+  <div id="sticky-enroll">
+    <a href="tel:[AELC%20INFO:%20Phone%20Number]" class="sticky-wa" title="[AELC INFO: WhatsApp Number]">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <button class="sticky-call" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+      <i class="fas fa-phone"></i> [AELC INFO: "Call Us"]
+    </button>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════════════════════ -->
+  <nav id="nav">
+    <div class="nav-logo">
+      <div class="nav-logo-mark">🎓</div>
+      <div class="nav-logo-text">
+        <div class="nav-logo-name">[AELC INFO: Logo Text - e.g., "AELC"]</div>
+        <div class="nav-logo-sub">[AELC INFO: Tagline - e.g., "Learn • Play • Grow"]</div>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="#about">[AELC INFO: "About Us" or Equivalent]</a>
+      <a href="#programs">[AELC INFO: "Programmes"]</a>
+      <a href="#process">[AELC INFO: "How It Works"]</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="tel:[AELC%20INFO:%20Phone%20Number]" class="nav-phone">
+        <i class="fas fa-phone"></i> [AELC INFO: Phone Number]
+      </a>
+      <button class="btn-enroll-nav" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
+        [AELC INFO: CTA Text - e.g., "Enroll Now"]
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-blob hb1"></div>
+      <div class="hero-blob hb2"></div>
+      <div class="hero-blob hb3"></div>
+    </div>
+
+    <div class="hero-floats">
+      <div class="hf">📚</div>
+      <div class="hf">🎨</div>
+      <div class="hf">✏️</div>
+      <div class="hf">🧩</div>
+      <div class="hf">⭐</div>
+      <div class="hf">🎵</div>
+      <div class="hf">🌟</div>
+      <div class="hf">💡</div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-pill">
+        <div class="hero-pill-dot"></div>
+        [AELC INFO: "Now Accepting Enrollments"]
+      </div>
+
+      <h1 class="hero-h1">
+        [AELC INFO: Hero Headline - e.g., "Where Little <span class="accent">Learners</span> Grow & Shine"]
+      </h1>
+
+      <p class="hero-sub">
+        [AELC INFO: Hero Sub-headline - e.g., "<strong>Play-based</strong> preschool and expert tuition for confident, curious kids."]
+      </p>
+
+      <div class="hero-ctas">
+        <button class="btn-primary">
+          <i class="fas fa-play-circle"></i> [AELC INFO: Primary CTA - e.g., "Book a Demo"]
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('process').scrollIntoView({ behavior: 'smooth' });">
+          <i class="fas fa-arrow-right"></i> [AELC INFO: Secondary CTA - e.g., "Learn More"]
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-img-card">
+      <div class="hic-main">
+        👨‍👩‍👧‍👦<!-- PLACEHOLDER: Replace with hero image emoji or actual image -->
+        <div class="hic-pill hic-pill-1">
+          <i class="fas fa-check-circle" style="color: #6BCB77;"></i> [AELC INFO: Badge 1 - e.g., "Expert Teachers"]
+        </div>
+        <div class="hic-pill hic-pill-2">
+          <i class="fas fa-star" style="color: #FFD93D;"></i> [AELC INFO: Badge 2 - e.g., "Safe Space"]
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       PROGRAMMES & SERVICES GRID
+  ════════════════════════════════════════════════════════════════ -->
+  <section id="programs">
+    <div class="section-inner">
+      <div class="prog-header">
+        <span class="sec-tag">
+          <i class="fas fa-heart"></i> [AELC INFO: Section Tag - e.g., "Our Offerings"]
+        </span>
+        <h2 class="sec-h">[AELC INFO: "Our Programmes & Services"]</h2>
+        <p class="sec-sub">
+          [AELC INFO: Section description - e.g., "From playgroup to advanced tuition, we nurture every stage of childhood."]
+        </p>
+      </div>
+
+      <div class="prog-grid">
+        <!-- Programme Card 1 -->
+        <div class="prog-card rv" style="animation-delay: 0.1s;">
+          <div class="prog-age">[AELC INFO: Age Range 1 - e.g., "Age 1.5-2.5"]</div>
+          <div class="prog-icon-wrap" style="background: linear-gradient(135deg, rgba(255,107,107,0.3), rgba(255,179,71,0.3));">
+            🧸<!-- PLACEHOLDER: Icon -->
+          </div>
+          <h3>[AELC INFO: Programme Name 1 - e.g., "Playgroup"]</h3>
+          <p>
+            [AELC INFO: Description 1 - e.g., "Sensory-rich, nurturing environment where toddlers explore, play, and bond with caregivers."]
+          </p>
+          <div class="prog-feats">
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 1.1 - e.g., "Music & Movement"]</div>
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 1.2 - e.g., "Art & Craft"]</div>
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 1.3 - e.g., "Storytelling"]</div>
+          </div>
+          <div class="prog-cta-row">
+            <button class="prog-cta-btn">[AELC INFO: "Explore"] →</button>
+          </div>
+        </div>
+
+        <!-- Programme Card 2 -->
+        <div class="prog-card rv" style="animation-delay: 0.2s;">
+          <div class="prog-age">[AELC INFO: Age Range 2 - e.g., "Age 2.5-3.5"]</div>
+          <div class="prog-icon-wrap" style="background: linear-gradient(135deg, rgba(78,205,196,0.3), rgba(107,203,119,0.3));">
+            🎨<!-- PLACEHOLDER: Icon -->
+          </div>
+          <h3>[AELC INFO: Programme Name 2 - e.g., "Nursery"]</h3>
+          <p>
+            [AELC INFO: Description 2 - e.g., "Building social skills, pre-literacy foundations, and creative expression through play-based learning."]
+          </p>
+          <div class="prog-feats">
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 2.1 - e.g., "Phonics Introduction"]</div>
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 2.2 - e.g., "Number Play"]</div>
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 2.3 - e.g., "Social Skills"]</div>
+          </div>
+          <div class="prog-cta-row">
+            <button class="prog-cta-btn">[AELC INFO: "Explore"] →</button>
+          </div>
+        </div>
+
+        <!-- Programme Card 3 -->
+        <div class="prog-card rv" style="animation-delay: 0.3s;">
+          <div class="prog-age">[AELC INFO: Age Range 3 - e.g., "Age 3.5-5"]</div>
+          <div class="prog-icon-wrap" style="background: linear-gradient(135deg, rgba(167,139,250,0.3), rgba(255,139,180,0.3));">
+            🔬<!-- PLACEHOLDER: Icon -->
+          </div>
+          <h3>[AELC INFO: Programme Name 3 - e.g., "LKG/UKG"]</h3>
+          <p>
+            [AELC INFO: Description 3 - e.g., "Strong academics foundations combined with holistic development, preparing children for school and beyond."]
+          </p>
+          <div class="prog-feats">
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 3.1 - e.g., "English & Hindi"]</div>
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 3.2 - e.g., "Math & Science"]</div>
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 3.3 - e.g., "Life Skills"]</div>
+          </div>
+          <div class="prog-cta-row">
+            <button class="prog-cta-btn">[AELC INFO: "Explore"] →</button>
+          </div>
+        </div>
+
+        <!-- Programme Card 4 -->
+        <div class="prog-card rv" style="animation-delay: 0.4s;">
+          <div class="prog-age">[AELC INFO: Age Range 4 - e.g., "Age 5+"]</div>
+          <div class="prog-icon-wrap" style="background: linear-gradient(135deg, rgba(255,217,61,0.3), rgba(107,203,119,0.3));">
+            📚<!-- PLACEHOLDER: Icon -->
+          </div>
+          <h3>[AELC INFO: Programme Name 4 - e.g., "Tuition Classes"]</h3>
+          <p>
+            [AELC INFO: Description 4 - e.g., "Expert-led academic support in Math, Science, & English, fostering confident, independent learners."]
+          </p>
+          <div class="prog-feats">
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 4.1 - e.g., "1-on-1 Guidance"]</div>
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 4.2 - e.g., "Flexible Schedules"]</div>
+            <div class="prog-feat"><i class="fas fa-check"></i> [AELC INFO: Feature 4.3 - e.g., "Progress Tracking"]</div>
+          </div>
+          <div class="prog-cta-row">
+            <button class="prog-cta-btn">[AELC INFO: "Explore"] →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       ABOUT / PHILOSOPHY SECTION
+  ════════════════════════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="two-col">
+        <div class="about-left rv-l">
+          <h2 class="sec-h">
+            [AELC INFO: Philosophy Headline - e.g., "We believe childhood is made of <span class="accent">curiosity, play, and joy</span>."]
+          </h2>
+
+          <div class="about-philosophy">
+            <p>[AELC INFO: Core belief statement - e.g., "p • l • a • y  —  l • e • a • r • n  —  g • r • o • w"]</p>
+          </div>
+
+          <p class="sec-sub">
+            [AELC INFO: Full about paragraph - e.g., "At AELC, we create safe, joyful spaces where every child's unique potential unfolds. Our expert educators blend Montessori principles, play-based learning, and modern academics to nurture confident, kind, curious thinkers and learners."]
+          </p>
+
+          <div class="about-checkmarks">
+            <div class="about-check">
+              <div class="ac-icon">✓</div>
+              [AELC INFO: Core value 1 - e.g., "Child-centric learning approach"]
+            </div>
+            <div class="about-check">
+              <div class="ac-icon">✓</div>
+              [AELC INFO: Core value 2 - e.g., "Safe, inclusive community"]
+            </div>
+            <div class="about-check">
+              <div class="ac-icon">✓</div>
+              [AELC INFO: Core value 3 - e.g., "Parent partnerships & transparency"]
+            </div>
+            <div class="about-check">
+              <div class="ac-icon">✓</div>
+              [AELC INFO: Core value 4 - e.g., "Holistic development focus"]
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual rv-r">
+          <div class="about-card-big">
+            <div class="about-main-emoji">🌈</div><!-- PLACEHOLDER: Replace with actual image -->
+            <h3>[AELC INFO: Card Headline]</h3>
+            <p>[AELC INFO: Card subtitle]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       HOW IT WORKS / ENROLLMENT PROCESS
+  ════════════════════════════════════════════════════════════════ -->
+  <section id="process">
+    <div class="section-inner">
+      <div class="process-header">
+        <span class="sec-tag" style="background: rgba(255,255,255,0.15); color: white;">
+          <i class="fas fa-lightbulb"></i> [AELC INFO: Section tag - e.g., "Simple Process"]
+        </span>
+        <h2 class="sec-h">[AELC INFO: "How It Works"]</h2>
+        <p class="sec-sub">
+          [AELC INFO: Process description - e.g., "Join the AELC family in three simple steps."]
+        </p>
+      </div>
+
+      <div class="steps-track">
+        <!-- Step 1 -->
+        <div class="step rv">
+          <div class="step-num" style="color: var(--coral);">1</div>
+          <h4>[AELC INFO: Step 1 Title - e.g., "Reach Out"]</h4>
+          <p>
+            [AELC INFO: Step 1 description - e.g., "Call or fill in our inquiry form to learn more about our programmes and schedule a campus visit."]
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step rv d1">
+          <div class="step-num" style="color: var(--sky);">2</div>
+          <h4>[AELC INFO: Step 2 Title - e.g., "Campus Visit"]</h4>
+          <p>
+            [AELC INFO: Step 2 description - e.g., "Meet our warm, experienced educators, explore our classrooms, and see learning in action."]
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step rv d2">
+          <div class="step-num" style="color: var(--mint);">3</div>
+          <h4>[AELC INFO: Step 3 Title - e.g., "Secure a Seat"]</h4>
+          <p>
+            [AELC INFO: Step 3 description - e.g., "Complete registration and join our thriving community. Your child's journey begins here!"]
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       HIGHLIGHT PROGRAMME BANNER
+  ════════════════════════════════════════════════════════════════ -->
+  <section id="highlight">
+    <div class="highlight-inner">
+      <div class="highlight-content rv-l">
+        <h2>
+          [AELC INFO: Highlight Programme Name - e.g., "AELC Phonics & Reading Lab"]
+        </h2>
+        <p>
+          [AELC INFO: Highlight description - e.g., "A specialized programme building strong foundations in literacy, phonics, and confident reading, one sound at a time."]
+        </p>
+        <button class="highlight-btn">
+          <i class="fas fa-star"></i> [AELC INFO: "Discover More"]
+        </button>
+      </div>
+
+      <div class="highlight-visual rv-r">
+        <div class="highlight-card">
+          <div class="highlight-emoji">📖</div><!-- PLACEHOLDER: Replace with icon/image -->
+          <h3>[AELC INFO: Feature heading]</h3>
+          <p>[AELC INFO: Feature description]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="footer-logo-mark">🎓</div>
+        <div class="footer-logo-text">
+          <div class="footer-logo-name">[AELC INFO: Logo Text]</div>
+          <div class="footer-logo-sub">[AELC INFO: Tagline]</div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">[AELC INFO: "About"]</a>
+        <a href="#programs">[AELC INFO: "Programmes"]</a>
+        <a href="#process">[AELC INFO: "Admissions"]</a>
+        <a href="#">[AELC INFO: "Privacy Policy"]</a>
+        <a href="#">[AELC INFO: "Contact"]</a>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          [AELC INFO: Copyright text - e.g., "© 2024 AELC. All rights reserved."]
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       JAVASCRIPT - 3D & INTERACTIVE FEATURES
+  ════════════════════════════════════════════════════════════════ -->
+  <script>
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Scroll reveal animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.rv, .rv-l, .rv-r').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Parallax effect on hero blobs
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      
+      document.querySelectorAll('.hero-blob').forEach((blob, i) => {
+        const speed = (i + 1) * 15;
+        blob.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+      });
+    });
+
+    // 3D card tilt effect on hover
+    document.querySelectorAll('.prog-card, .about-card-big, .highlight-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        const rotX = y * 10;
+        const rotY = -x * 10;
+
+        card.style.transform = `perspective(1200px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(20px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+    // Console message
+    console.log('%c🎓 AELC 3D Website – Ready for Content Integration', 'font-size: 16px; color: #FF6B6B; font-weight: bold;');
+    console.log('%cAll placeholders marked [AELC INFO: ...] are ready to be replaced with your actual content.', 'font-size: 12px; color: #4ECDC4;');
+  </script>
+
+</body>
+</html>
