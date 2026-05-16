@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: AnshdeepSinghOhri/aelc-website
+  repo: Addie1212/aelc-website
   branch: main
   identity_url: https://auth.decapbridge.com/
 
