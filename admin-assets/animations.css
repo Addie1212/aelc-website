@@ -1,0 +1,582 @@
+/*
+  ╔══════════════════════════════════════════════════════╗
+  ║   AELC PREMIUM ANIMATIONS  •  animations.css         ║
+  ║   Load AFTER site-theme.css on every page            ║
+  ╚══════════════════════════════════════════════════════╝
+*/
+
+/* ────────────────────────────────────────────────────
+   0. CUSTOM CURSOR
+──────────────────────────────────────────────────── */
+.aelc-cursor {
+  position: fixed;
+  width: 14px; height: 14px;
+  background: var(--coral, #FF6B6B);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%,-50%);
+  transition: width .18s, height .18s, background .18s, opacity .18s;
+  mix-blend-mode: multiply;
+  will-change: transform;
+}
+.aelc-cursor-ring {
+  position: fixed;
+  width: 38px; height: 38px;
+  border: 2px solid var(--coral, #FF6B6B);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%,-50%);
+  transition: width .35s cubic-bezier(.2,1,.4,1), height .35s cubic-bezier(.2,1,.4,1), border-color .3s, opacity .3s;
+  opacity: 0.55;
+  will-change: transform;
+}
+body:hover .aelc-cursor { opacity: 1; }
+.aelc-cursor.hovering { width: 22px; height: 22px; background: var(--sky, #4ECDC4); }
+.aelc-cursor-ring.hovering { width: 54px; height: 54px; border-color: var(--sky, #4ECDC4); opacity: 0.3; }
+.aelc-cursor.clicking { width: 10px; height: 10px; }
+
+/* ────────────────────────────────────────────────────
+   1. PAGE TRANSITION OVERLAY
+──────────────────────────────────────────────────── */
+#page-transition {
+  position: fixed; inset: 0;
+  background: var(--coral, #FF6B6B);
+  z-index: 999990;
+  transform: scaleY(0);
+  transform-origin: top;
+  pointer-events: none;
+}
+#page-transition.out {
+  animation: ptOut .55s cubic-bezier(.77,0,.18,1) forwards;
+}
+#page-transition.in {
+  animation: ptIn .55s cubic-bezier(.77,0,.18,1) forwards;
+}
+@keyframes ptOut {
+  0%   { transform: scaleY(1); transform-origin: top; }
+  100% { transform: scaleY(0); transform-origin: top; }
+}
+@keyframes ptIn {
+  0%   { transform: scaleY(0); transform-origin: bottom; }
+  100% { transform: scaleY(1); transform-origin: bottom; }
+}
+
+/* ────────────────────────────────────────────────────
+   2. FLOATING PARTICLES CANVAS
+──────────────────────────────────────────────────── */
+#aelc-particles {
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+/* ────────────────────────────────────────────────────
+   3. SCROLL REVEAL — enhanced
+──────────────────────────────────────────────────── */
+.rv, .rv-l, .rv-r, .rv-scale, .rv-fade {
+  opacity: 0;
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.rv       { transform: translateY(44px); }
+.rv-l     { transform: translateX(-44px); }
+.rv-r     { transform: translateX(44px); }
+.rv-scale { transform: scale(0.88); }
+.rv-fade  { transform: none; }
+
+.rv.in, .rv-l.in, .rv-r.in, .rv-scale.in, .rv-fade.in {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* stagger delays */
+.d1 { transition-delay: 0.08s !important; }
+.d2 { transition-delay: 0.16s !important; }
+.d3 { transition-delay: 0.24s !important; }
+.d4 { transition-delay: 0.32s !important; }
+.d5 { transition-delay: 0.40s !important; }
+.d6 { transition-delay: 0.48s !important; }
+.d7 { transition-delay: 0.56s !important; }
+.d8 { transition-delay: 0.64s !important; }
+
+/* ────────────────────────────────────────────────────
+   4. HERO ANIMATIONS — restored & enhanced
+──────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes blobMorph {
+  0%   { border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%; transform: translate(0,0) rotate(0deg); }
+  50%  { border-radius: 30% 70% 40% 60% / 70% 30% 60% 40%; transform: translate(15px,-20px) rotate(4deg); }
+  100% { border-radius: 50% 50% 30% 70% / 40% 70% 30% 60%; transform: translate(-10px,12px) rotate(-3deg); }
+}
+@keyframes floatDrift {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  33%     { transform: translateY(-20px) rotate(6deg); }
+  66%     { transform: translateY(12px) rotate(-5deg); }
+}
+@keyframes pillPulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(107,203,119,0.7); }
+  50%     { box-shadow: 0 0 0 8px rgba(107,203,119,0); }
+}
+@keyframes underlineGrow {
+  from { transform: translateX(-50%) scaleX(0); }
+  to   { transform: translateX(-50%) scaleX(1); }
+}
+@keyframes waBounce {
+  0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45); }
+  50%     { box-shadow: 0 6px 40px rgba(37,211,102,0.7), 0 0 0 14px rgba(37,211,102,0.1); }
+}
+@keyframes heroImgIn {
+  from { opacity: 0; transform: translateY(50px) rotate(-2deg); }
+  to   { opacity: 1; transform: translateY(0) rotate(0deg); }
+}
+@keyframes iconBounce {
+  0%,100% { transform: scale(1) rotate(0deg); }
+  30%     { transform: scale(1.3) rotate(-8deg); }
+  60%     { transform: scale(0.95) rotate(5deg); }
+}
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+@keyframes gradientShift {
+  0%,100% { background-position: 0% 50%; }
+  50%     { background-position: 100% 50%; }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  14%     { transform: scale(1.15); }
+  28%     { transform: scale(1); }
+  42%     { transform: scale(1.12); }
+  70%     { transform: scale(1); }
+}
+@keyframes navLinkSlide {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes logoSpin {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+@keyframes typeWrite {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes cursorBlink {
+  0%,100% { border-right-color: var(--coral); }
+  50%     { border-right-color: transparent; }
+}
+
+/* ────────────────────────────────────────────────────
+   5. NAVIGATION — animated logo + links
+──────────────────────────────────────────────────── */
+#nav .nav-logo-mark {
+  animation: fadeInScale 0.7s 0.1s both;
+  cursor: pointer;
+  position: relative;
+  overflow: visible !important;
+}
+#nav .nav-logo-mark::after {
+  content: '';
+  position: absolute; inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--coral, #FF6B6B);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity .35s, transform .35s;
+}
+#nav .nav-logo:hover .nav-logo-mark::after {
+  opacity: 0.5;
+  transform: scale(1.15);
+}
+#nav .nav-logo-mark img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#nav .nav-logo:hover .nav-logo-mark img {
+  transform: rotate(18deg) scale(1.1);
+}
+#nav .nav-logo-name {
+  animation: fadeInUp 0.6s 0.2s both;
+}
+#nav .nav-logo-sub {
+  animation: fadeInUp 0.6s 0.3s both;
+}
+.nav-links a {
+  animation: navLinkSlide 0.5s both;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute; bottom: 0; left: 50%; right: 50%;
+  height: 2px;
+  background: var(--coral, #FF6B6B);
+  border-radius: 99px;
+  transition: left .3s cubic-bezier(0.16, 1, 0.3, 1), right .3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-links a:hover::after { left: 10%; right: 10%; }
+
+.nav-links a:nth-child(1) { animation-delay: .1s; }
+.nav-links a:nth-child(2) { animation-delay: .15s; }
+.nav-links a:nth-child(3) { animation-delay: .2s; }
+.nav-links a:nth-child(4) { animation-delay: .25s; }
+.nav-links a:nth-child(5) { animation-delay: .3s; }
+.nav-links a:nth-child(6) { animation-delay: .35s; }
+
+.btn-enroll-nav {
+  animation: fadeInScale 0.6s 0.4s both;
+  position: relative;
+  overflow: hidden;
+}
+.btn-enroll-nav::before {
+  content: '';
+  position: absolute; top: 50%; left: -60%;
+  width: 40%; height: 200%;
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-50%) skewX(-20deg);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+.btn-enroll-nav:hover::before { left: 130%; }
+
+/* ────────────────────────────────────────────────────
+   6. HERO BLOBS — re-enabled
+──────────────────────────────────────────────────── */
+.hero-blob { animation: blobMorph 12s ease-in-out infinite alternate !important; }
+.hb1 { animation-duration: 14s !important; }
+.hb2 { animation-duration: 10s !important; animation-delay: -5s !important; }
+.hb3 { animation-duration: 16s !important; animation-delay: -3s !important; }
+
+.hf { animation: floatDrift 8s ease-in-out infinite !important; }
+.hf:nth-child(1)  { animation-duration: 9s !important;  animation-delay: 0s !important; }
+.hf:nth-child(2)  { animation-duration: 7s !important;  animation-delay: 1.2s !important; }
+.hf:nth-child(3)  { animation-duration: 10s !important; animation-delay: 0.8s !important; }
+.hf:nth-child(4)  { animation-duration: 8.5s !important;animation-delay: 2s !important; }
+.hf:nth-child(5)  { animation-duration: 6.5s !important;animation-delay: 1.5s !important; }
+.hf:nth-child(6)  { animation-duration: 11s !important; animation-delay: 0.4s !important; }
+.hf:nth-child(7)  { animation-duration: 9.5s !important;animation-delay: 3s !important; }
+.hf:nth-child(8)  { animation-duration: 7.5s !important;animation-delay: 2.5s !important; }
+
+.hero-pill-dot { animation: pillPulse 1.5s ease-in-out infinite !important; }
+.hero-h1 .accent::after { animation: underlineGrow 0.8s 1.3s both !important; }
+.hero-img-card { animation: heroImgIn 1s 0.6s both !important; display: block !important; }
+
+/* ────────────────────────────────────────────────────
+   7. CARDS — magnetic hover, shimmer, 3D tilt
+──────────────────────────────────────────────────── */
+.prog-card, .why-card, .testi-card, .blog-card,
+.feature-card, .development-card, .activity-card,
+.testimonial-card, .curriculum-card, .instrument-card,
+.schedule-card, .skill-card, .class-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease !important;
+  will-change: transform;
+}
+/* shimmer sweep on hover */
+.prog-card::before, .why-card::before, .feature-card::before,
+.development-card::before, .activity-card::before,
+.curriculum-card::before, .instrument-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.prog-card:hover::before, .why-card:hover::before, .feature-card:hover::before,
+.development-card:hover::before, .activity-card:hover::before,
+.curriculum-card:hover::before, .instrument-card:hover::before {
+  left: 150%;
+}
+.prog-card:hover, .why-card:hover, .feature-card:hover,
+.development-card:hover, .activity-card:hover,
+.curriculum-card:hover, .instrument-card:hover {
+  transform: translateY(-12px) scale(1.025) !important;
+  box-shadow: 0 28px 72px rgba(0,0,0,0.16) !important;
+}
+.testi-card:hover, .testimonial-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 56px rgba(0,0,0,0.13) !important;
+}
+
+/* icon bounce on card hover */
+.prog-card:hover .prog-icon-wrap,
+.why-card:hover .why-icon,
+.feature-card:hover .feature-icon,
+.development-card:hover .development-icon,
+.activity-card:hover .activity-icon,
+.curriculum-card:hover .curriculum-icon,
+.instrument-card:hover .instrument-icon {
+  animation: iconBounce 0.6s ease-in-out !important;
+}
+
+/* ────────────────────────────────────────────────────
+   8. STAT BAR NUMBERS — count-up animation
+──────────────────────────────────────────────────── */
+.stat-block {
+  animation: countUp 0.6s both;
+}
+.stat-block:nth-child(1) { animation-delay: .1s; }
+.stat-block:nth-child(2) { animation-delay: .2s; }
+.stat-block:nth-child(3) { animation-delay: .3s; }
+.stat-block:nth-child(4) { animation-delay: .4s; }
+.stat-block:nth-child(5) { animation-delay: .5s; }
+
+/* ────────────────────────────────────────────────────
+   9. BUTTONS — ripple + shimmer
+──────────────────────────────────────────────────── */
+.btn-primary, .btn-secondary, .btn-white, .btn-enroll-nav,
+.btn-form, .prog-cta-btn, .sticky-call, .mob-contact-cta {
+  position: relative;
+  overflow: hidden;
+}
+/* ripple */
+.btn-primary::after, .btn-form::after, .sticky-call::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;
+}
+.btn-primary:active::after, .btn-form:active::after {
+  transform: scale(2.5);
+  opacity: 1;
+  transition: transform 0s, opacity 0s;
+}
+
+/* ────────────────────────────────────────────────────
+   10. STICKY WHATSAPP — heartbeat
+──────────────────────────────────────────────────── */
+.sticky-wa {
+  animation: waBounce 2.5s ease-in-out infinite !important;
+}
+.sticky-wa:hover {
+  animation: heartbeat 0.8s ease-in-out !important;
+  transform: scale(1.12);
+}
+
+/* ────────────────────────────────────────────────────
+   11. FAQ — smooth accordion
+──────────────────────────────────────────────────── */
+.faq-item {
+  transition: box-shadow 0.3s ease;
+}
+.faq-item:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.1) !important; }
+.faq-q { transition: background 0.3s ease, color 0.3s ease; }
+.faq-q.open { color: var(--coral, #FF6B6B); }
+.faq-q .fq-arrow { animation: none; transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important; }
+
+/* ────────────────────────────────────────────────────
+   12. SECTION HEADERS — gradient animated text
+──────────────────────────────────────────────────── */
+.hero-h1 .accent,
+.sec-h span[style*="color:var(--coral)"],
+.sec-h span[style*="color: var(--coral)"] {
+  background: linear-gradient(90deg, var(--coral,#FF6B6B), var(--peach,#FFB347), var(--coral,#FF6B6B));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s linear infinite !important;
+}
+/* sky accents */
+.sec-h span[style*="color:var(--sky)"],
+.sec-h span[style*="color: var(--sky)"] {
+  background: linear-gradient(90deg, var(--sky,#4ECDC4), #38c4bb, var(--sky,#4ECDC4));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s linear infinite !important;
+}
+/* mint accents */
+.sec-h span[style*="color:var(--mint)"],
+.sec-h span[style*="color: var(--mint)"] {
+  background: linear-gradient(90deg, var(--mint,#6BCB77), #50e87f, var(--mint,#6BCB77));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s linear infinite !important;
+}
+
+/* ────────────────────────────────────────────────────
+   13. PROCESS STEPS — step number pulse
+──────────────────────────────────────────────────── */
+.step-num {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  animation: fadeInScale 0.6s both !important;
+}
+.step:hover .step-num {
+  transform: scale(1.12) rotate(-6deg) !important;
+}
+.steps-track::before {
+  background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+  background-size: 200% auto;
+  animation: gradientShift 3s linear infinite !important;
+}
+
+/* ────────────────────────────────────────────────────
+   14. FOOTER — fade-in links
+──────────────────────────────────────────────────── */
+footer {
+  animation: fadeInUp 0.7s 0.2s both;
+}
+.footer-links a {
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease !important;
+}
+.footer-links a:hover { transform: translateY(-3px) !important; }
+
+/* ────────────────────────────────────────────────────
+   15. CTA SECTION — animated bg gradient
+──────────────────────────────────────────────────── */
+.cta-section {
+  background-size: 200% 200% !important;
+  animation: gradientShift 5s ease infinite !important;
+}
+.cta-h2 {
+  animation: fadeInUp 0.7s both;
+}
+.cta-p {
+  animation: fadeInUp 0.7s 0.15s both;
+}
+
+/* ────────────────────────────────────────────────────
+   16. MOBILE MENU — slide from right
+──────────────────────────────────────────────────── */
+#mob-menu {
+  transition: right 0.45s cubic-bezier(.77,0,.175,1) !important;
+}
+#mob-menu.open .mob-links a {
+  animation: fadeInUp 0.4s both;
+}
+#mob-menu.open .mob-links a:nth-child(1) { animation-delay: .05s; }
+#mob-menu.open .mob-links a:nth-child(2) { animation-delay: .10s; }
+#mob-menu.open .mob-links a:nth-child(3) { animation-delay: .15s; }
+#mob-menu.open .mob-links a:nth-child(4) { animation-delay: .20s; }
+#mob-menu.open .mob-links a:nth-child(5) { animation-delay: .25s; }
+#mob-menu.open .mob-links a:nth-child(6) { animation-delay: .30s; }
+#mob-menu.open .mob-links a:nth-child(7) { animation-delay: .35s; }
+#mob-menu.open .mob-links a:nth-child(8) { animation-delay: .40s; }
+
+/* ────────────────────────────────────────────────────
+   17. TOUR ACCORDION — enhanced
+──────────────────────────────────────────────────── */
+.tour-acc-card {
+  transition: flex 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* ────────────────────────────────────────────────────
+   18. FORM INPUTS — focus glow
+──────────────────────────────────────────────────── */
+input, textarea, select {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease !important;
+}
+input:focus, textarea:focus, select:focus {
+  transform: scale(1.01);
+}
+
+/* ────────────────────────────────────────────────────
+   19. IMAGE ZOOM on hover
+──────────────────────────────────────────────────── */
+.blog-img img,
+.hic-main,
+.about-card-big {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  overflow: hidden;
+}
+.blog-card:hover .blog-img img { transform: scale(1.07); }
+
+/* ────────────────────────────────────────────────────
+   20. PROGRESS SECTION — colored orb bg
+──────────────────────────────────────────────────── */
+#process::after {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  top: -200px; right: -200px;
+  animation: blobMorph 10s ease-in-out infinite alternate !important;
+  pointer-events: none;
+}
+
+/* ────────────────────────────────────────────────────
+   21. HERO PILL — bounce in
+──────────────────────────────────────────────────── */
+.hero-pill {
+  animation: fadeInDown 0.7s 0.3s both !important;
+}
+.hero-h1 { animation: fadeInUp 0.8s 0.5s both !important; }
+.hero-sub { animation: fadeInUp 0.8s 0.7s both !important; }
+.hero-ctas { animation: fadeInUp 0.8s 0.9s both !important; }
+.hero-badges { animation: fadeInUp 0.8s 1.1s both !important; }
+
+/* nav phone bounce-in */
+.nav-phone { animation: fadeInScale 0.6s 0.35s both; }
+
+/* ────────────────────────────────────────────────────
+   22. SECTION TAGS — pulse ring
+──────────────────────────────────────────────────── */
+.sec-tag, .hero-tag {
+  position: relative;
+  animation: fadeInScale 0.5s both;
+}
+.sec-tag::before {
+  content: '';
+  position: absolute; inset: -4px;
+  border-radius: 99px;
+  border: 2px solid currentColor;
+  opacity: 0;
+  animation: pillPulse 3s ease-in-out infinite;
+}
+
+/* ────────────────────────────────────────────────────
+   23. ABOUT FLOAT BADGES — sway
+──────────────────────────────────────────────────── */
+.about-float-badge {
+  animation: floatDrift 6s ease-in-out infinite !important;
+}
+.afb-2 { animation-delay: 1.5s !important; }
+
+/* ────────────────────────────────────────────────────
+   24. REDUCED MOTION — respect user preference
+──────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .aelc-cursor, .aelc-cursor-ring { display: none; }
+  #aelc-particles { display: none; }
+}
