@@ -1,6 +1,6 @@
 # Use DecapBridge PKCE auth (required)
 backend:
-  name: git-gateway
+  name: github
   repo: Addie1212/aelc-website
   branch: main
   auth_type: pkce
