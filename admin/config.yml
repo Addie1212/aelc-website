@@ -5,15 +5,137 @@ backend:
   identity_url: https://auth.decapbridge.com/sites/9ed13b03-e280-42bc-a96a-031bf0176f90
   gateway_url: https://gateway.decapbridge.com
 
-media_folder: "images"
-public_folder: "/images"
+# Connects to your existing repository folder
+media_folder: "photos"
+public_folder: "/photos"
 
 collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "content"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "site_pages"
+    label: "Website Pages"
+    delete: false # Prevents accidental deletion of your core files
+    files:
+      - name: "index"
+        label: "Main Home Page (index.html)"
+        file: "index.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "playschool_homepage"
+        label: "Playschool Homepage"
+        file: "playschool-homepage.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "summer_camp"
+        label: "Summer Camp Page"
+        file: "summer-camp.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "kindergarten"
+        label: "Kindergarten Main"
+        file: "kindergarten.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "kindergarten_year1"
+        label: "Kindergarten - Year 1"
+        file: "kindergarten-year1.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "kindergarten_year2"
+        label: "Kindergarten - Year 2"
+        file: "kindergarten-year2.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "ai_it_classes"
+        label: "AI & IT Classes"
+        file: "ai-it-classes.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "digital_design"
+        label: "Digital Design"
+        file: "digital-design.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "artcraft"
+        label: "Art & Craft"
+        file: "artcraft.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "math_science"
+        label: "Math & Science"
+        file: "math-science.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "music_classes"
+        label: "Music Classes"
+        file: "music-classes.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "english_coaching"
+        label: "English Coaching"
+        file: "english-coaching.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "hindi_coaching"
+        label: "Hindi Coaching"
+        file: "hindi-coaching.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "foundation_tuitions"
+        label: "Foundation Tuitions"
+        file: "foundation-tuitions.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "life_skills"
+        label: "Life Skills"
+        file: "life-skills.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "3d_website"
+        label: "3D Website Page"
+        file: "3d-website.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "results"
+        label: "Results Page"
+        file: "results.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
+
+      - name: "success"
+        label: "Success Page"
+        file: "success.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body Content", name: "body", widget: "markdown"}
