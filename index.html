@@ -824,13 +824,13 @@ ul {
 .hero-h1 {
   font-family: var(--font-display);
   font-size: clamp(2.8rem, 6.5vw, 5.5rem);
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.06;
-  letter-spacing: -2px;
+  letter-spacing: -2.5px;
   color: #ffffff;
   margin-bottom: 24px;
   animation: fadeInUp 0.8s 0.5s both;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 8px 32px rgba(0, 0, 0, 0.9), 0 0 60px rgba(255, 107, 107, 0.4);
 }
 
 .hero-h1 .accent {
@@ -868,13 +868,13 @@ ul {
 
 .hero-sub {
   font-size: clamp(0.95rem, 1.8vw, 1.12rem);
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.98);
   line-height: 1.85;
   max-width: 560px;
   margin-bottom: 36px;
   animation: fadeInUp 0.8s 0.7s both;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.7);
 }
 
 .hero-sub strong {
@@ -894,16 +894,17 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: var(--coral);
+  background: linear-gradient(135deg, var(--coral), #FF8C6B);
   color: white;
   border: none;
   border-radius: var(--r-xl);
-  padding: 16px 36px;
+  padding: 16px 40px;
   font-family: var(--font-display);
   font-size: 1.1rem;
-  font-weight: 700;
-  box-shadow: 0 8px 0 var(--coral-dark), 0 12px 32px rgba(255, 107, 107, 0.35);
+  font-weight: 800;
+  box-shadow: 0 8px 0 #D94444, 0 12px 40px rgba(255, 107, 107, 0.4);
   transition: var(--tr);
+  letter-spacing: -0.5px;
 }
 
 .btn-primary:hover {
@@ -2415,23 +2416,25 @@ ul {
 }
 
 .why-card {
-  background: white;
+  background: linear-gradient(135deg, #FFFBF5 0%, #FFF8F0 100%);
   flex: 1 1 280px;
   max-width: 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: var(--r-lg);
-  padding: 32px 24px;
+  border-radius: 16px;
+  padding: 28px 22px;
   transition: var(--tr);
   position: relative;
-  border-bottom: 4px solid transparent;
-  box-shadow: var(--sh-sm);
+  border: 1px solid rgba(255, 107, 107, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 .why-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--sh-lg);
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(255, 107, 107, 0.15);
+  border-color: rgba(255, 107, 107, 0.25);
+  background: linear-gradient(135deg, #FFFBF5 0%, #FFF0F0 100%);
 }
 
 .why-icon {
@@ -2777,17 +2780,19 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: var(--r-lg);
-  padding: 28px;
-  box-shadow: var(--sh-sm);
+  border-radius: 16px;
+  padding: 24px 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   transition: var(--tr);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .testi-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--sh-lg);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(255, 107, 107, 0.12);
+  background: linear-gradient(135deg, #FFFBF5, #FFF8F0);
 }
 
 .testi-card::after {
@@ -2912,9 +2917,9 @@ ul {
 }
 
 .blog-card {
-  border-radius: var(--r-lg);
+  border-radius: 16px;
   overflow: hidden;
-  background: var(--bg-warm);
+  background: white;
   flex: 1 1 280px;
   max-width: 310px;
   display: flex;
@@ -2922,13 +2927,14 @@ ul {
   align-items: center;
   transition: var(--tr);
   cursor: pointer;
-  border: 2px solid var(--border);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
 .blog-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--sh-lg);
-  border-color: transparent;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(255, 107, 107, 0.15);
+  border-color: rgba(255, 107, 107, 0.15);
 }
 
 .blog-img {
@@ -3087,66 +3093,105 @@ ul {
 }
 
 .faq-cta-card {
-  background: linear-gradient(135deg, var(--sky), var(--mint));
-  border-radius: var(--r-lg);
-  padding: 18px 20px;
-  max-width: 340px;
+  background: linear-gradient(135deg, #E84C3D 0%, #F85A4D 100%);
+  border-radius: 14px;
+  padding: 10px 12px;
+  max-width: 280px;
   text-align: left;
-  box-shadow: var(--sh-sm);
+  box-shadow: 0 6px 18px rgba(255, 107, 107, 0.35);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-cta-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .faq-cta-card h3 {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: white;
-  margin-bottom: 6px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 3px;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.3px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .faq-cta-card p {
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.95);
-  line-height: 1.5;
-  margin-bottom: 12px;
+  color: #ffffff;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .faq-cta-icon {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  margin-bottom: 4px;
   display: inline-block;
+  position: relative;
+  z-index: 1;
+  animation: iconBounce 2s ease-in-out infinite;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
 }
 
 .btn-white {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 5px;
   background: white;
   color: var(--ink);
   border: none;
-  border-radius: 12px;
-  padding: 8px 14px;
+  border-radius: 8px;
+  padding: 6px 10px;
   font-family: var(--font-display);
-  font-size: 0.94rem;
+  font-size: 0.84rem;
   font-weight: 800;
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   transition: var(--tr);
+  min-width: 120px;
 }
 
 .btn-white:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 .visit-card {
-  background: white;
-  border-radius: var(--r);
-  padding: 16px;
-  margin-top: 12px;
-  box-shadow: var(--sh-sm);
-  border: 1px solid var(--border);
-  max-width: 340px;
-  font-size: 0.95rem;
+  background: linear-gradient(135deg, #F0F7FF 0%, #F0FFF4 100%);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(78, 205, 196, 0.1);
+  border: 1.5px solid rgba(78, 205, 196, 0.25);
+  max-width: 320px;
+  font-size: 0.92rem;
+  transition: all 0.3s ease;
+}
+
+.visit-card:hover {
+  box-shadow: 0 8px 20px rgba(78, 205, 196, 0.15);
+  transform: translateY(-2px);
 }
 
 /* 
@@ -3277,46 +3322,49 @@ ul {
 /* Form */
 .form-card {
   background: white;
-  flex: 1 1 280px;
-  max-width: 320px;
+  flex: 1 1 260px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: var(--r-lg);
-  padding: 20px 18px;
-  box-shadow: var(--sh-sm);
+  border-radius: 16px;
+  padding: 14px 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
   position: relative;
   z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .form-card h3 {
   font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin-bottom: 6px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-bottom: 3px;
+  color: var(--ink);
 }
 
 .form-card p {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--muted);
-  margin-bottom: 14px;
+  margin-bottom: 10px;
+  line-height: 1.3;
 }
 
 .form-grid {
   display: grid;
-  1fr;
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .fg {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .fg.full {
-  grid-column: span 2;
+  grid-column: span 1;
 }
 
 .fg label {
@@ -3351,37 +3399,38 @@ ul {
 
 .fg textarea {
   resize: vertical;
-  min-height: 80px;
-  line-height: 1.6;
+  min-height: 60px;
+  line-height: 1.5;
 }
 
 .btn-form {
   width: 100%;
-  background: var(--coral);
+  background: linear-gradient(135deg, var(--coral), #FF8C6B);
   color: white;
   border: none;
-  border-radius: var(--r);
-  padding: 12px;
+  border-radius: 10px;
+  padding: 10px;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 800;
-  box-shadow: 0 6px 0 var(--coral-dark), 0 8px 20px rgba(255, 107, 107, 0.25);
+  box-shadow: 0 4px 14px rgba(255, 107, 107, 0.3);
   transition: var(--tr);
-  margin-top: 6px;
+  margin-top: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
+  cursor: pointer;
 }
 
 .btn-form:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 0 var(--coral-dark), 0 16px 40px rgba(255, 107, 107, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
 }
 
 .btn-form:active {
-  transform: translateY(4px);
-  box-shadow: 0 2px 0 var(--coral-dark);
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
 }
 
 .form-privacy {
@@ -4149,11 +4198,8 @@ ul {
             <h3>Still have questions?</h3>
             <p>Call us, WhatsApp us, or book a free visit! Our team is available Monday-Saturday and will be happy to
               answer everything.</p>
-            <a href="#contact" class="btn-white" style="margin-bottom:14px;display:inline-flex"><i
-                class="fa-solid fa-calendar-check"></i> Book Free Demo</a><br>
-            <a href="https://wa.me/919667897249" target="_blank" class="btn-white"
-              style="background:#25D366;color:white;display:inline-flex;gap:8px"><i class="fa-brands fa-whatsapp"></i>
-              WhatsApp Us</a>
+            <a href="#contact" class="btn-white"><i class="fa-solid fa-calendar-check"></i> Book Demo</a><br>
+            <a href="https://wa.me/919667897249" target="_blank" class="btn-white" style="background:#25D366;color:white;gap:6px"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
           </div>
           <div class="visit-card">
             <h4 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:12px">🏢 Visit Us</h4>
