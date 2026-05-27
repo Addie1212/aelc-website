@@ -964,6 +964,141 @@ title: AELC - Beyond the Books
         if (e.key === 'Escape') closeTourLightbox(); 
       });
     });
-  </script>
+  </script><!-- ... existing code ... -->
+          <div class="auto-gallery rv" id="auto-gallery">
+            <div class="gallery-stage" style="cursor:zoom-in;" onclick="openTourLightbox(event)">
+              <img id="gallery-main" src="photos/front/img1.jpeg" alt="AELC campus gallery">
+              <div class="gallery-caption">
+                <span id="gallery-kicker">Campus</span>
+<!-- ... existing code ... -->
+    <div class="rv-r">
+      <div class="form-card">
+        <div id="form-inner-wrapper" style="width: 100%;">
+          <h3> Request a Free Demo</h3>
+          <p>We'll get back to you within 24 hours!</p>
+
+          <form id="enroll-form" name="AELC_Enrollment" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="AELC_Enrollment" />
+            <p class="hidden-field" style="display:none">
+              <label>Do not fill this out if you are human: <input name="bot-field"></label>
+            </p>
+            <div class="form-grid">
+              <div class="fg full"><label>Child's Full Name *</label><input type="text" name="childName" id="f-child" placeholder="Enter child's full name" required></div>
+<!-- ... existing code ... -->
+            <div class="fg full"><label>Any Additional Notes or Requirements? (Optional)</label><textarea name="message" id="f-msg" placeholder="Write here..."></textarea></div>
+          </div>
+          <button type="submit" class="btn-form" id="form-btn">Book Free Demo</button>
+          <p class="form-privacy"> 100% private - we'll only contact you about your inquiry.</p>
+        </form>
+        </div>
+
+        <div class="form-success" id="form-success">
+          <div class="fs-icon">🎉</div>
+<!-- ... existing code ... -->
+    const BLOGS = [
+      { img: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=250&fit=crop', tag: 'Child Development', tagClr: '#FF6B6B', tagBg: 'rgba(255,107,107,0.1)', title: '7 Signs Your Child is Ready for Preschool', excerpt: 'Most parents wonder: when exactly is the right time? Here are the developmental milestones that tell you your toddler is ready to take that exciting first step. From social skills to basic motor coordination, we break down what to look for and how to prepare.', date: 'Mar 2025', read: '4 min read' },
+      { img: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop', tag: 'Music Education', tagClr: '#2DC653', tagBg: 'rgba(45,198,83,0.1)', title: 'Why Every Child Should Learn a Musical Instrument', excerpt: 'Research shows that music learning boosts language skills, maths ability, and emotional intelligence. Here\'s how to get started - even for complete beginners. Discover the benefits and our Trinity-certified programs.', date: 'Feb 2025', read: '5 min read' },
+      { img: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop', tag: 'Study Tips', tagClr: '#0077B6', tagBg: 'rgba(0,119,182,0.1)', title: 'How to Build a Study Habit in Class 5-8 Students', excerpt: 'The middle school years are critical. These 6 evidence-based strategies help children build lasting study habits that carry through board exams and beyond. Tips from our experienced educators.', date: 'Jan 2025', read: '6 min read' },
+    ];
+
+    const GALLERY_IMAGES = [
+      "photos/front/img1.jpeg", "photos/front/img2.jpeg", "photos/front/img3.jpeg", "photos/front/img4.jpeg",
+      "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM.jpeg", "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM (1).jpeg", "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM (2).jpeg", "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.29 AM.jpeg",
+      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.36 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (2).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (3).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.43 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.43 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (2).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (3).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM (2).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM (2).jpeg",
+      "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (3).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (3).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.46 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.46 AM (2).jpeg",
+      "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.22 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.26 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.27 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.16.20 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.16.21 AM.jpeg",
+      "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.32 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.33 AM (1).jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.34 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.35 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.38 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.38 AM (1).jpeg",
+      "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.22 AM.jpeg", "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.28 AM.jpeg", "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.28 AM (1).jpeg",
+      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.22 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.28 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.28 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.29 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.29 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (3).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.33 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.33 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.34 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.34 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.35 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.35 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.36 AM (1).jpeg"
+    ];
+
+    /* RENDER FUNCTIONS  */
+<!-- ... existing code ... -->
+    /* AUTO GALLERY  */
+    let galleryIndex = 0;
+    let galleryTimer;
+    function galleryLabel(src) {
+      const section = decodeURIComponent(src.split('/')[1] || 'campus').replace('-', ' ');
+      return section.replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function openTourLightbox(event) {
+      if (event) event.preventDefault();
+      const lb = document.getElementById('tour-lightbox');
+      const grid = document.getElementById('tour-lb-grid');
+      const title = document.getElementById('tour-lb-title');
+      if (title) title.textContent = "AELC Photo Gallery";
+
+      if (grid && !grid.innerHTML.trim()) {
+        grid.innerHTML = GALLERY_IMAGES.map((src, index) => `
+          <img class="tour-lb-img" loading="lazy" src="${src}" alt="Gallery Image ${index + 1}" 
+               onerror="this.src='https://placehold.co/300x200/4ECDC4/FFFFFF?text=Photo+${index+1}'" 
+               onclick="setGalleryImage(${index}); closeTourLightbox(); window.location.hash='#tour';">
+        `).join('');
+      }
+      
+      if (lb) lb.classList.add('open');
+      clearInterval(galleryTimer);
+    }
+
+    function closeTourLightbox(e) {
+      if (e && e.target && e.target.tagName === 'IMG' && e.target.classList.contains('tour-lb-img')) return;
+      const lb = document.getElementById('tour-lightbox');
+      if (lb) lb.classList.remove('open');
+      clearInterval(galleryTimer);
+      galleryTimer = setInterval(() => setGalleryImage(galleryIndex + 1), 3200);
+    }
+
+    function setGalleryImage(index) {
+      if (!GALLERY_IMAGES.length) return;
+<!-- ... existing code ... -->
+    /* FORM LOGIC DELEGATED TO ANIMATIONS.JS  */
+
+    function setupAjaxForm() {
+      const enrollForm = document.getElementById('enroll-form');
+      if (enrollForm) {
+        enrollForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const btn = document.getElementById('form-btn');
+          const ogText = btn.innerHTML;
+
+          btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+          btn.disabled = true;
+
+          const formData = new FormData(enrollForm);
+          
+          fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+          })
+          .then(() => {
+            document.getElementById('form-inner-wrapper').style.display = 'none';
+            document.getElementById('form-success').style.display = 'block';
+            if(typeof confetti === 'function') {
+               confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
+            }
+          })
+          .catch((error) => {
+            alert('Oops! There was a network error. Please try again or WhatsApp us.');
+            btn.innerHTML = ogText;
+            btn.disabled = false;
+          });
+        });
+      }
+    }
+
+    function animateHeroBadges() {
+      document.querySelectorAll('.hbadge-num[data-target]').forEach(el => {
+<!-- ... existing code ... -->
+    /* INIT  */
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPrograms(); renderWhyUs(); renderSteps(); renderTestimonials(); renderBlog(); renderFAQ();
+      observe();
+      initTourGallery();
+      setupAjaxForm();
+      setTimeout(animateHeroBadges, 1400);
+      // Auto-advance slideshow every 5 seconds
+<!-- ... existing code ... -->
 </body>
 </html>
