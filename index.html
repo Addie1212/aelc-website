@@ -2,7 +2,7 @@
 title: AELC - Beyond the Books
 ---
 <!DOCTYPE html>
-
+ 
 <html lang="en">
 
 <head>
@@ -3089,52 +3089,64 @@ ul {
 .faq-cta-card {
   background: linear-gradient(135deg, var(--sky), var(--mint));
   border-radius: var(--r-lg);
-  padding: 40px;
-  text-align: center;
-  box-shadow: var(--sh-lg);
+  padding: 18px 20px;
+  max-width: 340px;
+  text-align: left;
+  box-shadow: var(--sh-sm);
 }
 
 .faq-cta-card h3 {
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .faq-cta-card p {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.7;
-  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.5;
+  margin-bottom: 12px;
 }
 
 .faq-cta-icon {
-  font-size: 4rem;
-  margin-bottom: 16px;
-  display: block;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 .btn-white {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background: white;
   color: var(--ink);
   border: none;
-  border-radius: 99px;
-  padding: 14px 28px;
+  border-radius: 12px;
+  padding: 8px 14px;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.94rem;
   font-weight: 800;
-  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.06);
   transition: var(--tr);
 }
 
 .btn-white:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 9px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.08);
+}
+
+.visit-card {
+  background: white;
+  border-radius: var(--r);
+  padding: 16px;
+  margin-top: 12px;
+  box-shadow: var(--sh-sm);
+  border: 1px solid var(--border);
+  max-width: 340px;
+  font-size: 0.95rem;
 }
 
 /* 
@@ -3266,29 +3278,29 @@ ul {
 .form-card {
   background: white;
   flex: 1 1 280px;
-  max-width: 310px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: var(--r-xl);
-  padding: 48px 40px;
-  box-shadow: var(--sh-lg);
+  border-radius: var(--r-lg);
+  padding: 20px 18px;
+  box-shadow: var(--sh-sm);
   position: relative;
   z-index: 1;
 }
 
 .form-card h3 {
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 800;
   margin-bottom: 6px;
 }
 
 .form-card p {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--muted);
-  margin-bottom: 28px;
+  margin-bottom: 14px;
 }
 
 .form-grid {
@@ -3349,17 +3361,17 @@ ul {
   color: white;
   border: none;
   border-radius: var(--r);
-  padding: 18px;
+  padding: 12px;
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 800;
-  box-shadow: 0 8px 0 var(--coral-dark), 0 12px 32px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 6px 0 var(--coral-dark), 0 8px 20px rgba(255, 107, 107, 0.25);
   transition: var(--tr);
   margin-top: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .btn-form:hover {
@@ -4143,8 +4155,7 @@ ul {
               style="background:#25D366;color:white;display:inline-flex;gap:8px"><i class="fa-brands fa-whatsapp"></i>
               WhatsApp Us</a>
           </div>
-          <div
-            style="background:white;border-radius:var(--r-lg);padding:28px;margin-top:18px;box-shadow:var(--sh-sm);border:2px solid var(--border)">
+          <div class="visit-card">
             <h4 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:12px">🏢 Visit Us</h4>
             <p style="font-size:0.9rem;font-weight:600;color:var(--muted);line-height:1.7">DG-2/115A, Ground
               Floor<br>Vikaspuri, New Delhi - 110018<br><br><a href="tel:9667897249"
@@ -4247,7 +4258,7 @@ ul {
 
             <div class="fg full"><label>Any Additional Notes or Requirements? (Optional)</label><textarea name="message" id="f-msg" placeholder="Write here..."></textarea></div>
           </div>
-          <button type="submit" class="btn-form" id="form-btn" style="background:#8C0D1A;box-shadow:none;">Submit Registration</button>
+          <button type="submit" class="btn-form" id="form-btn">Book Free Demo</button>
           <p class="form-privacy"> 100% private - we'll only contact you about your inquiry.</p>
         </form>
 
