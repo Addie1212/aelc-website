@@ -1,23 +1,38 @@
 ---
-title: AELC Playschool - A Magical Start
+title: AELC Playschool - 3D Magical Start
 ---
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AELC Playschool | Best Preschool in Vikaspuri, Delhi | Age 1.5-6</title>
+  <meta name="description" content="AELC Playschool in Vikaspuri, New Delhi offers a magical, safe, and interactive 3D learning environment for toddlers aged 1.5 to 6 years. Book a free campus tour today!">
+  <meta name="keywords" content="playschool Vikaspuri, best preschool Delhi, AELC playschool, early learning, toddler classes, nursery admission Delhi, play group, kindergarten">
+  <meta name="author" content="Asha Early Learning Centre">
+  <link rel="canonical" href="https://aelc.in/playschool">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / WhatsApp / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aelc.in/playschool">
+  <meta property="og:title" content="AELC Playschool | A Magical World for Little Learners">
+  <meta property="og:description" content="Vikaspuri's premium playschool. Safe, nurturing, and hyper-interactive space designed exclusively for ages 1.5 to 6 years.">
+  <meta property="og:image" content="https://i.ibb.co/Cp79n1N6/image-2026-03-13-120621551-Photoroom-upscayl-4x-upscayl-standard-4x.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="AELC Playschool | Vikaspuri">
+  <meta property="twitter:description" content="A magical, safe, and interactive learning environment for your child's first steps.">
   
-  <title>AELC Playschool | A Magical 3D World for Little Learners</title>
-  <meta name="description" content="Asha Early Learning Centre - Vikaspuri's premium playschool for ages 1.5 to 6. A magical, safe, and interactive environment for your child's first steps.">
-  <meta name="keywords" content="playschool Vikaspuri, best preschool Delhi, AELC playschool, early learning, toddler classes, nursery admission Delhi">
-  
-  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800;900&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
+  <!-- Three.js for 3D Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
   <style>
     :root {
       /* Playful & Vibrant Palette */
@@ -46,24 +61,22 @@ title: AELC Playschool - A Magical Start
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; overflow-x: hidden; }
+    html { scroll-behavior: smooth; overflow-x: hidden; font-size: 16px; }
     body { 
       font-family: var(--font-body); 
       background: var(--bg-main); 
       color: var(--ink); 
       overflow-x: hidden; 
       line-height: 1.6; 
-      perspective: 1000px; /* Enables 3D space globally */
+      perspective: 1000px;
     }
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
     button { cursor: pointer; font-family: var(--font-body); }
 
-    /* Layout */
     .section { padding: 100px 5vw; position: relative; }
     .section-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
     
-    /* Typography */
     .sec-tag { 
       display: inline-flex; align-items: center; gap: 8px; 
       background: rgba(255, 107, 107, 0.15); color: var(--coral); 
@@ -73,7 +86,6 @@ title: AELC Playschool - A Magical Start
     .sec-h { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 16px; color: var(--ink); }
     .sec-sub { font-size: 1.15rem; font-weight: 600; color: var(--muted); line-height: 1.7; max-width: 600px; }
 
-    /* --- 3D ANIMATION ENGINE --- */
     .tilt-wrapper { perspective: 1000px; transform-style: preserve-3d; }
     .tilt-card {
       transform-style: preserve-3d;
@@ -81,60 +93,21 @@ title: AELC Playschool - A Magical Start
       will-change: transform;
     }
     .tilt-card-inner {
-      transform: translateZ(50px); /* Pops the content out of the card */
+      transform: translateZ(50px);
     }
     
-    /* Floating 3D Shapes */
-    .scene3d {
-      position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;
-      perspective: 1200px;
-    }
-    .shape3d {
-      position: absolute;
-      transform-style: preserve-3d;
-      animation: float3D 15s infinite linear;
-    }
-    .cube {
-      width: 80px; height: 80px;
-      transform-origin: center center;
-    }
-    .face {
-      position: absolute; width: 80px; height: 80px;
-      background: rgba(78, 205, 196, 0.8);
-      border: 2px solid rgba(255,255,255,0.5);
-      box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
-      backdrop-filter: blur(5px);
-    }
-    .front  { transform: translateZ(40px); }
-    .back   { transform: rotateY(180deg) translateZ(40px); }
-    .right  { transform: rotateY(90deg) translateZ(40px); }
-    .left   { transform: rotateY(-90deg) translateZ(40px); }
-    .top    { transform: rotateX(90deg) translateZ(40px); }
-    .bottom { transform: rotateX(-90deg) translateZ(40px); }
-
-    .pyramid { width: 100px; height: 100px; }
-    .pyr-face { position: absolute; width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-bottom: 86.6px solid rgba(255, 107, 107, 0.8); transform-origin: bottom center; }
-    .pyr-front { transform: translateZ(28.9px) rotateX(19.5deg); }
-    .pyr-back { transform: translateZ(-28.9px) rotateY(180deg) rotateX(19.5deg); }
-    .pyr-left { transform: translateX(-28.9px) rotateY(-90deg) rotateX(19.5deg); }
-    .pyr-right { transform: translateX(28.9px) rotateY(90deg) rotateX(19.5deg); }
-    .pyr-bottom { position: absolute; width: 100px; height: 100px; background: rgba(255, 107, 107, 0.9); transform: rotateX(90deg) translateZ(-28.9px); }
-
-    @keyframes float3D {
-      0% { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
-      50% { transform: translateY(-50px) rotateX(180deg) rotateY(180deg); }
-      100% { transform: translateY(0px) rotateX(360deg) rotateY(360deg); }
-    }
-
-    /* NAVBAR */
-    nav {
+    header nav {
       position: fixed; top: 0; width: 100%; z-index: 9000; padding: 15px 5vw;
       display: flex; justify-content: space-between; align-items: center;
       background: rgba(250, 250, 250, 0.85); backdrop-filter: blur(16px);
       box-shadow: 0 4px 30px rgba(0,0,0,0.05);
     }
-    .logo { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--ink); display: flex; align-items: center; gap: 10px;}
-    .logo-icon { width: 40px; height: 40px; background: var(--coral); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; transform: rotate(-10deg); }
+    .logo { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--ink); display: flex; align-items: center; gap: 12px;}
+    .logo-img { 
+      width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
+      box-shadow: 0 4px 12px rgba(255,107,107,0.3);
+      border: 2px solid white;
+    }
     .nav-links { display: flex; gap: 24px; }
     .nav-links a { font-weight: 700; color: var(--muted); transition: var(--tr); }
     .nav-links a:hover { color: var(--coral); }
@@ -142,18 +115,20 @@ title: AELC Playschool - A Magical Start
     .btn-nav:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--sky-dark); }
     .btn-nav:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--sky-dark); }
 
-    /* HERO */
     #hero {
       min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; text-align: center; padding-top: 100px;
+    }
+    #three-canvas {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
       background: radial-gradient(circle at top right, #FFF5EB, #EBF8FF);
-      overflow: hidden; text-align: center; padding-top: 100px;
     }
     .hero-content { max-width: 800px; position: relative; z-index: 10; transform-style: preserve-3d; }
     .hero-h1 { 
       font-size: clamp(3.5rem, 8vw, 5.5rem); line-height: 1.05; letter-spacing: -1px;
       background: linear-gradient(135deg, var(--coral), var(--lavender));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      margin-bottom: 24px; text-shadow: 0 20px 40px rgba(255,107,107,0.2);
+      margin-bottom: 24px; filter: drop-shadow(0 10px 20px rgba(255,107,107,0.2));
     }
     .btn-hero {
       background: var(--coral); color: white; padding: 18px 48px; border-radius: 99px;
@@ -163,40 +138,26 @@ title: AELC Playschool - A Magical Start
     }
     .btn-hero:hover { transform: translateY(-4px); box-shadow: 0 12px 0 var(--coral-dark), 0 20px 50px rgba(255,107,107,0.5); }
 
-    /* STATS */
-    .stats-bar {
-      display: flex; justify-content: center; gap: 40px; margin-top: 60px; flex-wrap: wrap;
-    }
+    .stats-bar { display: flex; justify-content: center; gap: 40px; margin-top: 60px; flex-wrap: wrap; }
     .stat-box {
-      background: white; padding: 20px 30px; border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 2px solid var(--border);
+      background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);
+      padding: 20px 30px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 2px solid var(--white);
       transform-style: preserve-3d;
     }
     .stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--sky); line-height: 1; transform: translateZ(20px); }
     .stat-text { font-weight: 700; color: var(--muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transform: translateZ(10px); }
 
-    /* ABOUT (Replaces Trinity focus with Playschool focus) */
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .about-img {
-      position: relative; border-radius: 30px; overflow: visible;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-      transform-style: preserve-3d;
-    }
+    .about-img { position: relative; border-radius: 30px; overflow: visible; box-shadow: 0 30px 60px rgba(0,0,0,0.15); transform-style: preserve-3d; }
     .about-img img { border-radius: 30px; transform: translateZ(30px); position: relative; z-index: 2; }
-    .about-img::before {
-      content:''; position: absolute; inset: -20px; background: var(--sun); border-radius: 40px;
-      transform: translateZ(0px); z-index: 1;
-    }
-    
+    .about-img::before { content:''; position: absolute; inset: -20px; background: var(--sun); border-radius: 40px; transform: translateZ(0px); z-index: 1; }
     .check-list { display: flex; flex-direction: column; gap: 15px; margin: 30px 0; }
     .check-item { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.1rem; }
     .check-icon { width: 32px; height: 32px; background: var(--mint); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
 
-    /* CURRICULUM (Replaces General Programs) */
     #curriculum { background: var(--ink); color: white; }
     #curriculum .sec-h { color: white; }
     .curr-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 50px; perspective: 1000px; }
-    
     .curr-card {
       background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
       border-radius: 30px; padding: 40px 24px; text-align: center;
@@ -208,23 +169,17 @@ title: AELC Playschool - A Magical Start
     .curr-card h3 { font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 10px; transform: translateZ(20px); }
     .curr-card p { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.6; transform: translateZ(10px); }
 
-    /* WHY US (3D Floating Blocks) */
     #why { background: var(--bg-cream); overflow: hidden; }
     .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
-    .why-card {
-      background: white; border-radius: 24px; padding: 40px 30px; text-align: center;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 2px solid white;
-    }
+    .why-card { background: white; border-radius: 24px; padding: 40px 30px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 2px solid white; }
     .why-icon { width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white; transform: translateZ(40px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
     .why-card h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 10px; transform: translateZ(30px); color: var(--ink); }
     .why-card p { color: var(--muted); font-weight: 600; transform: translateZ(20px); }
 
-    /* CONTACT / ADMISSIONS */
     #contact { background: linear-gradient(135deg, var(--coral), #FF8E53); color: white; position: relative; }
     .contact-wrapper { background: white; border-radius: 40px; display: flex; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.3); transform-style: preserve-3d; }
     .c-info { flex: 1; padding: 60px; background: var(--ink); color: white; position: relative; overflow: hidden;}
     .c-form { flex: 1.2; padding: 60px; color: var(--ink); background: white; }
-    
     .c-form h3 { font-family: var(--font-display); font-size: 2.2rem; color: var(--coral); margin-bottom: 10px; }
     .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
     .form-group label { font-size: 0.85rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
@@ -233,12 +188,11 @@ title: AELC Playschool - A Magical Start
     .btn-submit { width: 100%; background: var(--sky); color: white; border: none; padding: 18px; border-radius: 12px; font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; box-shadow: 0 6px 0 var(--sky-dark); margin-top: 10px; transition: var(--tr); }
     .btn-submit:hover { transform: translateY(-3px); box-shadow: 0 9px 0 var(--sky-dark); }
     
-    /* Footer */
     footer { background: #1A202C; padding: 60px 5vw; color: white; text-align: center; }
+    .f-logo-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin: 0 auto 15px; border: 2px solid var(--sun); }
     .f-logo { font-family: var(--font-display); font-size: 2rem; color: var(--sun); margin-bottom: 10px; }
     .f-text { color: rgba(255,255,255,0.6); font-weight: 600; }
 
-    /* RESPONSIVE */
     @media(max-width: 992px) {
       .about-grid, .contact-wrapper { grid-template-columns: 1fr; flex-direction: column; }
       .curr-grid { grid-template-columns: repeat(2, 1fr); }
@@ -248,299 +202,413 @@ title: AELC Playschool - A Magical Start
       .curr-grid { grid-template-columns: 1fr; }
       .hero-h1 { font-size: 2.8rem; }
       .stats-bar { flex-direction: column; gap: 20px; }
+      .nav-links { display: none; }
     }
   </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Preschool",
+      "name": "AELC Playschool",
+      "image": "https://i.ibb.co/Cp79n1N6/image-2026-03-13-120621551-Photoroom-upscayl-4x-upscayl-standard-4x.png",
+      "@id": "https://aelc.in/playschool",
+      "url": "https://aelc.in/playschool",
+      "telephone": "+919667897249",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "DG-2/115A, Ground Floor",
+        "addressLocality": "Vikaspuri",
+        "addressRegion": "New Delhi",
+        "postalCode": "110018",
+        "addressCountry": "IN"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "120"
+      },
+      "description": "Vikaspuri's most loved playschool. A safe, nurturing, and interactive space designed exclusively for ages 1.5 to 6 years."
+    }
+  </script>
 </head>
 
 <body>
-  <nav>
-    <div class="logo">
-      <div class="logo-icon"><i class="fa-solid fa-shapes"></i></div>
-      AELC Playschool
-    </div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#curriculum">Curriculum</a>
-      <a href="#why">Why Us</a>
-    </div>
-    <a href="#contact" class="btn-nav">Enroll Now</a>
-  </nav>
+  <header>
+    <nav aria-label="Main Navigation">
+      <a href="/" aria-label="AELC Playschool Home" class="logo">
+        <img src="https://i.ibb.co/Cp79n1N6/image-2026-03-13-120621551-Photoroom-upscayl-4x-upscayl-standard-4x.png" alt="AELC Logo" class="logo-img">
+        AELC Playschool
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#why">Why Us</a>
+      </div>
+      <a href="#contact" class="btn-nav" aria-label="Enroll Now in AELC">Enroll Now</a>
+    </nav>
+  </header>
 
-  <section id="hero">
-    <!-- CSS 3D Floating Scene -->
-    <div class="scene3d">
-      <!-- Floating Cube 1 -->
-      <div class="shape3d cube" style="top: 20%; left: 15%; animation-duration: 20s; animation-delay: -5s;">
-        <div class="face front"></div><div class="face back"></div><div class="face right"></div>
-        <div class="face left"></div><div class="face top"></div><div class="face bottom"></div>
-      </div>
-      <!-- Floating Pyramid -->
-      <div class="shape3d pyramid" style="top: 60%; right: 15%; animation-duration: 18s;">
-        <div class="pyr-face pyr-front"></div><div class="pyr-face pyr-back"></div>
-        <div class="pyr-face pyr-left"></div><div class="pyr-face pyr-right"></div>
-        <div class="pyr-bottom"></div>
-      </div>
-      <!-- Floating Cube 2 -->
-      <div class="shape3d cube" style="top: 70%; left: 25%; animation-duration: 25s; transform: scale(0.6);">
-        <div class="face front" style="background:rgba(255,217,61,0.8)"></div><div class="face back" style="background:rgba(255,217,61,0.8)"></div>
-        <div class="face right" style="background:rgba(255,217,61,0.8)"></div><div class="face left" style="background:rgba(255,217,61,0.8)"></div>
-        <div class="face top" style="background:rgba(255,217,61,0.8)"></div><div class="face bottom" style="background:rgba(255,217,61,0.8)"></div>
-      </div>
-    </div>
+  <main>
+    <section id="hero" aria-label="Hero Section">
+      <!-- ThreeJS Canvas Background -->
+      <canvas id="three-canvas" aria-hidden="true"></canvas>
 
-    <div class="hero-content tilt-wrapper">
-      <div class="tilt-card">
-        <div class="tilt-card-inner">
-          <div class="sec-tag" style="background: white; border: 2px solid var(--border); margin-bottom: 24px;">✨ Admissions Open 2025-26</div>
-          <h1 class="hero-h1">A Magical 3D World<br>for Little Learners.</h1>
-          <p class="sec-sub" style="margin: 0 auto; color: var(--ink-light); font-size: 1.25rem;">
-            Vikaspuri's most loved playschool. A safe, nurturing, and hyper-interactive space designed exclusively for ages 1.5 to 6 years.
-          </p>
-          <a href="#contact" class="btn-hero"><i class="fa-solid fa-rocket"></i> Book a FREE Visit</a>
-          
-          <div class="stats-bar">
-            <div class="stat-box tilt-card">
-              <div class="tilt-card-inner">
-                <div class="stat-num">500+</div>
-                <div class="stat-text">Happy Toddlers</div>
-              </div>
-            </div>
-            <div class="stat-box tilt-card">
-              <div class="tilt-card-inner">
-                <div class="stat-num">1:10</div>
-                <div class="stat-text">Teacher Ratio</div>
-              </div>
-            </div>
-            <div class="stat-box tilt-card">
-              <div class="tilt-card-inner">
-                <div class="stat-num">4.9⭐</div>
-                <div class="stat-text">Google Rating</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="section-inner about-grid">
-      <div class="tilt-wrapper">
-        <div class="about-img tilt-card">
+      <div class="hero-content tilt-wrapper">
+        <div class="tilt-card">
           <div class="tilt-card-inner">
-            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&q=80" alt="Kids playing at AELC">
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="sec-tag">Why Playschool Matters</div>
-        <h2 class="sec-h">Their First Steps Outside Home Should Be <span style="color:var(--coral)">Extraordinary.</span></h2>
-        <p class="sec-sub">At AELC Playschool, we focus purely on Early Childhood Education. We blend Playway and Montessori methods to ensure your child builds confidence, motor skills, and a lifelong love for learning.</p>
-        
-        <div class="check-list">
-          <div class="check-item"><div class="check-icon"><i class="fa-solid fa-check"></i></div> Safe, AC & CCTV Monitored Campus</div>
-          <div class="check-item"><div class="check-icon"><i class="fa-solid fa-check"></i></div> Phonics & Sensorial Learning</div>
-          <div class="check-item"><div class="check-icon"><i class="fa-solid fa-check"></i></div> Gentle, Loving & Trained Educators</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="curriculum" class="section">
-    <div class="section-inner">
-      <div style="text-align: center;">
-        <div class="sec-tag" style="background: rgba(255,255,255,0.1); color: var(--sun);">Stages of Learning</div>
-        <h2 class="sec-h">The Playschool Curriculum</h2>
-        <p class="sec-sub" style="margin: 0 auto; color: rgba(255,255,255,0.7);">Carefully designed milestones for ages 1.5 to 6 years.</p>
-      </div>
-
-      <div class="curr-grid">
-        <div class="curr-card tilt-card" style="--c-color: var(--coral);">
-          <div class="tilt-card-inner">
-            <div class="curr-icon"><i class="fa-solid fa-baby"></i></div>
-            <div class="curr-age">1.5 - 2.5 Years</div>
-            <h3>Play Group</h3>
-            <p>Focuses on separation anxiety, basic motor skills, sensory play, and social interaction in a warm, loving space.</p>
-          </div>
-        </div>
-        
-        <div class="curr-card tilt-card" style="--c-color: var(--sky);">
-          <div class="tilt-card-inner">
-            <div class="curr-icon"><i class="fa-solid fa-shapes"></i></div>
-            <div class="curr-age">2.5 - 3.5 Years</div>
-            <h3>Pre-Nursery</h3>
-            <p>Introduction to phonics sounds, colors, shapes, vocabulary building, and structured playway activities.</p>
-          </div>
-        </div>
-
-        <div class="curr-card tilt-card" style="--c-color: var(--sun);">
-          <div class="tilt-card-inner">
-            <div class="curr-icon"><i class="fa-solid fa-palette"></i></div>
-            <div class="curr-age">3.5 - 4.5 Years</div>
-            <h3>Nursery (LKG)</h3>
-            <p>Developing fine motor skills, writing readiness, early mathematics, and creative expression through art.</p>
-          </div>
-        </div>
-
-        <div class="curr-card tilt-card" style="--c-color: var(--mint);">
-          <div class="tilt-card-inner">
-            <div class="curr-icon"><i class="fa-solid fa-book-open-reader"></i></div>
-            <div class="curr-age">4.5 - 6.0 Years</div>
-            <h3>Prep (UKG)</h3>
-            <p>Advanced phonics reading, numeric concepts, and school-readiness to ensure a smooth transition to formal schooling.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="why" class="section">
-    <!-- Background 3D Elements -->
-    <div class="scene3d" style="opacity: 0.4;">
-      <div class="shape3d cube" style="top: 10%; right: 10%; animation-duration: 12s;">
-        <div class="face front" style="background:rgba(167, 139, 250, 0.5)"></div><div class="face back" style="background:rgba(167, 139, 250, 0.5)"></div>
-        <div class="face right" style="background:rgba(167, 139, 250, 0.5)"></div><div class="face left" style="background:rgba(167, 139, 250, 0.5)"></div>
-        <div class="face top" style="background:rgba(167, 139, 250, 0.5)"></div><div class="face bottom" style="background:rgba(167, 139, 250, 0.5)"></div>
-      </div>
-    </div>
-
-    <div class="section-inner">
-      <div style="text-align: center;">
-        <div class="sec-tag">Why Choose Us</div>
-        <h2 class="sec-h">Designed for <span style="color:var(--sky)">Toddlers.</span></h2>
-      </div>
-
-      <div class="why-grid">
-        <div class="why-card tilt-card">
-          <div class="tilt-card-inner">
-            <div class="why-icon" style="background: var(--coral);"><i class="fa-solid fa-shield-cat"></i></div>
-            <h3>100% Safe Campus</h3>
-            <p>Soft flooring, child-safe furniture, and 24/7 CCTV monitoring to ensure your child is always protected.</p>
-          </div>
-        </div>
-        <div class="why-card tilt-card">
-          <div class="tilt-card-inner">
-            <div class="why-icon" style="background: var(--sky);"><i class="fa-solid fa-apple-whole"></i></div>
-            <h3>Hygiene & Health</h3>
-            <p>Strict sanitization protocols, clean washrooms, and guidance on nutritious toddler eating habits.</p>
-          </div>
-        </div>
-        <div class="why-card tilt-card">
-          <div class="tilt-card-inner">
-            <div class="why-icon" style="background: var(--sun);"><i class="fa-solid fa-face-smile-beam"></i></div>
-            <h3>Joyful Play Areas</h3>
-            <p>Indoor interactive play zones designed to stimulate physical growth and imaginative pretend-play.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <div class="section-inner">
-      <div class="contact-wrapper tilt-wrapper">
-        <div class="c-info tilt-card">
-          <div class="tilt-card-inner">
-            <h2 class="sec-h" style="color: white;">Let's Start This Journey Together.</h2>
-            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 40px;">Book a free campus tour and see the magic of AELC Playschool firsthand.</p>
+            <div class="sec-tag" style="background: white; border: 2px solid var(--border); margin-bottom: 24px;">✨ Admissions Open 2025-26</div>
+            <h1 class="hero-h1">A Magical 3D World<br>for Little Learners.</h1>
+            <p class="sec-sub" style="margin: 0 auto; color: var(--ink-light); font-size: 1.25rem;">
+              Vikaspuri's most loved playschool. A safe, nurturing, and hyper-interactive space designed exclusively for ages 1.5 to 6 years.
+            </p>
+            <a href="#contact" class="btn-hero" aria-label="Book a free visit"><i class="fa-solid fa-rocket"></i> Book a FREE Visit</a>
             
-            <div style="display: flex; flex-direction: column; gap: 20px;">
-              <div style="display: flex; align-items: center; gap: 15px;">
-                <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-location-dot"></i></div>
-                <div>
-                  <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5);">Visit Us</div>
-                  <div style="font-weight: 700; font-size: 1.1rem;">DG-2/115A, Vikaspuri, Delhi</div>
+            <div class="stats-bar">
+              <article class="stat-box tilt-card">
+                <div class="tilt-card-inner">
+                  <div class="stat-num">500+</div>
+                  <div class="stat-text">Happy Toddlers</div>
                 </div>
-              </div>
-              <div style="display: flex; align-items: center; gap: 15px;">
-                <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-phone"></i></div>
-                <div>
-                  <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5);">Call Us</div>
-                  <div style="font-weight: 700; font-size: 1.1rem;">9667897249</div>
+              </article>
+              <article class="stat-box tilt-card">
+                <div class="tilt-card-inner">
+                  <div class="stat-num">1:10</div>
+                  <div class="stat-text">Teacher Ratio</div>
+                </div>
+              </article>
+              <article class="stat-box tilt-card">
+                <div class="tilt-card-inner">
+                  <div class="stat-num">4.9⭐</div>
+                  <div class="stat-text">Google Rating</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-label="About AELC Playschool">
+      <div class="section-inner about-grid">
+        <div class="tilt-wrapper">
+          <div class="about-img tilt-card">
+            <div class="tilt-card-inner">
+              <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&q=80" alt="Happy kids playing at AELC Playschool" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="sec-tag">Why Playschool Matters</div>
+          <h2 class="sec-h">Their First Steps Outside Home Should Be <span style="color:var(--coral)">Extraordinary.</span></h2>
+          <p class="sec-sub">At AELC Playschool, we focus purely on Early Childhood Education. We blend Playway and Montessori methods to ensure your child builds confidence, motor skills, and a lifelong love for learning.</p>
+          
+          <div class="check-list">
+            <div class="check-item"><div class="check-icon"><i class="fa-solid fa-check"></i></div> Safe, AC & CCTV Monitored Campus</div>
+            <div class="check-item"><div class="check-icon"><i class="fa-solid fa-check"></i></div> Phonics & Sensorial Learning</div>
+            <div class="check-item"><div class="check-icon"><i class="fa-solid fa-check"></i></div> Gentle, Loving & Trained Educators</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="curriculum" class="section" aria-label="Playschool Curriculum">
+      <div class="section-inner">
+        <div style="text-align: center;">
+          <div class="sec-tag" style="background: rgba(255,255,255,0.1); color: var(--sun);">Stages of Learning</div>
+          <h2 class="sec-h">The Playschool Curriculum</h2>
+          <p class="sec-sub" style="margin: 0 auto; color: rgba(255,255,255,0.7);">Carefully designed milestones for ages 1.5 to 6 years.</p>
+        </div>
+
+        <div class="curr-grid">
+          <article class="curr-card tilt-card" style="--c-color: var(--coral);">
+            <div class="tilt-card-inner">
+              <div class="curr-icon"><i class="fa-solid fa-baby"></i></div>
+              <div class="curr-age">1.5 - 2.5 Years</div>
+              <h3>Play Group</h3>
+              <p>Focuses on separation anxiety, basic motor skills, sensory play, and social interaction in a warm, loving space.</p>
+            </div>
+          </article>
+          
+          <article class="curr-card tilt-card" style="--c-color: var(--sky);">
+            <div class="tilt-card-inner">
+              <div class="curr-icon"><i class="fa-solid fa-shapes"></i></div>
+              <div class="curr-age">2.5 - 3.5 Years</div>
+              <h3>Pre-Nursery</h3>
+              <p>Introduction to phonics sounds, colors, shapes, vocabulary building, and structured playway activities.</p>
+            </div>
+          </article>
+
+          <article class="curr-card tilt-card" style="--c-color: var(--sun);">
+            <div class="tilt-card-inner">
+              <div class="curr-icon"><i class="fa-solid fa-palette"></i></div>
+              <div class="curr-age">3.5 - 4.5 Years</div>
+              <h3>Nursery (LKG)</h3>
+              <p>Developing fine motor skills, writing readiness, early mathematics, and creative expression through art.</p>
+            </div>
+          </article>
+
+          <article class="curr-card tilt-card" style="--c-color: var(--mint);">
+            <div class="tilt-card-inner">
+              <div class="curr-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+              <div class="curr-age">4.5 - 6.0 Years</div>
+              <h3>Prep (UKG)</h3>
+              <p>Advanced phonics reading, numeric concepts, and school-readiness to ensure a smooth transition to formal schooling.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="section" aria-label="Why Choose AELC">
+      <div class="section-inner">
+        <div style="text-align: center;">
+          <div class="sec-tag">Why Choose Us</div>
+          <h2 class="sec-h">Designed for <span style="color:var(--sky)">Toddlers.</span></h2>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card tilt-card">
+            <div class="tilt-card-inner">
+              <div class="why-icon" style="background: var(--coral);"><i class="fa-solid fa-shield-cat"></i></div>
+              <h3>100% Safe Campus</h3>
+              <p>Soft flooring, child-safe furniture, and 24/7 CCTV monitoring to ensure your child is always protected.</p>
+            </div>
+          </article>
+          <article class="why-card tilt-card">
+            <div class="tilt-card-inner">
+              <div class="why-icon" style="background: var(--sky);"><i class="fa-solid fa-apple-whole"></i></div>
+              <h3>Hygiene & Health</h3>
+              <p>Strict sanitization protocols, clean washrooms, and guidance on nutritious toddler eating habits.</p>
+            </div>
+          </article>
+          <article class="why-card tilt-card">
+            <div class="tilt-card-inner">
+              <div class="why-icon" style="background: var(--sun);"><i class="fa-solid fa-face-smile-beam"></i></div>
+              <h3>Joyful Play Areas</h3>
+              <p>Indoor interactive play zones designed to stimulate physical growth and imaginative pretend-play.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-label="Contact and Admissions">
+      <div class="section-inner">
+        <div class="contact-wrapper tilt-wrapper">
+          <div class="c-info tilt-card">
+            <div class="tilt-card-inner">
+              <h2 class="sec-h" style="color: white;">Let's Start This Journey Together.</h2>
+              <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 40px;">Book a free campus tour and see the magic of AELC Playschool firsthand.</p>
+              
+              <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                  <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-location-dot"></i></div>
+                  <div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5);">Visit Us</div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">DG-2/115A, Vikaspuri, Delhi</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                  <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-phone"></i></div>
+                  <div>
+                    <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5);">Call Us</div>
+                    <div style="font-weight: 700; font-size: 1.1rem;"><a href="tel:+919667897249" style="color:white;">+91 9667897249</a></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div class="c-form tilt-card">
-          <div class="tilt-card-inner">
-            <h3>Book a FREE Visit</h3>
-            <form name="AELC_Playschool_Admission" method="POST" data-netlify="true">
-              <div class="form-group">
-                <label>Parent's Name</label>
-                <input type="text" name="parentName" placeholder="Enter your name" required>
-              </div>
-              <div class="form-group">
-                <label>Child's Name</label>
-                <input type="text" name="childName" placeholder="Enter child's name" required>
-              </div>
-              <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" name="phone" placeholder="10-digit number" required>
-              </div>
-              <div class="form-group">
-                <label>Admission For Stage</label>
-                <select name="stage" required>
-                  <option value="">Select Age Group...</option>
-                  <option value="playgroup">Play Group (1.5 - 2.5 Yrs)</option>
-                  <option value="prenursery">Pre-Nursery (2.5 - 3.5 Yrs)</option>
-                  <option value="nursery">Nursery / LKG (3.5 - 4.5 Yrs)</option>
-                  <option value="prep">Prep / UKG (4.5 - 6 Yrs)</option>
-                </select>
-              </div>
-              <button type="submit" class="btn-submit">Submit Request</button>
-            </form>
+          
+          <div class="c-form tilt-card">
+            <div class="tilt-card-inner">
+              <h3>Book a FREE Visit</h3>
+              <!-- Netlify Form Integration -->
+              <form name="AELC_Playschool_Admission" method="POST" data-netlify="true" aria-label="Admission Form">
+                <input type="hidden" name="form-name" value="AELC_Playschool_Admission" />
+                <div class="form-group">
+                  <label for="parentName">Parent's Name</label>
+                  <input type="text" id="parentName" name="parentName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                  <label for="childName">Child's Name</label>
+                  <input type="text" id="childName" name="childName" placeholder="Enter child's name" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="10-digit number" required>
+                </div>
+                <div class="form-group">
+                  <label for="stage">Admission For Stage</label>
+                  <select id="stage" name="stage" required>
+                    <option value="">Select Age Group...</option>
+                    <option value="playgroup">Play Group (1.5 - 2.5 Yrs)</option>
+                    <option value="prenursery">Pre-Nursery (2.5 - 3.5 Yrs)</option>
+                    <option value="nursery">Nursery / LKG (3.5 - 4.5 Yrs)</option>
+                    <option value="prep">Prep / UKG (4.5 - 6 Yrs)</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn-submit" aria-label="Submit Admission Request">Submit Request</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
+    <img src="https://i.ibb.co/Cp79n1N6/image-2026-03-13-120621551-Photoroom-upscayl-4x-upscayl-standard-4x.png" alt="AELC Logo" class="f-logo-img" loading="lazy">
     <div class="f-logo">AELC Playschool</div>
     <p class="f-text">DG-2/115A, Vikaspuri, New Delhi - 110018</p>
     <p class="f-text" style="margin-top: 20px; font-size: 0.8rem;">&copy; 2026 Asha Early Learning Centre. All rights reserved.</p>
   </footer>
 
   <script>
-    // --- 3D TILT ENGINE ---
-    // This script calculates mouse position over cards and applies real-time 3D rotation
+    // --- 1. CSS 3D TILT ENGINE ---
     document.addEventListener('DOMContentLoaded', () => {
       const tiltCards = document.querySelectorAll('.tilt-card');
-
       tiltCards.forEach(card => {
-        // Only apply 3D effect on desktop to save battery/performance on mobile
         if (window.matchMedia("(pointer: fine)").matches) {
           card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left; // x position within the element
-            const y = e.clientY - rect.top;  // y position within the element
-            
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            
-            // Calculate rotation amount (max 12 degrees)
             const rotateX = ((y - centerY) / centerY) * -12;
             const rotateY = ((x - centerX) / centerX) * 12;
-            
-            // Apply CSS transform
             card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            
-            // Dynamic lighting/shadow based on mouse position
             const shadowX = ((x - centerX) / centerX) * -20;
             const shadowY = ((y - centerY) / centerY) * -20;
             card.style.boxShadow = `${shadowX}px ${shadowY}px 40px rgba(0,0,0,0.15)`;
           });
-
-          // Reset on mouse leave
           card.addEventListener('mouseleave', () => {
             card.style.transform = `rotateX(0deg) rotateY(0deg)`;
-            card.style.boxShadow = ''; // Reset to default CSS shadow
+            card.style.boxShadow = '';
           });
         }
       });
     });
+
+    // --- 2. THREE.JS MIND-BOGGLING BACKGROUND ENGINE ---
+    window.addEventListener('load', initThreeJS);
+
+    function initThreeJS() {
+      const canvas = document.getElementById('three-canvas');
+      if (!canvas) return;
+
+      const scene = new THREE.Scene();
+      // Use a transparent background so the CSS gradient shows through
+      scene.background = null; 
+
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 30;
+
+      const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(window.devicePixelRatio);
+
+      // Lighting
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+      scene.add(ambientLight);
+      
+      const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+      dirLight.position.set(10, 20, 10);
+      scene.add(dirLight);
+
+      // Create Floating 3D Shapes
+      const shapes = [];
+      const colors = [0xFF6B6B, 0x4ECDC4, 0xFFD93D, 0xA78BFA, 0x6BCB77]; // Coral, Sky, Sun, Lavender, Mint
+
+      const geometries = [
+        new THREE.TorusKnotGeometry(2, 0.6, 64, 12),
+        new THREE.IcosahedronGeometry(3, 0),
+        new THREE.OctahedronGeometry(2.5, 1),
+        new THREE.TetrahedronGeometry(3, 0),
+        new THREE.SphereGeometry(2, 32, 32)
+      ];
+
+      // Add 15 random shapes to the scene
+      for (let i = 0; i < 15; i++) {
+        const geo = geometries[Math.floor(Math.random() * geometries.length)];
+        const mat = new THREE.MeshPhysicalMaterial({
+          color: colors[Math.floor(Math.random() * colors.length)],
+          roughness: 0.2,
+          metalness: 0.1,
+          clearcoat: 0.3,
+          transparent: true,
+          opacity: 0.85
+        });
+
+        const mesh = new THREE.Mesh(geo, mat);
+        
+        // Random positions spreading across the canvas
+        mesh.position.x = (Math.random() - 0.5) * 60;
+        mesh.position.y = (Math.random() - 0.5) * 40;
+        mesh.position.z = (Math.random() - 0.5) * 20 - 10;
+        
+        // Random rotation speeds
+        mesh.userData = {
+          rx: (Math.random() - 0.5) * 0.02,
+          ry: (Math.random() - 0.5) * 0.02,
+          rz: (Math.random() - 0.5) * 0.02,
+          yOffset: Math.random() * Math.PI * 2
+        };
+
+        scene.add(mesh);
+        shapes.push(mesh);
+      }
+
+      // Parallax Mouse Interaction
+      let mouseX = 0;
+      let mouseY = 0;
+      let targetX = 0;
+      let targetY = 0;
+      const windowHalfX = window.innerWidth / 2;
+      const windowHalfY = window.innerHeight / 2;
+
+      document.addEventListener('mousemove', (event) => {
+        mouseX = (event.clientX - windowHalfX) * 0.01;
+        mouseY = (event.clientY - windowHalfY) * 0.01;
+      });
+
+      // Animation Loop
+      function animate() {
+        requestAnimationFrame(animate);
+
+        // Smooth camera movement based on mouse
+        targetX = mouseX * 2;
+        targetY = mouseY * 2;
+        camera.position.x += (targetX - camera.position.x) * 0.05;
+        camera.position.y += (-targetY - camera.position.y) * 0.05;
+        camera.lookAt(scene.position);
+
+        const time = Date.now() * 0.001;
+
+        // Rotate and float shapes
+        shapes.forEach((shape) => {
+          shape.rotation.x += shape.userData.rx;
+          shape.rotation.y += shape.userData.ry;
+          shape.rotation.z += shape.userData.rz;
+          
+          // Gentle up/down floating
+          shape.position.y += Math.sin(time + shape.userData.yOffset) * 0.02;
+        });
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+
+      // Handle Window Resize
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    }
   </script>
 </body>
 </html>
