@@ -344,13 +344,13 @@ title: AELC - Beyond the Books
     .why-card p { font-size: 0.9rem; font-weight: 600; color: var(--muted); line-height: 1.7; }
     .why-card .why-tag { position: absolute; top: 16px; right: 16px; font-size: 0.65rem; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 99px; }
 
-    .cert-strip { background: white; padding: 32px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center; position: relative; z-index: 5;}
+    .cert-strip { background: linear-gradient(90deg, #ffffff 0%, #FFFBF5 50%, #ffffff 100%); padding: 48px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center; position: relative; z-index: 5;}
     .cert-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; }
     .cert-label { font-size: 0.85rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 3px; }
     .cert-logos { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
     .cert-logo-card { display: flex; align-items: center; gap: 12px; padding: 12px 24px; background: var(--bg-warm); border-radius: 12px; border: 1px solid var(--border); transition: var(--tr); cursor: pointer; }
     .cert-logo-card:hover { transform: translateY(-3px); box-shadow: var(--sh-sm); border-color: var(--sky); }
-    .cert-logo-card img { height: 36px; object-fit: contain; }
+    .cert-logo-card img { height: 36px; object-fit: contain; mix-blend-mode: multiply; }
     .cert-logo-card span { font-weight: 800; font-size: 0.95rem; color: var(--ink); }
 
     #tour { background: linear-gradient(135deg, #FFFBF5 0%, #FFF0F0 100%); position: relative; padding-bottom: 120px; }
@@ -400,7 +400,7 @@ title: AELC - Beyond the Books
     .process-header .sec-sub { color: rgba(255, 255, 255, 0.85); margin: 0 auto; }
     
     .steps-track { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
-    .steps-track::before { content: ''; position: absolute; top: 48px; left: 10%; right: 10%; height: 4px; background: rgba(255, 255, 255, 0.25); z-index: 0; border-radius: 99px; }
+    .steps-track::before { content: ''; position: absolute; top: 48px; left: 10%; right: 10%; height: 4px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); z-index: 0; border-radius: 99px; }
     
     .step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 16px; position: relative; z-index: 1; }
     .step-num { width: 96px; height: 96px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15); margin-bottom: 20px; transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
@@ -521,7 +521,7 @@ title: AELC - Beyond the Books
     .fg label { font-size: 0.75rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-left: 4px; }
     
     .fg input, .fg select, .fg textarea { padding: 16px 20px; border: 2px solid #E2E8F0; border-radius: 14px; font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: var(--ink); outline: none; transition: var(--tr); background: #F8FAFC; }
-    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--sky); background: white; box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.15); }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--sky); background: white; box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.2), 0 8px 16px rgba(0,0,0,0.05); transform: translateY(-1px); }
     .fg textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
 
     .btn-form { width: 100%; background: linear-gradient(135deg, var(--coral), var(--peach)); color: white; border: none; border-radius: 14px; padding: 18px; font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; box-shadow: 0 8px 24px rgba(255, 107, 107, 0.35); transition: var(--tr); margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; }
@@ -647,7 +647,7 @@ title: AELC - Beyond the Books
       <div class="hero-shimmer"></div>
       
       <div class="hero-float-pills">
-        <div class="hfp"><i class="fa-solid fa-check" style="color:var(--mint)"></i> Trinity Certified</div>
+        <div class="hfp"><i class="fa-solid fa-snowflake" style="color:var(--mint)"></i> FULLY AC</div>
         <div class="hfp"><i class="fa-solid fa-video" style="color:var(--sky)"></i> CCTV Monitored</div>
         <div class="hfp"><i class="fa-solid fa-star" style="color:var(--sun)"></i> Free Demo Class</div>
       </div>
@@ -802,7 +802,7 @@ title: AELC - Beyond the Books
         <span class="cert-label">Certifications &amp; Registrations</span>
         <div class="cert-logos">
           <div class="cert-logo-card">
-            <img src="https://cpimg.tistatic.com/08209356/b/4/MSME-Certificate-Service.jpg" alt="MSME certification logo" loading="lazy" onerror="this.style.display='none'">
+            <img src="https://www.legalraasta.com/blog/wp-content/uploads/2018/09/Importance-1-e1536998812445.png" alt="MSME certification logo" loading="lazy" onerror="this.style.display='none'">
             <span>MSME</span>
           </div>
           <div class="cert-logo-card">
@@ -1227,7 +1227,7 @@ title: AELC - Beyond the Books
       const g = document.getElementById('prog-grid');
       if (!g) return;
       g.innerHTML = PROGRAMS.map((p, i) => `
-    <article class="prog-card rv d${(i % 4) + 1}" style="--pc:${p.border}">
+    <article class="prog-card rv d${(i % 4) + 1}" style="--pc:${p.border}; background: linear-gradient(145deg, rgba(30, 34, 53, 0.8), rgba(15, 18, 30, 0.95)), radial-gradient(circle at top right, ${p.bg}, transparent 70%);">
       <div style="position:absolute;top:0;left:0;right:0;height:4px;background:${p.border}"></div>
       <div class="prog-icon-wrap" style="color:${p.color}; background:${p.bg}">${p.icon}</div>
       <div class="prog-age" style="background:${p.bg};color:${p.color}">${p.age}</div>
