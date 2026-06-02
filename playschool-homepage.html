@@ -1,1265 +1,546 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Asha Early Learning Centre | Best Playschool in Vikaspuri, Delhi | Age 1.5-6</title><meta name="description" content="Asha Early Learning Centre - Vikaspuri's most-loved playschool. Holistic learning, Trinity-certified music, safe classrooms, and joyful childhoods. Book your FREE demo class today!"><meta name="keywords" content="playschool Vikaspuri, best preschool Delhi, AELC, early learning, toddler classes, KG admission, music classes Delhi"><meta property="og:title" content="Asha Early Learning Centre | Vikaspuri's Premier Playschool"><meta property="og:description" content="Where curiosity meets joy. Expert-led playschool, tuitions & music in the heart of Vikaspuri, New Delhi."><meta property="og:type" content="website"><!-- Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800;900&family=Caveat:wght@500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><style>/* 
-   AELC PREMIUM HOMEPAGE - "Warm Wonder" Design System
-    */
-:root {
-  /* Primary Palette */
-  --coral:     #FF6B6B;
-  --coral-dark:#E05555;
-  --sky:       #4ECDC4;
-  --sky-dark:  #36b5ac;
-  --sun:       #FFD93D;
-  --sun-dark:  #E8C22A;
-  --mint:      #6BCB77;
-  --mint-dark: #50a85a;
-  --lavender:  #A78BFA;
-  --peach:     #FFB347;
-  --rose:      #FF8FAB;
+---
+title: AELC Playschool - A Magical Start
+---
+<!DOCTYPE html>
+<html lang="en">
 
-  /* Neutral */
-  --ink:       #1E2235;
-  --ink-light: #3D4464;
-  --muted:     #7A7F9A;
-  --border:    #E8EBF5;
-  --bg-warm:   #FFFBF5;
-  --bg-cream:  #FFF8F0;
-  --white:     #FFFFFF;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AELC Playschool | A Magical 3D World for Little Learners</title>
+  <meta name="description" content="Asha Early Learning Centre - Vikaspuri's premium playschool for ages 1.5 to 6. A magical, safe, and interactive environment for your child's first steps.">
+  <meta name="keywords" content="playschool Vikaspuri, best preschool Delhi, AELC playschool, early learning, toddler classes, nursery admission Delhi">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800;900&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <style>
+    :root {
+      /* Playful & Vibrant Palette */
+      --coral: #FF6B6B;
+      --coral-dark: #E05555;
+      --sky: #4ECDC4;
+      --sky-dark: #36b5ac;
+      --sun: #FFD93D;
+      --sun-dark: #E8C22A;
+      --mint: #6BCB77;
+      --lavender: #A78BFA;
+      
+      /* Neutral */
+      --ink: #2D3748; 
+      --muted: #718096;
+      --border: #E2E8F0;
+      --bg-main: #FAFAFA;
+      --white: #FFFFFF;
 
-  /* Type */
-  --font-display: 'Baloo 2', cursive;
-  --font-body:    'Nunito Sans', sans-serif;
-  --font-accent:  'Caveat', cursive;
+      /* Type */
+      --font-display: 'Baloo 2', cursive;
+      --font-body: 'Nunito Sans', sans-serif;
+      --font-accent: 'Caveat', cursive;
 
-  /* Spacing & Shape */
-  --r-sm:  0.75rem;
-  --r:     1.25rem;
-  --r-lg:  2rem;
-  --r-xl:  3rem;
-  --sh-sm: 0 4px 20px rgba(0,0,0,0.07);
-  --sh:    0 10px 40px rgba(0,0,0,0.10);
-  --sh-lg: 0 20px 60px rgba(0,0,0,0.12);
-  --tr:    all 0.35s cubic-bezier(0.4,0,0.2,1);
-}
-
-/*  RESET  */
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; font-size:16px; }
-body {
-  font-family: var(--font-body);
-  background: var(--bg-warm);
-  color: var(--ink);
-  overflow-x: hidden;
-  line-height: 1.6;
-}
-img { max-width:100%; display:block; }
-a { text-decoration:none; color:inherit; }
-button { cursor:pointer; font-family:var(--font-body); }
-ul { list-style:none; }
-
-/*  SCROLLBAR  */
-::-webkit-scrollbar { width:6px; }
-::-webkit-scrollbar-track { background:#f5f5f5; }
-::-webkit-scrollbar-thumb { background:var(--coral); border-radius:3px; }
-
-/* 
-   STICKY FLOATING CTA
- */
-#sticky-enroll {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  z-index: 9997;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
-}
-.sticky-wa {
-  width: 58px; height: 58px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex; align-items:center; justify-content:center;
-  font-size: 1.6rem;
-  color: white;
-  box-shadow: 0 6px 24px rgba(37,211,102,0.45);
-  animation: waBounce 2.5s ease-in-out infinite;
-  transition: var(--tr);
-}
-.sticky-wa:hover { transform: scale(1.12); }
-@keyframes waBounce {
-  0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45); }
-  50% { box-shadow: 0 6px 40px rgba(37,211,102,0.7), 0 0 0 12px rgba(37,211,102,0.1); }
-}
-.sticky-call {
-  background: var(--coral);
-  color: white;
-  border: none;
-  border-radius: 99px;
-  padding: 12px 22px;
-  font-family: var(--font-display);
-  font-size: 0.9rem;
-  font-weight: 700;
-  box-shadow: 0 6px 0 var(--coral-dark), 0 10px 30px rgba(255,107,107,0.35);
-  display: flex; align-items:center; gap:8px;
-  animation: fadeInUp 1s 2s both;
-  transition: var(--tr);
-}
-.sticky-call:hover { transform: translateY(-3px); box-shadow: 0 9px 0 var(--coral-dark), 0 14px 36px rgba(255,107,107,0.4); }
-@keyframes fadeInUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-
-/* 
-   NAVBAR
- */
-#nav {
-  position: fixed; top:0; left:0; right:0; z-index: 9000;
-  padding: 0 5vw;
-  display: flex; align-items:center; justify-content:space-between;
-  height: 76px;
-  background: rgba(255,251,245,0.96);
-  backdrop-filter: blur(16px);
-  border-bottom: 2px solid transparent;
-  transition: var(--tr);
-}
-#nav.scrolled {
-  height: 64px;
-  border-bottom-color: var(--border);
-  box-shadow: var(--sh-sm);
-}
-.nav-logo { display:flex; align-items:center; gap:12px; }
-.nav-logo-mark {
-  width: 46px; height: 46px;
-  background: linear-gradient(135deg, var(--coral), var(--peach));
-  border-radius: 50%;
-  display: flex; align-items:center; justify-content:center;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 0 var(--coral-dark), 0 6px 16px rgba(255,107,107,0.3);
-  transition: var(--tr);
-  flex-shrink: 0;
-}
-.nav-logo:hover .nav-logo-mark { transform: rotate(15deg) scale(1.08); }
-.nav-logo-text { line-height:1; }
-.nav-logo-name {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--ink);
-  letter-spacing: -0.5px;
-}
-.nav-logo-sub {
-  font-size: 0.62rem;
-  font-weight: 700;
-  color: var(--muted);
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-}
-.nav-links { display:flex; align-items:center; gap:4px; }
-.nav-links a {
-  font-size: 0.88rem; font-weight: 700;
-  color: var(--ink-light);
-  padding: 7px 13px;
-  border-radius: 99px;
-  transition: var(--tr);
-}
-.nav-links a:hover { color: var(--coral); background: rgba(255,107,107,0.08); }
-.nav-right { display:flex; align-items:center; gap:10px; }
-.nav-phone {
-  display: flex; align-items:center; gap:6px;
-  font-size: 0.85rem; font-weight: 800;
-  color: var(--ink);
-  padding: 8px 14px;
-  border-radius: 99px;
-  border: 2px solid var(--border);
-  transition: var(--tr);
-}
-.nav-phone:hover { border-color: var(--sky); color: var(--sky-dark); }
-.nav-phone i { color: var(--sky); }
-.btn-enroll-nav {
-  background: var(--coral);
-  color: white;
-  border: none;
-  border-radius: 99px;
-  padding: 10px 22px;
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 700;
-  box-shadow: 0 5px 0 var(--coral-dark);
-  transition: var(--tr);
-  display: inline-block;
-}
-.btn-enroll-nav:hover { transform:translateY(-3px); box-shadow:0 8px 0 var(--coral-dark); color:white; }
-.btn-enroll-nav:active { transform:translateY(2px); box-shadow:0 2px 0 var(--coral-dark); }
-
-/* HAMBURGER */
-#ham { display:none; background:none; border:2px solid var(--border); border-radius:8px; padding:7px 10px; flex-direction:column; gap:4px; }
-#ham span { display:block; width:20px; height:2px; background:var(--ink); border-radius:99px; transition:var(--tr); }
-#ham.open span:first-child { transform:translateY(6px) rotate(45deg); }
-#ham.open span:nth-child(2) { opacity:0; }
-#ham.open span:last-child { transform:translateY(-6px) rotate(-45deg); }
-
-/* MOBILE MENU */
-#mob-menu {
-  position: fixed; top:0; right:-100%; width:min(320px,92vw); height:100vh;
-  background: var(--white);
-  z-index: 8998;
-  padding: 0;
-  box-shadow: -8px 0 60px rgba(0,0,0,0.14);
-  transition: right 0.45s cubic-bezier(0.77,0,0.175,1);
-  display: flex; flex-direction:column;
-}
-#mob-menu.open { right:0; }
-.mob-head { background: linear-gradient(135deg,var(--coral),var(--peach)); padding:24px; display:flex;justify-content:space-between;align-items:center; }
-.mob-head-title { font-family:var(--font-display); font-size:1.4rem; font-weight:800; color:white; }
-#mob-close { background:rgba(255,255,255,0.25); border:none; color:white; width:36px;height:36px;border-radius:50%;font-size:1.1rem; }
-.mob-links { padding:16px; flex:1; display:flex; flex-direction:column; gap:4px; }
-.mob-links a { display:block; padding:14px 16px; font-weight:800; font-size:1.05rem; color:var(--ink-light); border-radius:var(--r); transition:var(--tr); }
-.mob-links a:hover { background:rgba(255,107,107,0.08); color:var(--coral); }
-.mob-footer { padding:16px; border-top:2px solid var(--border); }
-.mob-contact-cta { width:100%; background:var(--coral); color:white; border:none; border-radius:var(--r); padding:14px; font-family:var(--font-display); font-size:1.1rem; font-weight:700; box-shadow:0 5px 0 var(--coral-dark); }
-.mob-overlay { position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:8997;opacity:0;pointer-events:none;transition:opacity 0.3s; }
-.mob-overlay.show { opacity:1;pointer-events:all; }
-
-/* 
-   HERO
- */
-#hero {
-  min-height: 100vh;
-  padding: 120px 5vw 80px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-/* Layered background */
-.hero-bg {
-  position: absolute; inset:0; pointer-events:none; overflow:hidden;
-}
-.hero-blob {
-  position: absolute;
-  border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
-  opacity: 0.18;
-  animation: blobMorph 12s ease-in-out infinite alternate;
-}
-.hb1 { width:700px;height:700px;top:-200px;right:-150px;background:var(--coral);animation-duration:14s; }
-.hb2 { width:500px;height:500px;bottom:-100px;left:-80px;background:var(--sky);animation-duration:10s;animation-delay:-5s; }
-.hb3 { width:350px;height:350px;top:40%;left:55%;background:var(--sun);animation-duration:16s;animation-delay:-3s; }
-@keyframes blobMorph {
-  0%   { border-radius:60% 40% 70% 30% / 50% 60% 40% 70%; transform:translate(0,0) rotate(0deg); }
-  50%  { border-radius:30% 70% 40% 60% / 70% 30% 60% 40%; transform:translate(15px,-20px) rotate(4deg); }
-  100% { border-radius:50% 50% 30% 70% / 40% 70% 30% 60%; transform:translate(-10px,12px) rotate(-3deg); }
-}
-
-/* Floating emoji decorations */
-.hero-floats { position:absolute;inset:0;pointer-events:none; }
-.hf {
-  position:absolute;
-  font-size:2.5rem;
-  animation:floatDrift 8s ease-in-out infinite;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
-}
-.hf:nth-child(1){top:14%;left:4%;animation-delay:0s;animation-duration:9s;font-size:2.8rem}
-.hf:nth-child(2){top:24%;right:6%;animation-delay:1.2s;animation-duration:7s}
-.hf:nth-child(3){top:65%;left:5%;animation-delay:0.8s;animation-duration:10s;font-size:2rem}
-.hf:nth-child(4){bottom:22%;right:7%;animation-delay:2s;animation-duration:8.5s;font-size:3rem}
-.hf:nth-child(5){top:75%;left:50%;animation-delay:1.5s;animation-duration:6.5s;font-size:2.2rem}
-.hf:nth-child(6){top:38%;right:14%;animation-delay:0.4s;animation-duration:11s;font-size:1.8rem}
-.hf:nth-child(7){top:12%;right:25%;animation-delay:3s;animation-duration:9.5s;font-size:2.6rem}
-.hf:nth-child(8){bottom:35%;left:42%;animation-delay:2.5s;animation-duration:7.5s;font-size:2rem}
-@keyframes floatDrift {
-  0%,100%{transform:translateY(0) rotate(0deg);}
-  33%{transform:translateY(-18px) rotate(5deg);}
-  66%{transform:translateY(10px) rotate(-4deg);}
-}
-
-/* Dotted pattern overlay */
-.hero-dots {
-  position:absolute;inset:0;
-  background-image:radial-gradient(circle,rgba(30,34,53,0.06) 1.5px,transparent 1.5px);
-  background-size:32px 32px;
-  pointer-events:none;
-}
-
-.hero-content { position:relative;z-index:2; max-width:700px; }
-
-.hero-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: white;
-  border: 2px solid var(--border);
-  border-radius: 99px;
-  padding: 7px 16px 7px 10px;
-  font-size: 0.82rem;
-  font-weight: 800;
-  color: var(--ink-light);
-  margin-bottom: 24px;
-  box-shadow: var(--sh-sm);
-  animation: fadeInUp 0.7s 0.3s both;
-}
-.hero-pill-dot {
-  width: 10px; height:10px;
-  background: var(--mint);
-  border-radius: 50%;
-  animation: pillPulse 1.5s ease-in-out infinite;
-  flex-shrink:0;
-}
-@keyframes pillPulse {
-  0%,100%{box-shadow:0 0 0 0 rgba(107,203,119,0.7);}
-  50%{box-shadow:0 0 0 6px rgba(107,203,119,0);}
-}
-
-.hero-h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2.8rem, 6.5vw, 5.5rem);
-  font-weight: 800;
-  line-height: 1.06;
-  letter-spacing: -2px;
-  color: var(--ink);
-  margin-bottom: 24px;
-  animation: fadeInUp 0.8s 0.5s both;
-}
-.hero-h1 .accent { color: var(--coral); position:relative; display:inline-block; }
-.hero-h1 .accent::after {
-  content:'';
-  position:absolute;
-  bottom:-6px; left:0; right:0;
-  height:6px;
-  background: var(--sun);
-  border-radius:3px;
-  animation: underlineGrow 0.8s 1.3s both;
-  transform-origin:left;
-}
-@keyframes underlineGrow { from{transform:scaleX(0)} to{transform:scaleX(1)} }
-.hero-h1 .sky-word { color: var(--sky); }
-
-.hero-sub {
-  font-size: clamp(0.95rem,1.8vw,1.12rem);
-  font-weight: 600;
-  color: var(--muted);
-  line-height: 1.85;
-  max-width: 560px;
-  margin-bottom: 36px;
-  animation: fadeInUp 0.8s 0.7s both;
-}
-.hero-sub strong { color: var(--ink); font-weight:800; }
-
-.hero-ctas {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 52px;
-  animation: fadeInUp 0.8s 0.9s both;
-}
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--coral);
-  color: white;
-  border: none;
-  border-radius: var(--r-xl);
-  padding: 16px 36px;
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 700;
-  box-shadow: 0 8px 0 var(--coral-dark), 0 12px 32px rgba(255,107,107,0.35);
-  transition: var(--tr);
-}
-.btn-primary:hover { transform:translateY(-4px);box-shadow:0 12px 0 var(--coral-dark),0 16px 40px rgba(255,107,107,0.4);color:white; }
-.btn-primary:active { transform:translateY(4px);box-shadow:0 2px 0 var(--coral-dark); }
-
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: white;
-  color: var(--ink);
-  border: 2.5px solid var(--ink);
-  border-radius: var(--r-xl);
-  padding: 14px 32px;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  box-shadow: 0 6px 0 rgba(0,0,0,0.12), 0 10px 24px rgba(0,0,0,0.07);
-  transition: var(--tr);
-}
-.btn-secondary:hover { transform:translateY(-4px);box-shadow:0 10px 0 rgba(0,0,0,0.12),0 14px 32px rgba(0,0,0,0.09);color:var(--ink); }
-
-/* Hero badges */
-.hero-badges {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  animation: fadeInUp 0.8s 1.1s both;
-}
-.hero-badge {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: white;
-  border-radius: var(--r);
-  padding: 12px 18px;
-  box-shadow: var(--sh-sm);
-  border: 2px solid var(--border);
-}
-.hbadge-icon { font-size:1.5rem; }
-.hbadge-num {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--ink);
-  line-height: 1;
-}
-.hbadge-lbl { font-size:0.65rem; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:1.5px; }
-
-/* Hero image card */
-.hero-img-card {
-  position: absolute;
-  right: 5vw;
-  top: 50%;
-  transform: translateY(-50%);
-  width: min(42vw, 520px);
-  animation: heroImgIn 1s 0.6s both;
-}
-@keyframes heroImgIn { from{opacity:0;transform:translateY(-40%) translateX(40px)} to{opacity:1;transform:translateY(-50%) translateX(0)} }
-.hic-main {
-  position: relative;
-  background: linear-gradient(135deg,#FFE5E5,#FFF3E0,#E8F5E9);
-  border-radius: 2rem;
-  padding: 32px;
-  box-shadow: var(--sh-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10rem;
-  line-height:1;
-  border: 3px solid white;
-  overflow:hidden;
-}
-.hic-main::before {
-  content:'';
-  position:absolute;inset:0;
-  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF6B6B' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-.hic-pill {
-  position: absolute;
-  background: white;
-  border-radius: 99px;
-  padding: 8px 16px;
-  font-size: 0.8rem;
-  font-weight: 800;
-  display: flex; align-items:center; gap:7px;
-  box-shadow: var(--sh-sm);
-  white-space:nowrap;
-}
-.hic-pill-1 { top:-14px;left:20px; }
-.hic-pill-2 { bottom:-14px;right:20px; }
-.hic-pill-3 { top:50%;right:-16px;transform:translateY(-50%); }
-.hic-float {
-  position:absolute;
-  animation:floatDrift 6s ease-in-out infinite;
-}
-.hic-float-1{top:8%;right:12%;font-size:1.8rem;animation-delay:0.5s}
-.hic-float-2{bottom:12%;left:14%;font-size:1.6rem;animation-delay:1.2s}
-
-/* Hero wave */
-.hero-wave {
-  position:absolute;bottom:-2px;left:0;width:100%;line-height:0;pointer-events:none;
-}
-
-/* 
-   TRUST BAR / STATS
- */
-#stats {
-  background: var(--ink);
-  padding: 0;
-}
-.stats-inner {
-  max-width:1200px; margin:0 auto;
-  display: grid;
-  grid-template-columns: repeat(5,1fr);
-  padding: 0 5vw;
-}
-.stat-block {
-  text-align:center;
-  padding: 32px 16px;
-  position:relative;
-  animation: fadeInUp 0.6s both;
-}
-.stat-block + .stat-block::before {
-  content:'';
-  position:absolute;left:0;top:20%;bottom:20%;
-  width:1px;background:rgba(255,255,255,0.08);
-}
-.stat-icon { font-size:1.8rem; margin-bottom:8px; display:block; }
-.stat-num {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem,3vw,2.8rem);
-  font-weight: 800;
-  line-height:1;
-  margin-bottom:4px;
-}
-.stat-lbl {
-  font-size: 0.7rem;
-  font-weight: 800;
-  color: rgba(255,255,255,0.4);
-  text-transform:uppercase;
-  letter-spacing:2px;
-}
-
-/* 
-   SECTION COMMON
- */
-.section { padding: 90px 5vw; }
-.section-inner { max-width:1200px; margin:0 auto; }
-.two-col { display:grid; 1fr; gap:64px; align-items:center; }
-.sec-tag {
-  display:inline-flex;align-items:center;gap:8px;
-  background: rgba(255,107,107,0.1);
-  color: var(--coral);
-  font-size:0.72rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;
-  padding:6px 16px;border-radius:99px;
-  margin-bottom:16px;
-}
-.sec-tag-sky { background:rgba(78,205,196,0.12);color:var(--sky-dark); }
-.sec-tag-mint { background:rgba(107,203,119,0.12);color:var(--mint-dark); }
-.sec-tag-sun { background:rgba(255,217,61,0.2);color:#b38a00; }
-.sec-tag-lav { background:rgba(167,139,250,0.14);color:#7c5fe6; }
-.sec-h { font-family:var(--font-display); font-size:clamp(2rem,4vw,3rem); font-weight:800; line-height:1.1; letter-spacing:-1px; margin-bottom:16px; }
-.sec-sub { font-size:1rem; font-weight:600; color:var(--muted); line-height:1.8; max-width:560px; }
-
-/* Reveal animations */
-.rv { opacity:0; transform:translateY(40px); transition:opacity 0.7s ease,transform 0.7s ease; }
-.rv-l { opacity:0; transform:translateX(-40px); transition:opacity 0.7s ease,transform 0.7s ease; }
-.rv-r { opacity:0; transform:translateX(40px); transition:opacity 0.7s ease,transform 0.7s ease; }
-.rv.in, .rv-l.in, .rv-r.in { opacity:1; transform:translate(0); }
-.d1{transition-delay:0.08s}.d2{transition-delay:0.16s}.d3{transition-delay:0.24s}.d4{transition-delay:0.32s}.d5{transition-delay:0.40s}
-
-/* 
-   ABOUT
- */
-#about { background:var(--white); }
-.about-left .sec-sub { max-width:100%; }
-.about-checkmarks { display:flex; flex-direction:column; gap:12px; margin:28px 0; }
-.about-check {
-  display:flex; align-items:center; gap:12px;
-  font-size:0.95rem; font-weight:700; color:var(--ink-light);
-}
-.ac-icon {
-  width:36px;height:36px;border-radius:10px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:1rem;flex-shrink:0;
-}
-.about-quote {
-  background: linear-gradient(135deg,rgba(255,107,107,0.08),rgba(255,179,71,0.08));
-  border-left: 4px solid var(--coral);
-  border-radius: 0 var(--r) var(--r) 0;
-  padding: 18px 22px;
-  margin: 24px 0;
-}
-.about-quote p { font-family:var(--font-accent); font-size:1.2rem; color:var(--ink); line-height:1.6; }
-.about-ctas { display:flex; gap:12px; flex-wrap:wrap; }
-
-/* About visual side */
-.about-visual { position:relative; }
-.about-card-big {
-  background: linear-gradient(145deg,#FFE9E9,#FFF5E6,#E9F9EF);
-  border-radius:2rem;
-  padding: 48px 40px;
-  text-align:center;
-  box-shadow: var(--sh-lg);
-  border: 3px solid white;
-  position:relative;
-  overflow:hidden;
-}
-.about-card-big::before {
-  content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;
-  background:radial-gradient(circle,rgba(255,107,107,0.12),transparent);border-radius:50%;
-}
-.about-main-emoji { font-size:8rem; display:block; margin-bottom:16px; line-height:1; filter:drop-shadow(0 8px 24px rgba(0,0,0,0.12)); }
-.about-card-big h3 { font-family:var(--font-display); font-size:1.5rem; margin-bottom:8px; }
-.about-card-big p { font-size:0.9rem; font-weight:600; color:var(--muted); margin-bottom:20px; }
-.about-mini-grid { display:grid; 1fr; gap:10px; }
-.amg-item {
-  background:white;border-radius:var(--r-sm);padding:12px;
-  font-size:0.85rem;font-weight:800;color:var(--ink-light);
-  display:flex;align-items:center;gap:8px;
-  box-shadow:var(--sh-sm);
-}
-.about-float-badge {
-  position:absolute;
-  background:white;border-radius:99px;padding:10px 16px;
-  font-size:0.82rem;font-weight:900;
-  box-shadow:var(--sh);
-  display:flex;align-items:center;gap:8px;white-space:nowrap;
-}
-.afb-1{top:-16px;left:10%;transform:rotate(-4deg);}
-.afb-2{bottom:-16px;right:10%;transform:rotate(3deg);}
-
-/* 
-   PROGRAMS
- */
-#programs { background:var(--ink); position:relative; overflow:hidden; }
-#programs::before {
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle,rgba(255,255,255,0.04) 1.5px,transparent 1.5px);
-  background-size:28px 28px;pointer-events:none;
-}
-.prog-header { text-align:center; margin-bottom:56px; }
-.prog-header .sec-h { color:var(--sun); }
-.prog-header .sec-sub { color:rgba(255,255,255,0.55); margin:0 auto; }
-
-.prog-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
-.prog-card {
-  background: rgba(255,255,255,0.05); flex: 1 1 280px; max-width: 310px; display: flex; flex-direction: column; align-items: center;
-  border: 2px solid rgba(255,255,255,0.08);
-  border-radius: var(--r-lg);
-  padding: 28px;
-  cursor:pointer;
-  transition: var(--tr);
-  position:relative;
-  overflow:hidden;
-}
-.prog-card::before {
-  content:'';
-  position:absolute;top:0;left:0;right:0;height:4px;
-  border-radius:var(--r-lg) var(--r-lg) 0 0;
-}
-.prog-card:hover {
-  background: rgba(255,255,255,0.1);
-  transform: translateY(-8px);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.3);
-  border-color:rgba(255,255,255,0.2);
-}
-.prog-icon-wrap {
-  width:64px;height:64px;border-radius:var(--r-sm);
-  display:flex;align-items:center;justify-content:center;
-  font-size:2rem;margin-bottom:18px;
-  transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
-}
-.prog-card:hover .prog-icon-wrap { transform:rotate(8deg) scale(1.12); }
-.prog-age {
-  display:inline-block;font-size:0.65rem;font-weight:900;
-  letter-spacing:2px;text-transform:uppercase;
-  padding:3px 10px;border-radius:99px;margin-bottom:8px;
-}
-.prog-card h3 { font-family:var(--font-display); font-size:1.3rem; font-weight:800; color:white; margin-bottom:8px; }
-.prog-card p { font-size:0.87rem; font-weight:600; color:rgba(255,255,255,0.55); line-height:1.7; margin-bottom:18px; }
-.prog-feats { display:flex;flex-direction:column;gap:7px; }
-.prog-feat { display:flex;align-items:center;gap:8px;font-size:0.82rem;font-weight:700;color:rgba(255,255,255,0.7); }
-.prog-feat i { width:16px;font-size:0.7rem; }
-.prog-cta-row { margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1); }
-.prog-cta-btn {
-  width:100%;border:2px solid rgba(255,255,255,0.2);background:none;color:white;
-  border-radius:99px;padding:9px;font-family:var(--font-display);font-size:0.9rem;font-weight:700;
-  transition:var(--tr);
-}
-.prog-card:hover .prog-cta-btn { border-color:white;background:white; }
-
-/* 
-   WHY US
- */
-#why { background:var(--bg-cream); }
-.why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:56px; }
-.why-card {
-  background:white; flex: 1 1 280px; max-width: 310px; display: flex; flex-direction: column; align-items: center;border-radius:var(--r-lg);padding:32px 24px;
-  transition:var(--tr);position:relative;
-  border-bottom:4px solid transparent;
-  box-shadow:var(--sh-sm);
-}
-.why-card:hover { transform:translateY(-8px);box-shadow:var(--sh-lg); }
-.why-icon {
-  width:68px;height:68px;border-radius:var(--r);
-  display:flex;align-items:center;justify-content:center;
-  font-size:2rem;margin-bottom:18px;
-  transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
-}
-.why-card:hover .why-icon { transform:rotate(10deg) scale(1.1); }
-.why-card h3 { font-family:var(--font-display); font-size:1.2rem; font-weight:800; margin-bottom:8px; }
-.why-card p { font-size:0.87rem; font-weight:600; color:var(--muted); line-height:1.75; }
-.why-card .why-tag {
-  position:absolute;top:16px;right:16px;
-  font-size:0.62rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;
-  padding:3px 10px;border-radius:99px;
-}
-
-/* 
-   VIRTUAL TOUR TEASER
- */
-#tour { background:white; }
-.tour-inner { display:grid;1.2fr;gap:56px;align-items:center; }
-.tour-spaces { display:grid;1fr;gap:14px; }
-.tour-space {
-  border-radius:var(--r-lg);overflow:hidden;
-  position:relative;cursor:pointer;
-  transition:var(--tr);
-  aspect-ratio: 1;
-}
-.tour-space:hover { transform:scale(1.04);box-shadow:var(--sh-lg); }
-.ts-visual {
-  width:100%;height:100%;
-  display:flex;align-items:center;justify-content:center;
-  flex-direction:column;gap:10px;
-  font-size:0.85rem;font-weight:800;color:white;
-}
-.ts-icon { font-size:3rem;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.2)); }
-.ts-overlay {
-  position:absolute;inset:0;background:rgba(0,0,0,0);
-  display:flex;align-items:center;justify-content:center;
-  font-size:2rem;
-  transition:var(--tr);
-  opacity:0;
-}
-.tour-space:hover .ts-overlay { opacity:1;background:rgba(0,0,0,0.18); }
-.tour-space.tall { grid-row:span 2; }
-
-/* 
-   PROCESS / HOW IT WORKS
- */
-#process { background:linear-gradient(135deg,var(--coral),#FF8E53); overflow:hidden;position:relative; }
-#process::before {
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle,rgba(255,255,255,0.08) 2px,transparent 2px);
-  background-size:32px 32px;pointer-events:none;
-}
-.process-header { text-align:center;margin-bottom:56px; }
-.process-header .sec-h { color:white; }
-.process-header .sec-sub { color:rgba(255,255,255,0.7);margin:0 auto; }
-.steps-track { display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative; }
-.steps-track::before {
-  content:'';
-  position:absolute;top:44px;left:10%;right:10%;height:3px;
-  background:rgba(255,255,255,0.25);z-index:0;
-  border-radius:99px;
-}
-.step {
-  display:flex;flex-direction:column;align-items:center;text-align:center;
-  padding:0 12px;
-  position:relative;z-index:1;
-}
-.step-num {
-  width:88px;height:88px;border-radius:50%;
-  background:white;
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-display);font-size:1.6rem;font-weight:800;
-  box-shadow: 0 8px 0 rgba(0,0,0,0.12), 0 12px 32px rgba(0,0,0,0.15);
-  margin-bottom:18px;
-  position:relative;
-  transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
-}
-.step:hover .step-num { transform:scale(1.1) rotate(-5deg); }
-.step-num-inner { font-size:2.2rem;line-height:1; }
-.step h4 { font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:white; margin-bottom:6px; }
-.step p { font-size:0.82rem; font-weight:600; color:rgba(255,255,255,0.7); line-height:1.65; }
-
-/* 
-   TESTIMONIALS
- */
-#testimonials { background:var(--bg-warm); }
-.testi-header { text-align:center;margin-bottom:56px; }
-.testi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-.testi-card {
-  background:white; flex: 1 1 280px; max-width: 310px; display: flex; flex-direction: column; align-items: center;border-radius:var(--r-lg);padding:28px;
-  box-shadow:var(--sh-sm);transition:var(--tr);
-  position:relative;overflow:hidden;
-}
-.testi-card:hover { transform:translateY(-6px);box-shadow:var(--sh-lg); }
-.testi-card::after {
-  content:'"';
-  position:absolute;bottom:-10px;right:18px;
-  font-size:8rem;font-family:Georgia;color:var(--border);
-  line-height:1;pointer-events:none;
-}
-.tc-stars { color:var(--sun-dark); font-size:1rem; margin-bottom:12px; letter-spacing:2px; }
-.tc-text { font-size:0.92rem; font-weight:600; color:var(--ink-light); line-height:1.85; margin-bottom:20px; position:relative;z-index:1; }
-.tc-author { display:flex;align-items:center;gap:12px; }
-.tc-avatar {
-  width:48px;height:48px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.4rem;flex-shrink:0;
-  border:3px solid white;box-shadow:var(--sh-sm);
-}
-.tc-name { font-weight:900;font-size:0.92rem; }
-.tc-role { font-size:0.75rem;font-weight:700;color:var(--muted); }
-.testi-summary {
-  background:white;border-radius:var(--r-lg);padding:32px 40px;
-  display:flex;align-items:center;gap:40px;flex-wrap:wrap;
-  justify-content:center;
-  box-shadow:var(--sh-sm);margin-top:28px;
-}
-.ts-rating {
-  display:flex;align-items:center;gap:12px;
-}
-.ts-big-num { font-family:var(--font-display);font-size:3.5rem;font-weight:800;line-height:1; }
-.ts-stars { font-size:1.4rem;color:var(--sun-dark);letter-spacing:2px; }
-.ts-label { font-size:0.82rem;font-weight:800;color:var(--muted);line-height:1.6; }
-
-/* 
-   BLOG / TIPS
- */
-#blog { background:white; }
-.blog-header { display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px; }
-.blog-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:22px; }
-.blog-card {
-  border-radius:var(--r-lg);overflow:hidden;
-  background:var(--bg-warm); flex: 1 1 280px; max-width: 310px; display: flex; flex-direction: column; align-items: center;
-  transition:var(--tr);cursor:pointer;
-  border:2px solid var(--border);
-}
-.blog-card:hover { transform:translateY(-6px);box-shadow:var(--sh-lg);border-color:transparent; }
-.blog-img {
-  aspect-ratio:16/9;
-  display:flex;align-items:center;justify-content:center;
-  font-size:5rem;
-  position:relative;overflow:hidden;
-}
-.blog-body { padding:22px; }
-.blog-tag {
-  display:inline-block;font-size:0.65rem;font-weight:900;letter-spacing:2px;
-  text-transform:uppercase;padding:3px 10px;border-radius:99px;margin-bottom:10px;
-}
-.blog-card h3 { font-family:var(--font-display);font-size:1.15rem;font-weight:800;margin-bottom:8px;line-height:1.3; }
-.blog-card p { font-size:0.85rem;font-weight:600;color:var(--muted);line-height:1.7;margin-bottom:14px; }
-.blog-footer { display:flex;justify-content:space-between;align-items:center; }
-.blog-meta { font-size:0.75rem;font-weight:700;color:var(--muted); }
-.blog-read { font-size:0.82rem;font-weight:800;color:var(--coral);display:flex;align-items:center;gap:4px; }
-.blog-read i { transition:transform 0.2s; }
-.blog-card:hover .blog-read i { transform:translateX(4px); }
-
-/* 
-   FAQ
- */
-#faq { background:var(--bg-cream); }
-.faq-layout { display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start; }
-.faq-list { display:flex;flex-direction:column;gap:10px; }
-.faq-item {
-  background:white;border-radius:var(--r);
-  box-shadow:var(--sh-sm);overflow:hidden;
-}
-.faq-q {
-  width:100%;background:none;border:none;
-  padding:18px 22px;text-align:left;
-  font-family:var(--font-body);font-size:0.95rem;font-weight:800;color:var(--ink);
-  display:flex;justify-content:space-between;align-items:center;gap:12px;
-  transition:var(--tr);
-}
-.faq-q:hover { background:rgba(255,107,107,0.04); }
-.faq-q .fq-arrow { transition:transform 0.35s;color:var(--coral);flex-shrink:0;font-size:1.1rem; }
-.faq-q.open .fq-arrow { transform:rotate(45deg); }
-.faq-a { max-height:0;overflow:hidden;transition:max-height 0.45s ease; }
-.faq-a.open { max-height:300px; }
-.faq-a-inner { padding:0 22px 20px;font-size:0.9rem;font-weight:600;color:var(--muted);line-height:1.85; }
-.faq-right { position:sticky;top:100px; }
-.faq-cta-card {
-  background:linear-gradient(135deg,var(--sky),var(--mint));
-  border-radius:var(--r-lg);padding:40px;text-align:center;
-  box-shadow:var(--sh-lg);
-}
-.faq-cta-card h3 { font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:white;margin-bottom:10px; }
-.faq-cta-card p { font-size:0.9rem;font-weight:600;color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:24px; }
-.faq-cta-icon { font-size:4rem;margin-bottom:16px;display:block; }
-.btn-white {
-  display:inline-flex;align-items:center;gap:10px;
-  background:white;color:var(--ink);border:none;border-radius:99px;
-  padding:14px 28px;font-family:var(--font-display);font-size:1rem;font-weight:800;
-  box-shadow:0 6px 0 rgba(0,0,0,0.1);transition:var(--tr);
-}
-.btn-white:hover { transform:translateY(-3px);box-shadow:0 9px 0 rgba(0,0,0,0.1); }
-
-/* 
-   CONTACT / ENROLLMENT FORM
- */
-#contact { background:var(--ink); position:relative;overflow:hidden; }
-#contact::before {
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle,rgba(255,255,255,0.03) 1.5px,transparent 1.5px);
-  background-size:24px 24px;pointer-events:none;
-}
-.contact-layout { display:grid;1.1fr;gap:64px;align-items:center; }
-.contact-left { position:relative;z-index:1; }
-.contact-left .sec-h { color:var(--sun); }
-.contact-left .sec-sub { color:rgba(255,255,255,0.6);max-width:100%; }
-.contact-info { display:flex;flex-direction:column;gap:16px;margin-top:36px; }
-.ci-item {
-  display:flex;align-items:center;gap:16px;
-  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);
-  border-radius:var(--r);padding:14px 18px;
-  transition:var(--tr);
-}
-.ci-item:hover { background:rgba(255,255,255,0.1);transform:translateX(6px); }
-.ci-icon {
-  width:44px;height:44px;border-radius:10px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.2rem;flex-shrink:0;
-}
-.ci-text h4 { font-size:0.7rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:3px; }
-.ci-text a, .ci-text span { font-size:0.97rem;font-weight:700;color:white;display:block;line-height:1.5; }
-.ci-text a:hover { color:var(--sun); }
-.contact-socials { display:flex;gap:10px;margin-top:16px; }
-.c-social {
-  width:40px;height:40px;border-radius:50%;
-  background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);
-  display:flex;align-items:center;justify-content:center;
-  font-size:0.95rem;color:rgba(255,255,255,0.6);transition:var(--tr);
-}
-.c-social:hover { background:var(--coral);color:white;border-color:var(--coral);transform:translateY(-3px); }
-
-/* Form */
-.form-card {
-  background:white; flex: 1 1 280px; max-width: 310px; display: flex; flex-direction: column; align-items: center;border-radius:var(--r-xl);padding:48px 40px;
-  box-shadow:var(--sh-lg);position:relative;z-index:1;
-}
-.form-card h3 { font-family:var(--font-display);font-size:1.6rem;font-weight:800;margin-bottom:6px; }
-.form-card p { font-size:0.9rem;font-weight:600;color:var(--muted);margin-bottom:28px; }
-.form-grid { display:grid;1fr;gap:16px; }
-.fg { display:flex;flex-direction:column;gap:6px; }
-.fg.full { grid-column:span 2; }
-.fg label { font-size:0.7rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#888; }
-.fg input,.fg select,.fg textarea {
-  padding:13px 16px;border:2.5px solid var(--border);border-radius:var(--r-sm);
-  font-family:var(--font-body);font-size:0.92rem;font-weight:700;
-  outline:none;transition:var(--tr);background:var(--bg-warm);
-}
-.fg input:focus,.fg select:focus,.fg textarea:focus {
-  border-color:var(--sky);box-shadow:0 0 0 4px rgba(78,205,196,0.12);background:white;
-}
-.fg textarea { resize:vertical;min-height:80px;line-height:1.6; }
-.btn-form {
-  width:100%;background:var(--coral);color:white;border:none;
-  border-radius:var(--r);padding:18px;
-  font-family:var(--font-display);font-size:1.3rem;font-weight:800;
-  box-shadow:0 8px 0 var(--coral-dark),0 12px 32px rgba(255,107,107,0.3);
-  transition:var(--tr);margin-top:6px;
-  display:flex;align-items:center;justify-content:center;gap:10px;
-}
-.btn-form:hover { transform:translateY(-4px);box-shadow:0 12px 0 var(--coral-dark),0 16px 40px rgba(255,107,107,0.35); }
-.btn-form:active { transform:translateY(4px);box-shadow:0 2px 0 var(--coral-dark); }
-.form-privacy { text-align:center;font-size:0.78rem;font-weight:700;color:#aaa;margin-top:12px; }
-.form-success { display:none;text-align:center;padding:24px; }
-.fs-icon { font-size:5rem;margin-bottom:12px; }
-.form-success h3 { font-size:1.5rem;margin-bottom:8px; }
-.form-success p { font-size:0.9rem;font-weight:600;color:var(--muted);line-height:1.7; }
-
-/* 
-   FOOTER
- */
-footer {
-  background:#0D0F1A;
-  padding:72px 5vw 0;
-  border-top:4px solid var(--sun);
-}
-.footer-top { display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:48px;margin-bottom:56px; }
-.f-brand-logo { display:flex;align-items:center;gap:12px;margin-bottom:16px; }
-.f-brand-mark {
-  width:44px;height:44px;border-radius:50%;
-  background:linear-gradient(135deg,var(--coral),var(--peach));
-  display:flex;align-items:center;justify-content:center;font-size:1.3rem;
-}
-.f-brand-name { font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:white; }
-.f-tagline { font-family:var(--font-accent);font-size:1.1rem;color:rgba(255,255,255,0.5);margin-bottom:12px; }
-.f-desc { font-size:0.85rem;font-weight:600;color:rgba(255,255,255,0.4);line-height:1.85;margin-bottom:20px; }
-.f-socials { display:flex;gap:10px; }
-.f-soc {
-  width:38px;height:38px;border-radius:50%;
-  background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);
-  display:flex;align-items:center;justify-content:center;
-  font-size:0.9rem;color:rgba(255,255,255,0.5);transition:var(--tr);
-}
-.f-soc:hover { background:var(--coral);color:white;border-color:var(--coral);transform:translateY(-3px); }
-.f-col h4 { font-size:0.65rem;font-weight:900;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:18px; }
-.f-col ul { display:flex;flex-direction:column;gap:10px; }
-.f-col ul li a { color:rgba(255,255,255,0.55);font-size:0.88rem;font-weight:700;transition:color 0.2s; }
-.f-col ul li a:hover { color:var(--sun); }
-.f-accreditation { display:flex;flex-wrap:wrap;gap:8px; }
-.f-acc { background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);padding:7px 12px;border-radius:var(--r-sm);font-size:0.75rem;font-weight:900;color:rgba(255,255,255,0.45);display:inline-flex;align-items:center;gap:6px; }
-.footer-bottom {
-  border-top:1px solid rgba(255,255,255,0.07);
-  padding:20px 0;
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
-}
-.footer-bottom p { font-size:0.8rem;font-weight:700;color:rgba(255,255,255,0.3); }
-
-/* 
-   UTILITIES & RESPONSIVE
- */
-.text-center { text-align:center; }
-.mt-8 { margin-top:8px; }
-.btn-link {
-  display:inline-flex;align-items:center;gap:6px;
-  font-weight:800;font-size:0.9rem;color:var(--coral);
-  transition:var(--tr);
-}
-.btn-link i { transition:transform 0.2s; }
-.btn-link:hover { color:var(--coral-dark); }
-.btn-link:hover i { transform:translateX(5px); }
-
-@media(max-width:1100px){
-  .prog-grid { grid-template-columns:repeat(2,1fr); }
-  .why-grid { grid-template-columns:repeat(2,1fr); }
-  .footer-top { 1fr; }
-}
-@media(max-width:900px){
-  .nav-links,.nav-right { display:none; }
-  #ham { display:flex; }
-  .two-col,.tour-inner,.contact-layout,.faq-layout,.blog-header { }
-  .blog-header { flex-direction:column;align-items:flex-start;gap:12px; }
-  .hero-img-card { display:none; }
-  .stats-inner { grid-template-columns:repeat(3,1fr); }
-  .steps-track { 1fr; gap:28px; }
-  .steps-track::before { display:none; }
-  .curriculum-grid, .development-grid, .activities-grid, .classes-grid, .features-grid, .topics-grid, .subject-grid, .testimonials-grid { }
-  .faq-right { position:static; }
-  .curriculum-grid, .development-grid, .activities-grid, .classes-grid, .features-grid, .topics-grid, .subject-grid, .testimonials-grid { }
-  .why-grid { 1fr; }
-}
-@media(max-width:600px){
-  .section { padding:60px 5vw; }
-  .hero-h1 { letter-spacing:-1px; }
-  .hero-badges { gap:12px; }
-  .hero-badge { padding:10px 14px; }
-  .hero-ctas { gap:10px; }
-  .btn-primary, .btn-secondary { padding:14px 22px;font-size:1rem; }
-  .stats-inner { grid-template-columns:repeat(2,1fr); }
-  .steps-track { }
-  .curriculum-grid, .development-grid, .activities-grid, .classes-grid, .features-grid, .topics-grid, .subject-grid, .testimonials-grid { }
-  .fg.full { grid-column:auto; }
-  .curriculum-grid, .development-grid, .activities-grid, .classes-grid, .features-grid, .topics-grid, .subject-grid, .testimonials-grid { }
-  .tour-spaces { }
-  .curriculum-grid, .development-grid, .activities-grid, .classes-grid, .features-grid, .topics-grid, .subject-grid, .testimonials-grid { }
-  .curriculum-grid, .development-grid, .activities-grid, .classes-grid, .features-grid, .topics-grid, .subject-grid, .testimonials-grid { }
-  #sticky-enroll { bottom:16px;right:16px; }
-  .footer-top { }
-  .footer-bottom { flex-direction:column;text-align:center; }
-}
-</style>
-<link rel="stylesheet" href="admin-assets/animations.css"><link rel="stylesheet" href="admin-assets/site-theme.css"></head><body><!--  STICKY ACTIONS  --><div id="sticky-enroll"><a href="https://wa.me/919667897249" target="_blank" class="sticky-wa" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><a href="#contact" class="sticky-call"><i class="fa-solid fa-calendar-check"></i> Book Free Demo
-  </a></div><!--  NAVBAR  --><nav id="nav"><a href="#" class="nav-logo"><div class="nav-logo-mark"></div><div class="nav-logo-text"><div class="nav-logo-name">AELC</div><div class="nav-logo-sub">Asha Early Learning</div></div></a><div class="nav-links"><a href="#about">About</a><a href="#programs">Programs</a><a href="#tour">Tour</a><a href="#testimonials">Reviews</a><a href="#blog">Blog</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><div class="nav-right"><a href="tel:9667897249" class="nav-phone"><i class="fa-solid fa-phone"></i> 9667897249</a><a href="#contact" class="btn-enroll-nav"> Enroll Now</a></div><button id="ham" aria-label="Open menu"><span></span><span></span><span></span></button></nav><!-- MOBILE MENU --><div class="mob-overlay" id="mob-overlay"></div><div id="mob-menu"><div class="mob-head"><span class="mob-head-title"> AELC</span><button id="mob-close">x</button></div><div class="mob-links"><a href="#about" onclick="closeMob()"> About Us</a><a href="#programs" onclick="closeMob()"> Programs</a><a href="#tour" onclick="closeMob()"> Virtual Tour</a><a href="#testimonials" onclick="closeMob()"> Parent Reviews</a><a href="#blog" onclick="closeMob()"> Blog & Tips</a><a href="#faq" onclick="closeMob()">FAQ FAQs</a><a href="#contact" onclick="closeMob()"> Contact</a></div><div class="mob-footer"><button class="mob-contact-cta" onclick="closeMob();document.getElementById('contact').scrollIntoView({behavior:'smooth'})"> Book FREE Demo Class</button></div></div><!--  HERO  --><section id="hero"><div class="hero-bg"><div class="hero-blob hb1"></div><div class="hero-blob hb2"></div><div class="hero-blob hb3"></div><div class="hero-dots"></div></div><div class="hero-floats"><span class="hf"></span><span class="hf"></span><span class="hf"></span><span class="hf"></span><span class="hf"></span><span class="hf"></span><span class="hf"></span><span class="hf"></span></div><div class="hero-content"><div class="hero-pill"><div class="hero-pill-dot"></div>Admissions Open 2025-26  -  Vikaspuri, New Delhi
-    </div><h1 class="hero-h1">Where little minds<br><span class="accent">bloom</span> &amp;
-      <span class="sky-word">soar.</span></h1><p class="hero-sub"><strong>Asha Early Learning Centre</strong> - Vikaspuri's most trusted playschool blending
-      joyful exploration, music, arts, and world-class academic foundations.
-      <strong>Ages 1.5 to 17.</strong></p><div class="hero-ctas"><a href="#contact" class="btn-primary"><i class="fa-solid fa-calendar-check"></i> Book FREE Demo Class
-      </a><a href="#programs" class="btn-secondary"><i class="fa-solid fa-compass"></i> Explore Programs
-      </a></div><div class="hero-badges"><div class="hero-badge"><div class="hbadge-icon"></div><div><div class="hbadge-num" style="color:var(--coral)" data-target="500">0</div><div class="hbadge-lbl">Happy Students</div></div></div><div class="hero-badge"><div class="hbadge-icon"></div><div><div class="hbadge-num" style="color:var(--sky)" data-target="12">0</div><div class="hbadge-lbl">Years of Joy</div></div></div><div class="hero-badge"><div class="hbadge-icon"></div><div><div class="hbadge-num" style="color:var(--mint)" data-target="100">0</div><div class="hbadge-lbl">% Trinity Pass</div></div></div><div class="hero-badge"><div class="hbadge-icon"></div><div><div class="hbadge-num" style="color:var(--peach)">FREE</div><div class="hbadge-lbl">Demo Class</div></div></div></div></div><!-- Floating image card (hidden on mobile) --><div class="hero-img-card"><div class="hic-main"><span class="hic-float hic-float-1"></span><span class="hic-float hic-float-2"></span></div><div class="hic-pill hic-pill-1" style="color:var(--coral)"> Trinity Certified</div><div class="hic-pill hic-pill-2" style="color:var(--mint-dark)">Check CCTV + AC Classrooms</div><div class="hic-pill hic-pill-3" style="color:var(--sky-dark)"> Free Demo</div></div><div class="hero-wave"><svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,40 C360,80 720,0 1080,50 C1260,70 1380,30 1440,40 L1440,80 L0,80 Z" fill="#1E2235"/></svg></div></section><!--  STATS  --><div id="stats"><div class="stats-inner"><div class="stat-block rv d1"><span class="stat-icon"></span><div class="stat-num" style="color:var(--coral)" data-target="500">0</div><div class="stat-lbl">Students Enrolled</div></div><div class="stat-block rv d2"><span class="stat-icon"></span><div class="stat-num" style="color:var(--sky)" data-target="12">0</div><div class="stat-lbl">Years Serving</div></div><div class="stat-block rv d3"><span class="stat-icon"></span><div class="stat-num" style="color:var(--sun)" data-target="8">0</div><div class="stat-lbl">Programs</div></div><div class="stat-block rv d4"><span class="stat-icon"></span><div class="stat-num" style="color:var(--mint)" data-target="100">0</div><div class="stat-lbl">% Music Pass Rate</div></div><div class="stat-block rv d5"><span class="stat-icon"></span><div class="stat-num" style="color:var(--lavender)">4.9</div><div class="stat-lbl">Google Rating</div></div></div></div><!--  ABOUT  --><section id="about" class="section"><div class="section-inner two-col"><div class="about-left rv-l"><div class="sec-tag"> Our Story</div><h2 class="sec-h">Nurturing futures since <span style="color:var(--coral)">2012</span>, one child at a time.</h2><div class="stat-block rv d2"><span class="stat-icon"></span><div class="stat-num" style="color:var(--sky)" data-target="12">0</div><div class="stat-lbl">Years Serving</div></div><div class="stat-block rv d3"><span class="stat-icon"></span><div class="stat-num" style="color:var(--sun)" data-target="8">0</div><div class="stat-lbl">Programs</div></div><div class="stat-block rv d4"><span class="stat-icon"></span><div class="stat-num" style="color:var(--mint)" data-target="100">0</div><div class="stat-lbl">% Music Pass Rate</div></div><div class="stat-block rv d5"><span class="stat-icon"></span><div class="stat-num" style="color:var(--lavender)">4.9</div><div class="stat-lbl">Google Rating</div></div></div><div class="about-check"><div class="ac-icon" style="background:rgba(255,217,61,0.15)"></div>Trinity College London music exam centre</div></div><div class="about-check"><div class="ac-icon" style="background:rgba(167,139,250,0.14)"></div>FREE Demo Class before any commitment</div></div><!--  ABOUT  -->t-quote"><section id="about" class="section"> centre - we blend Real-Life Learning with Academic Excellence to prepare children for the world, not just the exam."</p><div class="section-inner two-col"><div class="about-left rv-l"><div class="sec-tag"> Our Story</div>"><i class="fa-solid fa-phone"></i> Book a Visit</a><h2 class="sec-h">Nurturing futures since <span style="color:var(--coral)">2012</span>, one child at a time.</h2><div class="about-checkmarks"><div class="about-check"><div class="ac-icon" style="background:rgba(255,107,107,0.12)"></div>Safe, CCTV-monitored, fully air-conditioned classrooms</div><div class="about-check"><div class="ac-icon" style="background:rgba(78,205,196,0.12)"></div>Structured timetable, notes & periodic assessments</div><div class="about-check"><div class="ac-icon" style="background:rgba(107,203,119,0.12)"></div>Low student-to-teacher ratio - every child seen</div><div class="about-check"><div class="ac-icon" style="background:rgba(255,217,61,0.15)"></div>Trinity College London music exam centre</div><div class="about-check"><div class="ac-icon" style="background:rgba(167,139,250,0.14)"></div>FREE Demo Class before any commitment</div></div>round Floor  -  New Delhi - 110018</p><div class="about-quote">grid"><p>"Not just another tuition centre - we blend Real-Life Learning with Academic Excellence to prepare children for the world, not just the exam."</p></div>iv class="amg-item"> 9318320049</div><div class="about-ctas">"> Mon-Sat</div><a href="#contact" class="btn-primary"><i class="fa-solid fa-phone"></i> Book a Visit</a><a href="#programs" class="btn-link">See all programs <i class="fa-solid fa-arrow-right"></i></a></div></div> class="about-float-badge afb-1"> 12+ Years of Excellence</div><div class="about-visual rv-r"> afb-2">Check 500+ Happy Families</div><div class="about-card-big"><span class="about-main-emoji"></span><h3>DG-2/115A, Vikaspuri</h3><p>Ground Floor  -  New Delhi - 110018</p><div class="about-mini-grid"><div class="amg-item"> 9667897249</div><div class="amg-item"> 9318320049</div><div class="amg-item"> Mon-Sat</div><div class="amg-item"> Near Metro</div>gba(255,217,61,0.15);color:var(--sun)"> Programs</div></div>s="sec-h" style="color:var(--sun)">Everything your child needs,<br>under one roof.</h2></div>ss="sec-sub">Tuitions  -  Playschool  -  Music  -  Art  -  AI  -  Life Skills - all designed with love.</p><div class="about-float-badge afb-1"> 12+ Years of Excellence</div><div class="about-float-badge afb-2">Check 500+ Happy Families</div></div> rendered by JS --></div>v></section></section><!--  PROGRAMS  --><section id="programs" class="section"><div class="section-inner">ion"><div class="prog-header rv"><div class="sec-tag dark" style="background:rgba(255,217,61,0.15);color:var(--sun)"> Programs</div><h2 class="sec-h" style="color:var(--sun)">Everything your child needs,<br>under one roof.</h2><p class="sec-sub">Tuitions  -  Playschool  -  Music  -  Art  -  AI  -  Life Skills - all designed with love.</p></div>lass="sec-sub" style="margin:0 auto">We don't just teach - we care, guide, and grow with your child every step of the way.</p><div class="prog-grid" id="prog-grid"><!-- rendered by JS -->"why-grid"></div> rendered by JS --></div>v></section></section><!--  WHY US  --><section id="why" class="section"><div class="section-inner">tion" style="background:white"><div class="text-center rv" style="margin-bottom:0"><div class="sec-tag sec-tag-mint"> Why AELC</div><h2 class="sec-h">Why 500+ Vikaspuri families <span style="color:var(--coral)">trust us.</span></h2><p class="sec-sub" style="margin:0 auto">We don't just teach - we care, guide, and grow with your child every step of the way.</p></div>2 class="sec-h">Step inside our <span style="color:var(--sky)">joyful</span> world.</h2><div class="why-grid" id="why-grid"> playrooms to the music studio and art lab - every corner of AELC is designed to spark curiosity and delight.</p><!-- rendered by JS -->p:28px;display:flex;flex-direction:column;gap:12px"></div><div style="display:flex;align-items:center;gap:12px;font-weight:700;font-size:0.9rem;color:var(--ink-light)"><span style="font-size:1.4rem"></span> Art & Craft Studio - Fully equipped</div></div><div style="display:flex;align-items:center;gap:12px;font-weight:700;font-size:0.9rem;color:var(--ink-light)"><span style="font-size:1.4rem"></span> Music Studio - Piano, Guitar, Ukulele</div></section><div style="display:flex;align-items:center;gap:12px;font-weight:700;font-size:0.9rem;color:var(--ink-light)"><span style="font-size:1.4rem"></span> Tuition Classrooms - AC, CCTV, Low-ratio</div><div style="display:flex;align-items:center;gap:12px;font-weight:700;font-size:0.9rem;color:var(--ink-light)"><span style="font-size:1.4rem"></span> AI & Tech Lab - Class 9-10 Innovation</div><!--  VIRTUAL TOUR  --><section id="tour" class="section" style="background:white">-top:28px;display:inline-flex"><i class="fa-solid fa-calendar-check"></i> Book a Physical Tour</a><div class="section-inner"><div class="tour-inner">s rv-r"><div class="rv-l">-space" style="background:linear-gradient(135deg,var(--coral),#FF8E53)"><div class="sec-tag sec-tag-sky"> Virtual Tour</div>Art Studio</div><h2 class="sec-h">Step inside our <span style="color:var(--sky)">joyful</span> world.</h2><p class="sec-sub">From our cosy playrooms to the music studio and art lab - every corner of AELC is designed to spark curiosity and delight.</p><div style="margin-top:28px;display:flex;flex-direction:column;gap:12px">y),var(--mint))"><div style="display:flex;align-items:center;gap:12px;font-weight:700;font-size:0.9rem;color:var(--ink-light)"><span style="font-size:1.4rem"></span> Art & Craft Studio - Fully equipped</div><div style="display:flex;align-items:center;gap:12px;font-weight:700;font-size:0.9rem;color:var(--ink-light)"><span style="font-size:1.4rem"></span> Music Studio - Piano, Guitar, Ukulele</div><div style="display:flex;align-items:center;gap:12px;font-weight:700;font-size:0.9rem;color:var(--ink-light)"><span style="font-size:1.4rem"></span> Tuition Classrooms - AC, CCTV, Low-ratio</div><div style="display:flex;align-items:center;gap:12px;font-weight:700;font-size:0.9rem;color:var(--ink-light)"><span style="font-size:1.4rem"></span> AI & Tech Lab - Class 9-10 Innovation</div></div> class="ts-visual"><div class="ts-icon"></div>Music Studio</div><a href="#contact" class="btn-primary" style="margin-top:28px;display:inline-flex"><i class="fa-solid fa-calendar-check"></i> Book a Physical Tour</a></div>v><div class="tour-spaces rv-r">e="background:linear-gradient(135deg,var(--sun),var(--peach))"><div class="tour-space" style="background:linear-gradient(135deg,var(--coral),#FF8E53)"><div class="ts-visual"><div class="ts-icon"></div>Art Studio</div><div class="ts-overlay"></div></div>lass="tour-space" style="background:linear-gradient(135deg,var(--mint),var(--sky))"><div class="tour-space" style="background:linear-gradient(135deg,var(--sky),var(--mint))"><div class="ts-visual"><div class="ts-icon"></div>Classrooms</div><div class="ts-overlay"></div></div><div class="tour-space tall" style="background:linear-gradient(145deg,var(--lavender),var(--sky))"><div class="ts-visual"><div class="ts-icon"></div>Music Studio</div><div class="ts-overlay"></div></div><div class="tour-space" style="background:linear-gradient(135deg,var(--sun),var(--peach))"><div class="ts-visual"><div class="ts-icon"></div>Play Area</div><div class="ts-overlay"></div></div>="process-header rv"><div class="tour-space" style="background:linear-gradient(135deg,var(--mint),var(--sky))">s</div><div class="ts-visual"><div class="ts-icon"></div>AI Lab</div>ly:var(--font-accent);font-weight:700;letter-spacing:0">we handle the rest!</span></h2><div class="ts-overlay"></div>nquiry to your child's first day - we make every step easy and exciting.</p></div></div>ss="steps-track" id="steps-track"></div> JS rendered --></div>v></section></section><!--  HOW IT WORKS  --><section id="process" class="section"><div class="section-inner">ass="section"><div class="process-header rv"><div class="sec-tag" style="background:rgba(255,255,255,0.15);color:white"> Simple Process</div><h2 class="sec-h">Getting started is simple - <span style="font-family:var(--font-accent);font-weight:700;letter-spacing:0">we handle the rest!</span></h2><p class="sec-sub">From your first inquiry to your child's first day - we make every step easy and exciting.</p></div>lass="sec-sub" style="margin:0 auto">Stories of transformation, growth, and joy from the parents who trust AELC with their most precious ones.</p><div class="steps-track" id="steps-track"><!-- JS rendered -->" id="testi-grid"></div> JS rendered --></div>v></section>lass="testi-summary rv"><div class="ts-rating"><!--  TESTIMONIALS  -->m">4.9</div><section id="testimonials" class="section">iv><div class="ts-label">Google Rating<br><span style="font-size:0.78rem;color:var(--muted)">100+ verified reviews</span></div></div><div class="section-inner"><div class="testi-header rv">t:60px;background:var(--border)"></div><div class="sec-tag sec-tag-lav"> Parent Stories</div><h2 class="sec-h">Real words from <span style="color:var(--coral)">real families.</span></h2><p class="sec-sub" style="margin:0 auto">Stories of transformation, growth, and joy from the parents who trust AELC with their most precious ones.</p></div>v><div class="testi-grid" id="testi-grid">ground:var(--border)"></div><!-- JS rendered -->lass="btn-primary"><i class="fa-solid fa-star"></i> Join Happy Families</a></div><div class="testi-summary rv"><div class="ts-rating"><div class="ts-big-num">4.9</div><div><div class="ts-stars"></div><div class="ts-label">Google Rating<br><span style="font-size:0.78rem;color:var(--muted)">100+ verified reviews</span></div></div></div>"blog" class="section"><div style="width:1px;height:60px;background:var(--border)"></div><div class="ts-rating">v"><div class="ts-big-num" style="color:var(--coral)">500+</div><div><div class="ts-label" style="font-size:0.88rem">Happy Families<br><span style="font-size:0.78rem">enrolled since 2012</span></div></div></div>class="sec-h">Tips, insights &amp; <span style="color:var(--peach)">stories</span> for parents.</h2><div style="width:1px;height:60px;background:var(--border)"></div><a href="#contact" class="btn-primary"><i class="fa-solid fa-star"></i> Join Happy Families</a>w-right"></i></a></div></div> class="blog-grid" id="blog-grid"></section> JS rendered --></div><!--  BLOG  --><section id="blog" class="section"><div class="section-inner"><div class="blog-header rv"><div>="faq" class="section"><div class="sec-tag sec-tag-sun"> Parenting Corner</div><h2 class="sec-h">Tips, insights &amp; <span style="color:var(--peach)">stories</span> for parents.</h2></div>lass="faq-left"><a href="#" class="btn-link" style="flex-shrink:0">View all articles <i class="fa-solid fa-arrow-right"></i></a></div>2 class="sec-h">Questions parents <span style="color:var(--coral)">often ask.</span></h2><div class="blog-grid" id="blog-grid">ist" style="margin-top:28px"><!-- JS rendered --> --></div>div></div>div></section> class="faq-right rv-r"><div class="faq-cta-card"><!--  FAQ  -->s="faq-cta-icon"></span><section id="faq" class="section">?</h3><div class="section-inner">p us, or book a free visit! Our team is available Monday-Saturday and will be happy to answer everything.</p><div class="faq-layout"> class="btn-white" style="margin-bottom:14px;display:inline-flex"><i class="fa-solid fa-calendar-check"></i> Book Free Demo</a><br><div class="faq-left">a.me/919667897249" target="_blank" class="btn-white" style="background:#25D366;color:white;display:inline-flex;gap:8px"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a><div class="sec-tag sec-tag-coral" style="background:rgba(255,107,107,0.1);color:var(--coral)">FAQ FAQs</div><h2 class="sec-h">Questions parents <span style="color:var(--coral)">often ask.</span></h2>dow:var(--sh-sm);border:2px solid var(--border)"><div class="faq-list rv" id="faq-list" style="margin-top:28px">argin-bottom:12px"> Visit Us</h4><!-- JS rendered -->0.9rem;font-weight:600;color:var(--muted);line-height:1.7">DG-2/115A, Ground Floor<br>Vikaspuri, New Delhi - 110018<br><br><a href="tel:9667897249" style="color:var(--coral);font-weight:900">9667897249</a>-  <a href="tel:9318320049" style="color:var(--coral);font-weight:900">9318320049</a></p></div></div><div class="faq-right rv-r"><div class="faq-cta-card"><span class="faq-cta-icon"></span><h3>Still have questions?</h3><p>Call us, WhatsApp us, or book a free visit! Our team is available Monday-Saturday and will be happy to answer everything.</p><a href="#contact" class="btn-white" style="margin-bottom:14px;display:inline-flex"><i class="fa-solid fa-calendar-check"></i> Book Free Demo</a><br><a href="https://wa.me/919667897249" target="_blank" class="btn-white" style="background:#25D366;color:white;display:inline-flex;gap:8px"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a></div>="contact-layout"><div style="background:white;border-radius:var(--r-lg);padding:28px;margin-top:18px;box-shadow:var(--sh-sm);border:2px solid var(--border)"><h4 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:12px"> Visit Us</h4>v><p style="font-size:0.9rem;font-weight:600;color:var(--muted);line-height:1.7">DG-2/115A, Ground Floor<br>Vikaspuri, New Delhi - 110018<br><br><a href="tel:9667897249" style="color:var(--coral);font-weight:900">9667897249</a>-  <a href="tel:9318320049" style="color:var(--coral);font-weight:900">9318320049</a></p></div>ss="sec-sub">Fill the form and our team calls you back within 24 hours. No obligation, no pressure - just a warm welcome!</p></div> class="contact-info"></div><div class="ci-item"><div class="ci-icon" style="background:rgba(255,107,107,0.15)"></div><div class="ci-text"><h4>Address</h4><span>DG-2/115A, Ground Floor, Vikaspuri, New Delhi - 110018</span></div></div></div><div class="ci-item"><div class="ci-icon" style="background:rgba(78,205,196,0.15)"></div><div class="ci-text"><h4>Phone / WhatsApp</h4><a href="tel:9667897249">9667897249</a><a href="tel:9318320049">9318320049</a></div></div></section><div class="ci-item"><div class="ci-icon" style="background:rgba(107,203,119,0.15)"></div><div class="ci-text"><h4>Hours</h4><span>Monday - Saturday  -  Morning & Evening Batches</span></div></div><div class="ci-item"><div class="ci-icon" style="background:rgba(255,217,61,0.2)"></div><div class="ci-text"><h4>Nearest Metro</h4><span>Vikaspuri Station, Blue Line</span></div></div><!--  CONTACT  --><section id="contact" class="section"><div class="section-inner">c-social"><i class="fa-brands fa-instagram"></i></a><div class="contact-layout">ocial"><i class="fa-brands fa-facebook"></i></a><div class="contact-left">ocial"><i class="fa-brands fa-youtube"></i></a><div class="sec-tag" style="background:rgba(255,217,61,0.15);color:var(--sun)"> Get In Touch</div>app"></i></a><h2 class="sec-h" style="color:var(--sun)">Book your child's <span style="color:var(--coral)">FREE</span> demo class today!</h2><p class="sec-sub">Fill the form and our team calls you back within 24 hours. No obligation, no pressure - just a warm welcome!</p><div class="contact-info"><div class="ci-item"><div class="ci-icon" style="background:rgba(255,107,107,0.15)"></div><div class="ci-text"><h4>Address</h4><span>DG-2/115A, Ground Floor, Vikaspuri, New Delhi - 110018</span></div></div><div class="ci-item"><div class="ci-icon" style="background:rgba(78,205,196,0.15)"></div><div class="ci-text"><h4>Phone / WhatsApp</h4><a href="tel:9667897249">9667897249</a><a href="tel:9318320049">9318320049</a></div></div><div class="ci-item"><div class="ci-icon" style="background:rgba(107,203,119,0.15)"></div><div class="ci-text"><h4>Hours</h4><span>Monday - Saturday  -  Morning & Evening Batches</span></div></div><div class="ci-item"><div class="ci-icon" style="background:rgba(255,217,61,0.2)"></div><div class="ci-text"><h4>Nearby Metro</h4><span>Vikaspuri Station, Blue Line</span></div></div><div class="ci-item"><div class="ci-icon" style="background:rgba(167,139,250,0.15)"></div><div class="ci-text"><h4>Location</h4><a href="https://maps.app.goo.gl/BtctNnuGdwRdb3SWA" target="_blank" style="color:var(--sun)">View on Google Maps</a></div></div></div><div class="fg"><label>Parent's Name *</label><input type="text" id="f-parent" placeholder="e.g. Priya Sharma" required></div><div class="contact-socials">Child's Name</label><input type="text" id="f-child" placeholder="e.g. Ananya"></div><a href="#" class="c-social"><i class="fa-brands fa-instagram"></i></a>f-phone" placeholder="98XXXXXXXX" required maxlength="10"></div><a href="#" class="c-social"><i class="fa-brands fa-facebook"></i></a>t" id="f-age" placeholder="e.g. 4 years or Class 7"></div><a href="#" class="c-social"><i class="fa-brands fa-youtube"></i></a><a href="https://wa.me/919667897249" target="_blank" class="c-social"><i class="fa-brands fa-whatsapp"></i></a></div><option value="">Select a program...</option></div><option> Playschool (Jr/Sr Nursery/KG)</option><div class="rv-r">n> Foundation Tuitions (Class 1-8)</option><div class="form-card">th & Science (Class 9-12)</option><h3> Request a Free Demo</h3>hing</option><p>We'll get back to you within 24 hours!</p>o/etc.)</option><form id="enroll-form" onsubmit="submitForm(event)"><div class="form-grid">Classes</option><div class="fg"><label>Parent's Name *</label><input type="text" id="f-parent" placeholder="e.g. Priya Sharma" required></div><div class="fg"><label>Child's Name</label><input type="text" id="f-child" placeholder="e.g. Ananya"></div><div class="fg"><label>Phone Number *</label><input type="tel" id="f-phone" placeholder="98XXXXXXXX" required maxlength="10"></div><div class="fg"><label>Child's Age / Class</label><input type="text" id="f-age" placeholder="e.g. 4 years or Class 7"></div><div class="fg full"><label>Program of Interest *</label>xtarea id="f-msg" placeholder="Tell us anything - your schedule, specific questions, or how you heard about us!"></textarea></div><select id="f-prog" required><option value="">Select a program...</option>"><option> Playschool (Jr/Sr Nursery/KG)</option><option> Foundation Tuitions (Class 1-8)</option><option> Math & Science (Class 9-12)</option>contact you about your inquiry.</p><option> English Coaching</option><option> Music Classes (Guitar/Piano/etc.)</option><option> Art & Craft</option><option> AI/IT Classes</option><option> Summer Camp</option> will call you back within <strong>24 hours</strong>.<br><br>For immediate help, call <a href="tel:9667897249" style="color:var(--coral);font-weight:900">9667897249</a> or <a href="https://wa.me/919667897249" target="_blank" style="color:#25D366;font-weight:900">WhatsApp us</a>.</p><option> Multiple Programs</option></select></div><div class="fg full"><label>Message (Optional)</label><textarea id="f-msg" placeholder="Tell us anything - your schedule, specific questions, or how you heard about us!"></textarea></div></div><button type="submit" class="btn-form" id="form-btn">Book My FREE Demo Class!
-            </button>-><p class="form-privacy"> 100% private - we'll only contact you about your inquiry.</p></form>ter-top"><div class="form-success" id="form-success"><div class="fs-icon"></div><h3>You're all set!</h3></div><p>We received your request! Our team will call you back within <strong>24 hours</strong>.<br><br>For immediate help, call <a href="tel:9667897249" style="color:var(--coral);font-weight:900">9667897249</a> or <a href="https://wa.me/919667897249" target="_blank" style="color:#25D366;font-weight:900">WhatsApp us</a>.</p></div></div>="f-tagline">Learning Beyond School, Growing Beyond Boundaries</p></div>ss="f-desc">Asha Early Learning Centre - Vikaspuri's most trusted home for playschool, tuitions, music, art, and life skills since 2012.</p></div> class="f-socials"></div><a href="#" class="f-soc"><i class="fa-brands fa-instagram"></i></a></section> href="#" class="f-soc"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class="f-soc"><i class="fa-brands fa-youtube"></i></a><!--  FOOTER  -->//wa.me/919667897249" target="_blank" class="f-soc"><i class="fa-brands fa-whatsapp"></i></a><footer>div><div class="footer-top"><div>class="f-col"><div class="f-brand-logo"><div class="f-brand-mark"><img src="https://i.ibb.co/Cp79n1N6/image-2026-03-13-120621551-Photoroom-upscayl-4x-upscayl-standard-4x.png" alt="AELC Logo"></div> href="#programs"> Foundation Tuitions</a></li><div class="f-brand-name">AELC</div>ience 9-12</a></li></div><a href="#programs"> English Coaching</a></li><p class="f-tagline">Learning Beyond School, Growing Beyond Boundaries</p><p class="f-desc">Asha Early Learning Centre - Vikaspuri's most trusted home for playschool, tuitions, music, art, and life skills since 2012.</p><div class="f-socials">s"> AI/IT Classes</a></li><a href="#" class="f-soc"><i class="fa-brands fa-instagram"></i></a><a href="#" class="f-soc"><i class="fa-brands fa-facebook-f"></i></a><a href="#" class="f-soc"><i class="fa-brands fa-youtube"></i></a><a href="https://wa.me/919667897249" target="_blank" class="f-soc"><i class="fa-brands fa-whatsapp"></i></a></div>ick Links</h4></div><div class="f-col">bout">About AELC</a></li><h4>Programs</h4>hy">Why Choose Us</a></li><ul>i><a href="#tour">Virtual Tour</a></li><li><a href="#programs"> Playschool</a></li></li><li><a href="#programs"> Foundation Tuitions</a></li><li><a href="#programs"> Math & Science 9-12</a></li><li><a href="#programs"> English Coaching</a></li><li><a href="#programs"> Music Classes</a></li>7,61,0.6)">Admin Panel</a></li><li><a href="#programs"> Art & Craft</a></li><li><a href="#programs"> AI/IT Classes</a></li><li><a href="#programs"> Life Skills</a></li></ul>ontact</h4></div>style="margin-bottom:16px"><div class="f-col">l:9667897249"> 9667897249</a></li><h4>Quick Links</h4>318320049"> 9318320049</a></li><ul>i><a href="https://wa.me/919667897249" target="_blank"> WhatsApp Us</a></li><li><a href="#about">About AELC</a></li> Delhi</a></li><li><a href="#why">Why Choose Us</a></li><li><a href="#tour">Virtual Tour</a></li><li><a href="#testimonials">Parent Reviews</a></li>><li><a href="#blog">Blog & Tips</a></li>n><li><a href="#faq">FAQs</a></li>ured</span><li><a href="#contact">Enroll Now</a></li><li><a href="admin.html" style="color:rgba(255,217,61,0.6)">Admin Panel</a></li></ul></div><div class="f-col">ttom"><h4>Contact</h4>ly Learning Centre (AELC)  -  DG-2/115A, Vikaspuri, New Delhi  -  All rights reserved.</p><ul style="margin-bottom:16px">e ones of Vikaspuri</p><li><a href="tel:9667897249"> 9667897249</a></li><li><a href="tel:9318320049"> 9318320049</a></li><li><a href="https://wa.me/919667897249" target="_blank"> WhatsApp Us</a></li><li><a href="https://maps.app.goo.gl/BtctNnuGdwRdb3SWA" target="_blank"> DG-2/115A, Vikaspuri, Delhi</a></li></ul><div class="f-accreditation"><span class="f-acc"> Trinity College London</span><span class="f-acc"> CBSE Aligned</span>07,0.12)', age:'Ages 1.5-6', title:'Playschool', sub:'Jr Nursery  -  Sr Nursery  -  KG', desc:'Play-based learning in a safe, warm classroom with personalized attention and structured phonics curriculum.', feats:['Phonics & Early Numeracy','Art, Craft & Music daily','CCTV + AC Classrooms','Low student-teacher ratio'], cta:'Enroll Now', border:'#FF6B6B' },
-        <span class="f-acc"> CCTV Secured</span>0.1)', age:'Class 1-8', title:'Foundation Tuitions', sub:'All Subjects', desc:'Strong academic foundations in Maths, Science, English, Social Studies & Hindi with notes and regular assessments.', feats:['All CBSE subjects covered','Notes & Assignments','Periodic Tests & Assessments','Free Demo Class'], cta:'Book Demo', border:'#0077B6' },
-        <span class="f-acc"> Fully AC</span>8,83,0.1)', age:'Class 9-12', title:'Math & Science', sub:'Senior Classes', desc:'Highly qualified tutors with personalised learning plans for board exam preparation and beyond.', feats:['Maths  -  Physics  -  Chemistry  -  Bio','Board-exam focused','Previous year papers','FREE Trial Class'], cta:'Free Trial', border:'#2DC653' },
-      </div>', color:'#FFC300', bg:'rgba(255,195,0,0.12)', age:'All Ages', title:'Music Classes', sub:'Piano - Guitar - Ukulele - Harmonium', desc:'Learn from certified musicians and sit Trinity College of London Grade exams with a 100% pass rate.', feats:['Piano, Guitar, Mandolin, Ukulele','Trinity College London Exams','Chord Progression & Staff Notation','Weekend & Weekday Batches'], cta:'Book Music Demo', border:'#FFC300' },
-    </div>', color:'#F77F00', bg:'rgba(247,127,0,0.1)', age:'All Ages', title:'Art & Craft', sub:'Creative Studio', desc:'Drawing, shading, colouring, and craft activities that develop creativity and fine motor skills.', feats:['Basic Drawing & Shading','Craft & DIY Projects','Stage Art & Theatre Props','All materials provided'], cta:'Join Art Class', border:'#F77F00' },
-  </div>:'', color:'#A78BFA', bg:'rgba(167,139,250,0.12)', age:'Class 9-10', title:'AI/IT Classes', sub:'Future Skills', desc:'CBSE AI & IT curriculum, coding basics, and digital literacy for the next generation of innovators.', feats:['AI Fundamentals (CBSE)','Coding & Digital Literacy','Project-based Learning','Dance & Computer Workshop soon!'], cta:'Enroll Now', border:'#A78BFA' },
-  <div class="footer-bottom">', bg:'rgba(255,217,61,0.15)', age:'Ages 3-8', title:'Summer Camp', sub:'19 May - 27 June', desc:'6 weeks of fun, creativity, and learning! Colours, cooking, dancing, reels, and more. 1,200/week.', feats:['Fun with Colours & Craft','Dancing & Trending Reels','Healthy Cooking Sessions','Early Bird: 10% Off!'], cta:'Register Now', border:'#FFD93D' },
-    <p>(c) 2025 Asha Early Learning Centre (AELC)  -  DG-2/115A, Vikaspuri, New Delhi  -  All rights reserved.</p>d the Classroom', desc:'Confidence, communication, problem-solving, and leadership activities that prepare children for the real world.', feats:['Public Speaking & Drama','Teamwork & Leadership','Emotional Intelligence','Role Plays & Scenarios'], cta:'Learn More', border:'#FF8FAB' },
-    <p>Designed with  for the little ones of Vikaspuri</p></div></footer>_US = [
-  { icon:'', color:'rgba(255,107,107,0.12)', border:'#FF6B6B', title:'Safe & Secure', desc:'Fully AC, CCTV-monitored classrooms. Safe study guidance, counselling, and background-checked staff.', tag:'Top Priority', tagColor:'rgba(255,107,107,0.12)', tagTxt:'#c0392b' },
-<!-- SCRIPTS -->olor:'rgba(0,119,182,0.1)', border:'#0077B6', title:'Structured Learning', desc:'Proper timetable, comprehensive notes, assignments, and periodic tests keep every student organised.', tag:'Proven Method', tagColor:'rgba(0,119,182,0.1)', tagTxt:'#0077B6' },
-<script>:'', color:'rgba(45,198,83,0.1)', border:'#2DC653', title:'Low Student:Teacher Ratio', desc:'Small batches mean every child receives individual attention, guidance, and encouragement.', tag:'Personal Attention', tagColor:'rgba(45,198,83,0.1)', tagTxt:'#1a7a31' },
-/*  DATA  */or:'rgba(255,195,0,0.15)', border:'#FFC300', title:'Trinity Music Centre', desc:'100% pass rate in Trinity College of London exams. Internationally recognised music certifications.', tag:'Internationally Certified', tagColor:'rgba(255,195,0,0.15)', tagTxt:'#b38a00' },
-const PROGRAMS = [or:'rgba(167,139,250,0.12)', border:'#A78BFA', title:'FREE Demo First', desc:'No pressure. Try a class first, meet the teachers, see the classroom - then decide. No obligation.', tag:'Zero Pressure', tagColor:'rgba(167,139,250,0.12)', tagTxt:'#6d4fe0' },
-  { icon:'<i class="fa-solid fa-child"></i>', color:'#FF6B6B', bg:'rgba(255,107,107,0.12)', age:'Ages 1.5-6', title:'Playschool', sub:'Jr Nursery  -  Sr Nursery  -  KG', desc:'Play-based learning in a safe, warm classroom with personalized attention and structured phonics curriculum.', feats:['Phonics & Early Numeracy','Art, Craft & Music daily','CCTV + AC Classrooms','Low student-teacher ratio'], cta:'Enroll Now', border:'#FF6B6B' },
-  { icon:'<i class="fa-solid fa-book"></i>', color:'#0077B6', bg:'rgba(0,119,182,0.1)', age:'Class 1-8', title:'Foundation Tuitions', sub:'All Subjects', desc:'Strong academic foundations in Maths, Science, English, Social Studies & Hindi with notes and regular assessments.', feats:['All CBSE subjects covered','Notes & Assignments','Periodic Tests & Assessments','Free Demo Class'], cta:'Book Demo', border:'#0077B6' },
-  { icon:'<i class="fa-solid fa-flask"></i>', color:'#2DC653', bg:'rgba(45,198,83,0.1)', age:'Class 9-12', title:'Math & Science', sub:'Senior Classes', desc:'Highly qualified tutors with personalised learning plans for board exam preparation and beyond.', feats:['Maths  -  Physics  -  Chemistry  -  Bio','Board-exam focused','Previous year papers','FREE Trial Class'], cta:'Free Trial', border:'#2DC653' },
-  { icon:'<i class="fa-solid fa-music"></i>', color:'#FFC300', bg:'rgba(255,195,0,0.12)', age:'All Ages', title:'Music Classes', sub:'Piano - Guitar - Ukulele - Harmonium', desc:'Learn from certified musicians and sit Trinity College of London Grade exams with a 100% pass rate.', feats:['Piano, Guitar, Mandolin, Ukulele','Trinity College London Exams','Chord Progression & Staff Notation','Weekend & Weekday Batches'], cta:'Book Music Demo', border:'#FFC300' },
-  { icon:'<i class="fa-solid fa-palette"></i>', color:'#F77F00', bg:'rgba(247,127,0,0.1)', age:'All Ages', title:'Art & Craft', sub:'Creative Studio', desc:'Drawing, shading, colouring, and craft activities that develop creativity and fine motor skills.', feats:['Basic Drawing & Shading','Craft & DIY Projects','Stage Art & Theatre Props','All materials provided'], cta:'Join Art Class', border:'#F77F00' },
-  { icon:'<i class="fa-solid fa-robot"></i>', color:'#A78BFA', bg:'rgba(167,139,250,0.12)', age:'Class 9-10', title:'AI/IT Classes', sub:'Future Skills', desc:'CBSE AI & IT curriculum, coding basics, and digital literacy for the next generation of innovators.', feats:['AI Fundamentals (CBSE)','Coding & Digital Literacy','Project-based Learning','Dance & Computer Workshop soon!'], cta:'Enroll Now', border:'#A78BFA' },
-  { icon:'<i class="fa-solid fa-sun"></i>', color:'#FFD93D', bg:'rgba(255,217,61,0.15)', age:'Ages 3-8', title:'Summer Camp', sub:'19 May - 27 June', desc:'6 weeks of fun, creativity, and learning! Colours, cooking, dancing, reels, and more. 1,200/week.', feats:['Fun with Colours & Craft','Dancing & Trending Reels','Healthy Cooking Sessions','Early Bird: 10% Off!'], cta:'Register Now', border:'#FFD93D' },
-  { icon:'<i class="fa-solid fa-heart"></i>', color:'#FF8FAB', bg:'rgba(255,143,171,0.12)', age:'All Ages', title:'Life Skills', sub:'Beyond the Classroom', desc:'Confidence, communication, problem-solving, and leadership activities that prepare children for the real world.', feats:['Public Speaking & Drama','Teamwork & Leadership','Emotional Intelligence','Role Plays & Scenarios'], cta:'Learn More', border:'#FF8FAB' },
-];{ num:'3', emoji:'', title:'Meet Our Team', desc:'Tour the classrooms, meet the teachers, and see the AELC difference.' },
-  { num:'4', emoji:'', title:'Simple Registration', desc:'Quick enrolment - just a form, a photo, and a warm handshake.' },
-const WHY_US = [ji:'', title:'Your Child Begins!', desc:'Day one packed with smiles, new friends, and joyful learning.' },
-  { icon:'<i class="fa-solid fa-shield-alt"></i>', color:'rgba(255,107,107,0.12)', border:'#FF6B6B', title:'Safe & Secure', desc:'Fully AC, CCTV-monitored classrooms. Safe study guidance, counselling, and background-checked staff.', tag:'Top Priority', tagColor:'rgba(255,107,107,0.12)', tagTxt:'#c0392b' },
-  { icon:'<i class="fa-solid fa-clipboard-list"></i>', color:'rgba(0,119,182,0.1)', border:'#0077B6', title:'Structured Learning', desc:'Proper timetable, comprehensive notes, assignments, and periodic tests keep every student organised.', tag:'Proven Method', tagColor:'rgba(0,119,182,0.1)', tagTxt:'#0077B6' },
-  { icon:'<i class="fa-solid fa-chalkboard-teacher"></i>', color:'rgba(45,198,83,0.1)', border:'#2DC653', title:'Low Student:Teacher Ratio', desc:'Small batches mean every child receives individual attention, guidance, and encouragement.', tag:'Personal Attention', tagColor:'rgba(45,198,83,0.1)', tagTxt:'#1a7a31' },
-  { icon:'<i class="fa-solid fa-music"></i>', color:'rgba(255,195,0,0.15)', border:'#FFC300', title:'Trinity Music Centre', desc:'100% pass rate in Trinity College of London exams. Internationally recognised music certifications.', tag:'Internationally Certified', tagColor:'rgba(255,195,0,0.15)', tagTxt:'#b38a00' },
-  { icon:'<i class="fa-solid fa-handshake"></i>', color:'rgba(167,139,250,0.12)', border:'#A78BFA', title:'FREE Demo First', desc:'No pressure. Try a class first, meet the teachers, and see the classroom before making any commitment. No obligation.', tag:'Zero Pressure', tagColor:'rgba(167,139,250,0.12)', tagTxt:'#6d4fe0' },
-  { icon:'<i class="fa-solid fa-globe"></i>', color:'rgba(247,127,0,0.1)', border:'#F77F00', title:'Beyond Exams', desc:'We prepare children for the real world with life skills, communication, and critical thinking programs.', tag:'Holistic Growth', tagColor:'rgba(247,127,0,0.1)', tagTxt:'#b85a00' },
-  { icon:'<i class="fa-solid fa-mobile-alt"></i>', color:'rgba(78,205,196,0.12)', border:'#4ECDC4', title:'Parent Communication', desc:'Regular updates, feedback, and open communication so parents are always part of the learning journey.', tag:'Transparent', tagColor:'rgba(78,205,196,0.12)', tagTxt:'#36b5ac' },
-  { icon:'<i class="fa-solid fa-trophy"></i>', color:'rgba(255,143,171,0.12)', border:'#FF8FAB', title:'12+ Years of Trust', desc:'Serving Vikaspuri families since 2012 with consistent quality, warmth, and academic excellence.', tag:'Trusted Legacy', tagColor:'rgba(255,143,171,0.12)', tagTxt:'#cc4477' },
-];{ stars:5, text:'The AI/IT class gave Ankit a huge edge in Class 10. He now understands coding and is excited about technology in a way he never was before. Great program!', name:'Vikas Nair', role:'Father of Ankit, AI/IT Class', avatar:'', bg:'#FFF5F0' },
-];
-const STEPS = [
-  { num:'1', emoji:'', title:'Call or Enquire', desc:'Call 9667897249 or fill the form below. We respond within 24 hours.' },
-  { num:'2', emoji:'', title:'Book a Free Demo', desc:'Visit our centre or schedule a free demo class - no commitment needed.' },1)', title:'7 Signs Your Child is Ready for Preschool', excerpt:'Most parents wonder: when exactly is the right time? Here are the developmental milestones that tell you your toddler is ready to take that exciting first step.', date:'Mar 2025', read:'4 min read' },
-  { num:'3', emoji:'', title:'Meet Our Team', desc:'Tour the classrooms, meet the teachers, and see the AELC difference.' },.1)', title:'Why Every Child Should Learn a Musical Instrument', excerpt:'Research shows that music learning boosts language skills, maths ability, and emotional intelligence. Here\'s how to get started - even for complete beginners.', date:'Feb 2025', read:'5 min read' },
-  { num:'4', emoji:'', title:'Simple Registration', desc:'Quick enrolment - just a form, a photo, and a warm handshake.' },, title:'How to Build a Study Habit in Class 5-8 Students', excerpt:'The middle school years are critical. These 6 evidence-based strategies help children build lasting study habits that carry through board exams and beyond.', date:'Jan 2025', read:'6 min read' },
-  { num:'5', emoji:'', title:'Your Child Begins!', desc:'Day one packed with smiles, new friends, and joyful learning.' },
-];
-const FAQS = [
-const TESTIMONIALS = [l form of AELC?', a:'AELC stands for Asha Early Learning Centre. We are located at DG-2/115A, Ground Floor, Vikaspuri, New Delhi - 110018. Contact: 9667897249 / 9318320049.' },
-  { stars:5, text:'AELC completely transformed my daughter\'s confidence. Her Maths went from 55% to 92% in one term! The teachers genuinely care about every single child.', name:'Priya Sharma', role:'Mother of Ananya, Class 6', avatar:'', bg:'#FFF0F0' },
-  { stars:5, text:'My son has been learning guitar at AELC for 8 months and is already preparing for his Trinity Grade 2 exam. The music teacher is absolutely exceptional.', name:'Rajesh Kumar', role:'Father of Arjun, Guitar Student', avatar:'', bg:'#EBF8FF' },
-  { stars:5, text:'We enrolled Riya in Jr Nursery and she loves coming every single day. The environment is safe, warm, and stimulating. Best decision we ever made as parents!', name:'Sunita Verma', role:'Mother of Riya, Jr Nursery', avatar:'', bg:'#F0FFF5' },
-  { stars:5, text:'The Math & Science tuitions for Class 10 were outstanding. Rohan scored 94% in his boards and credits AELC entirely. Highly dedicated and qualified teachers.', name:'Amit Gupta', role:'Father of Rohan, Class 10', avatar:'', bg:'#FFFBEB' },
-  { stars:5, text:'Kavya came home from Summer Camp every day with new crafts, new songs, and new friends. So much fun packed into those morning hours. Totally worth it!', name:'Meena Agarwal', role:'Mother of Kavya, Summer Camp', avatar:'', bg:'#F5F0FF' },
-  { stars:5, text:'The AI/IT class gave Ankit a huge edge in Class 10. He now understands coding and is excited about technology in a way he never was before. Great program!', name:'Vikas Nair', role:'Father of Ankit, AI/IT Class', avatar:'', bg:'#FFF5F0' },
-];{ q:'How do I contact AELC?', a:'Call or WhatsApp: 9667897249 or 9318320049. Visit us at DG-2/115A, Ground Floor, Vikaspuri, New Delhi - 110018. Open Monday-Saturday.' },
-];
-const BLOGS = [
-  { img:'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=250&fit=crop', tag:'Child Development', tagClr:'#FF6B6B', tagBg:'rgba(255,107,107,0.1)', title:'7 Signs Your Child is Ready for Preschool', excerpt:'Most parents wonder: when exactly is the right time? Here are the developmental milestones that tell you your toddler is ready to take that exciting first step. From social skills to basic motor coordination, we break down what to look for and how to prepare.', date:'Mar 2025', read:'4 min read' },
-  { img:'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop', tag:'Music Education', tagClr:'#2DC653', tagBg:'rgba(45,198,83,0.1)', title:'Why Every Child Should Learn a Musical Instrument', excerpt:'Research shows that music learning boosts language skills, maths ability, and emotional intelligence. Here\'s how to get started - even for complete beginners. Discover the benefits and our Trinity-certified programs.', date:'Feb 2025', read:'5 min read' },
-  { img:'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop', tag:'Study Tips', tagClr:'#0077B6', tagBg:'rgba(0,119,182,0.1)', title:'How to Build a Study Habit in Class 5-8 Students', excerpt:'The middle school years are critical. These 6 evidence-based strategies help children build lasting study habits that carry through board exams and beyond. Tips from our experienced educators.', date:'Jan 2025', read:'6 min read' },
-];g.innerHTML = PROGRAMS.map((p,i) => `
-    <div class="prog-card rv d${(i%4)+1}" style="--pc:${p.border}">const FAQS = [ss="prog-card::before"></div>{ q:'What is the full form of AELC?', a:'AELC stands for Asha Early Learning Centre. We are located at DG-2/115A, Ground Floor, Vikaspuri, New Delhi - 110018. Contact: 9667897249 / 9318320049.' },
-  { q:'What age groups do you cater to?', a:'We serve children from 1.5 years (Jr Nursery) all the way up to Class 12. We have Playschool, Foundation Tuitions (1-8), Senior Tuitions (9-12), Music, Art, and AI/IT classes.' },
-  { q:'Is a demo class free?', a:'Yes! We offer a 100% FREE demo class for all new students. You can experience our teaching quality, meet the teachers, and see the classroom before making any commitment.' },
-  { q:'What music instruments do you teach?', a:'We teach Piano, Guitar, Mandolin, Ukulele, and Harmonium. We are also a registered centre for Trinity College of London examinations.' },
-  { q:'Are the classrooms air-conditioned?', a:'Yes, all our classrooms are fully air-conditioned and under 24/7 CCTV surveillance for your child\'s safety and your peace of mind.' },
-  { q:'What is the Summer Camp fee?', a:'Summer Camp 2025 (19 May - 27 June) is priced at 1,200 per week for ages 3-8. An early bird discount of 10% is available. Timings: 9:00 AM to 12:00 Noon.' },
-  { q:'Do you provide study materials and notes?', a:'Yes! All students receive comprehensive notes, assignments, structured timetables, and are assessed through periodic tests. We believe in structured, transparent learning.' },
-  { q:'How do I contact AELC?', a:'Call or WhatsApp: 9667897249 or 9318320049. Visit us at DG-2/115A, Ground Floor, Vikaspuri, New Delhi - 110018. Open Monday-Saturday.' },
-];    <div class="prog-cta-row"><button class="prog-cta-btn" style="color:${p.color}" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">/*  RENDER FUNCTIONS  */
-function renderPrograms() {
-  const g = document.getElementById('prog-grid');
-  g.innerHTML = PROGRAMS.map((p,i) => `
-    <div class="prog-card rv d${(i%4)+1}" style="--pc:${p.border}"><div class="prog-card::before"></div><div style="position:absolute;top:0;left:0;right:0;height:4px;border-radius:var(--r-lg) var(--r-lg) 0 0;background:${p.border}"></div><div class="prog-icon-wrap" style="background:${p.bg}">${p.icon}</div><div class="prog-age" style="background:${p.bg};color:${p.color}">${p.age}</div><h3>${p.title}</h3>rv d${(i%4)+1}" style="border-bottom-color:${w.border}"><p>${p.desc}</p>icon" style="background:${w.color}">${w.icon}</div><div class="prog-feats">yle="background:${w.tagColor};color:${w.tagTxt}">${w.tag}</span>${p.feats.map(f=>`<div class="prog-feat"><i class="fa-solid fa-check" style="color:${p.color}"></i> ${f}</div>`).join('')}
-      </div>.desc}</p><div class="prog-cta-row"><button class="prog-cta-btn" style="color:${p.color}" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">${p.cta} 
-        </button>eps() {
-      </div>document.getElementById('steps-track');
-    </div>`).join('');6B6B','#4ECDC4','#FFD93D','#6BCB77','#A78BFA'];
-} t.innerHTML = STEPS.map((s,i) => `
-    <div class="step rv d${i+1}">function renderWhyUs() {um" style="color:${colors[i]}">
-  const g = document.getElementById('why-grid');div>
-  g.innerHTML = WHY_US.map((w,i) => `
-    <div class="why-card rv d${(i%4)+1}" style="border-bottom-color:${w.border}"><div class="why-icon" style="background:${w.color}">${w.icon}</div><span class="why-tag" style="background:${w.tagColor};color:${w.tagTxt}">${w.tag}</span><h3>${w.title}</h3><p>${w.desc}</p></div>`).join('');nials() {
-} const g = document.getElementById('testi-grid');
-  g.innerHTML = TESTIMONIALS.map((t,i) => `
-function renderSteps() {rd rv d${(i%3)+1}">const t = document.getElementById('steps-track');/div>
-  const colors = ['#FF6B6B','#4ECDC4','#FFD93D','#6BCB77','#A78BFA'];
-  t.innerHTML = STEPS.map((s,i) => `
-    <div class="step rv d${i+1}">yle="background:${t.bg}">${t.avatar}</div><div class="step-num" style="color:${colors[i]}">lass="tc-role">${t.role}</div></div><div class="step-num-inner">${s.emoji}</div></div>.join('');
-      <h4>${s.title}</h4><p>${s.desc}</p></div>`).join('');{
-} const g = document.getElementById('blog-grid');
-  g.innerHTML = BLOGS.map((b,i) => `
-function renderTestimonials() {{i+1}">const g = document.getElementById('testi-grid');bg}"><div style="font-size:5rem">${b.emoji}</div></div>g.innerHTML = TESTIMONIALS.map((t,i) => `
-    <div class="testi-card rv d${(i%3)+1}">round:${b.tagBg};color:${b.tagClr}">${b.tag}</span><div class="tc-stars">${''.repeat(t.stars)}</div><p class="tc-text">"${t.text}"</p><div class="tc-author">er"><div class="tc-avatar" style="background:${t.bg}">${t.avatar}</div><div><div class="tc-name">${t.name}</div><div class="tc-role">${t.role}</div></div></div>v></div>`).join('');
-}   </div>`).join('');
-}
-function renderBlog() {
-  const g = document.getElementById('blog-grid');
-  g.innerHTML = BLOGS.map((b,i) => `'faq-list');
-    <div class="blog-card rv d${i+1}"><div class="blog-img">d${(i%3)+1}"><img src="${b.img}" alt="${b.title}">Q(this)"></div>q} <span class="fq-arrow">+</span><div class="blog-body"><span class="blog-tag" style="background:${b.tagBg};color:${b.tagClr}">${b.tag}</span><h3>${b.title}</h3>nner">${f.a}</div><p>${b.excerpt}</p><div class="blog-footer"><span class="blog-meta"> ${b.date}  -   ${b.read}</span><span class="blog-read">Read more <i class="fa-solid fa-arrow-right"></i></span></div>eFAQ(btn) {
-      </div>= btn.nextElementSibling;
-    </div>`).join('');lassList.contains('open');
-} document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
-  document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
-function renderFAQ() {lassList.add('open'); btn.classList.add('open'); }
-  const l = document.getElementById('faq-list');
-  l.innerHTML = FAQS.map((f,i) => `
-    <div class="faq-item rv d${(i%3)+1}"><button class="faq-q" onclick="toggleFAQ(this)">${f.q} <span class="fq-arrow">+</span></button>unted = '1';
-      <div class="faq-a">at(el.dataset.target);
-        <div class="faq-a-inner">${f.a}</div>tContent.includes('%') ? '%' : '+');
-      </div>cimal = target % 1 !== 0;
-    </div>`).join('');
-} const step = target / 60;
-  const interval = setInterval(() => {
-function toggleFAQ(btn) {
-  const ans = btn.nextElementSibling;
-  const isOpen = ans.classList.contains('open');ed(1) : target) + suffix;
-  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
-  document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
-  if (!isOpen) { ans.classList.add('open'); btn.classList.add('open'); }ent)) + suffix;
-}   }
-  }, 28);
-/*  COUNTER ANIMATION  */
-function animateCounter(el) {
-  if (el.dataset.counted) return;
-  el.dataset.counted = '1';nObserver(entries => {
-  const target = parseFloat(el.dataset.target);
-  const suffix = el.dataset.suffix || (el.textContent.includes('%') ? '%' : '+');
-  const isDecimal = target % 1 !== 0;
-  let current = 0;SelectorAll('[data-target]').forEach(animateCounter);
-  const step = target / 60;
-  const interval = setInterval(() => {
-    current += step;
-    if (current >= target) {
-      el.textContent = (isDecimal ? target.toFixed(1) : target) + suffix;el));
-      clearInterval(interval);data-target]').forEach(el => obs.observe(el.closest('.hero-badge,.stat-block') || el));
-    } else {
-      el.textContent = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
-    } NAVBAR  */
-  }, 28); = document.getElementById('nav');
-}indow.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
-
-/*  SCROLL OBSERVER  */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {.getElementById('mob-menu');
-    if (!e.isIntersecting) return;mentById('mob-overlay');
-    e.target.classList.add('in');entById('mob-close');
-    e.target.querySelectorAll('[data-target]').forEach(animateCounter);open'); mobOverlay.classList.add('show'); }
-  });ion closeMob() { ham.classList.remove('open'); mobMenu.classList.remove('open'); mobOverlay.classList.remove('show'); }
-}, { threshold:0.12 });lick', openMob);
-mobClose.addEventListener('click', closeMob);
-function observe() {istener('click', closeMob);
-  document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el => obs.observe(el));
-  document.querySelectorAll('[data-target]').forEach(el => obs.observe(el.closest('.hero-badge,.stat-block') || el));
-}ocument.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-/*  NAVBAR  */nt.querySelector(a.getAttribute('href'));
-const nav = document.getElementById('nav');toView({behavior:'smooth'}); closeMob(); }
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
-});
-/*  MOBILE MENU  */
-const ham = document.getElementById('ham');
-const mobMenu = document.getElementById('mob-menu');
-const mobOverlay = document.getElementById('mob-overlay');
-const mobClose = document.getElementById('mob-close');
-function openMob() { ham.classList.add('open'); mobMenu.classList.add('open'); mobOverlay.classList.add('show'); }
-function closeMob() { ham.classList.remove('open'); mobMenu.classList.remove('open'); mobOverlay.classList.remove('show'); }
-ham.addEventListener('click', openMob);st show success
-mobClose.addEventListener('click', closeMob);
-mobOverlay.addEventListener('click', closeMob);nt').value.trim(),
-    childName:  document.getElementById('f-child').value.trim(),
-/*  SMOOTH SCROLL  */tElementById('f-phone').value.trim(),
-document.querySelectorAll('a[href^="#"]').forEach(a => {rim(),
-  a.addEventListener('click', e => {yId('f-prog').value,
-    const t = document.querySelector(a.getAttribute('href'));,
-    if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); closeMob(); }
-  });reatedAt: new Date().toISOString(),
-});;
-
-/*  FORM  */
-async function submitForm(e) {ed') {
-  e.preventDefault();= firebase.firestore.FieldValue.serverTimestamp();
-  const btn = document.getElementById('form-btn');
-  btn.textContent = ' Sending...'; btn.disabled = true;
-  } catch(err) { console.warn('DB not configured:', err); }
-  // Try Firebase if available, else just show success
-  const data = {ementById('enroll-form').style.display = 'none';
-    parentName: document.getElementById('f-parent').value.trim(),;
-    childName:  document.getElementById('f-child').value.trim(),
-    phone:      document.getElementById('f-phone').value.trim(),
-    ageClass:   document.getElementById('f-age').value.trim(),
-    program:    document.getElementById('f-prog').value,.6},
-    message:    document.getElementById('f-msg').value.trim(),'] });
-    status: 'new', read: false,
-    createdAt: new Date().toISOString(),
-  };
-/*  HERO COUNTERS  */
-  try {n animateHeroBadges() {
-    if (typeof db !== 'undefined') {-num[data-target]').forEach(el => {
-      data.timestamp = firebase.firestore.FieldValue.serverTimestamp();
-      await db.collection('inquiries').add(data);
+      --tr: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
-  } catch(err) { console.warn('DB not configured:', err); }
 
-  document.getElementById('enroll-form').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
-renderTestimonials(); renderBlog(); renderFAQ();
-  // Confetti
-  if (typeof confetti !== 'undefined') {ded', () => {
-    confetti({ particleCount:180, spread:75, origin:{y:0.6},
-      colors:['#FF6B6B','#FFD93D','#4ECDC4','#6BCB77','#FFFFFF'] });
-  }
-}/script>/*  HERO COUNTERS  */ancement) -->
-function animateHeroBadges() {ivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>document.querySelectorAll('.hbadge-num[data-target]').forEach(el => {
-    el.dataset.counted = '';
-    animateCounter(el);  });}/*  INIT  */renderPrograms(); renderWhyUs(); renderSteps();renderTestimonials(); renderBlog(); renderFAQ();document.addEventListener('DOMContentLoaded', () => {  observe();  setTimeout(animateHeroBadges, 1400);});</script><!-- Confetti (optional enhancement) --><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script><script src="admin-assets/animations.js" defer></script>
-</body></html><!-- filepath: c:\Users\Anshdeep Singh Ohri\Downloads\playschool-homepage.html -->
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { 
+      font-family: var(--font-body); 
+      background: var(--bg-main); 
+      color: var(--ink); 
+      overflow-x: hidden; 
+      line-height: 1.6; 
+      perspective: 1000px; /* Enables 3D space globally */
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; font-family: var(--font-body); }
 
+    /* Layout */
+    .section { padding: 100px 5vw; position: relative; }
+    .section-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
+    
+    /* Typography */
+    .sec-tag { 
+      display: inline-flex; align-items: center; gap: 8px; 
+      background: rgba(255, 107, 107, 0.15); color: var(--coral); 
+      font-size: 0.85rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; 
+      padding: 8px 18px; border-radius: 99px; margin-bottom: 16px; 
+    }
+    .sec-h { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 16px; color: var(--ink); }
+    .sec-sub { font-size: 1.15rem; font-weight: 600; color: var(--muted); line-height: 1.7; max-width: 600px; }
 
+    /* --- 3D ANIMATION ENGINE --- */
+    .tilt-wrapper { perspective: 1000px; transform-style: preserve-3d; }
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+      will-change: transform;
+    }
+    .tilt-card-inner {
+      transform: translateZ(50px); /* Pops the content out of the card */
+    }
+    
+    /* Floating 3D Shapes */
+    .scene3d {
+      position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;
+      perspective: 1200px;
+    }
+    .shape3d {
+      position: absolute;
+      transform-style: preserve-3d;
+      animation: float3D 15s infinite linear;
+    }
+    .cube {
+      width: 80px; height: 80px;
+      transform-origin: center center;
+    }
+    .face {
+      position: absolute; width: 80px; height: 80px;
+      background: rgba(78, 205, 196, 0.8);
+      border: 2px solid rgba(255,255,255,0.5);
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+      backdrop-filter: blur(5px);
+    }
+    .front  { transform: translateZ(40px); }
+    .back   { transform: rotateY(180deg) translateZ(40px); }
+    .right  { transform: rotateY(90deg) translateZ(40px); }
+    .left   { transform: rotateY(-90deg) translateZ(40px); }
+    .top    { transform: rotateX(90deg) translateZ(40px); }
+    .bottom { transform: rotateX(-90deg) translateZ(40px); }
 
+    .pyramid { width: 100px; height: 100px; }
+    .pyr-face { position: absolute; width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-bottom: 86.6px solid rgba(255, 107, 107, 0.8); transform-origin: bottom center; }
+    .pyr-front { transform: translateZ(28.9px) rotateX(19.5deg); }
+    .pyr-back { transform: translateZ(-28.9px) rotateY(180deg) rotateX(19.5deg); }
+    .pyr-left { transform: translateX(-28.9px) rotateY(-90deg) rotateX(19.5deg); }
+    .pyr-right { transform: translateX(28.9px) rotateY(90deg) rotateX(19.5deg); }
+    .pyr-bottom { position: absolute; width: 100px; height: 100px; background: rgba(255, 107, 107, 0.9); transform: rotateX(90deg) translateZ(-28.9px); }
 
+    @keyframes float3D {
+      0% { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
+      50% { transform: translateY(-50px) rotateX(180deg) rotateY(180deg); }
+      100% { transform: translateY(0px) rotateX(360deg) rotateY(360deg); }
+    }
 
+    /* NAVBAR */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 9000; padding: 15px 5vw;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(250, 250, 250, 0.85); backdrop-filter: blur(16px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.05);
+    }
+    .logo { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--ink); display: flex; align-items: center; gap: 10px;}
+    .logo-icon { width: 40px; height: 40px; background: var(--coral); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; transform: rotate(-10deg); }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { font-weight: 700; color: var(--muted); transition: var(--tr); }
+    .nav-links a:hover { color: var(--coral); }
+    .btn-nav { background: var(--sky); color: white; padding: 10px 24px; border-radius: 99px; font-weight: 800; box-shadow: 0 4px 0 var(--sky-dark); transition: var(--tr); border: none; }
+    .btn-nav:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--sky-dark); }
+    .btn-nav:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--sky-dark); }
 
+    /* HERO */
+    #hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      background: radial-gradient(circle at top right, #FFF5EB, #EBF8FF);
+      overflow: hidden; text-align: center; padding-top: 100px;
+    }
+    .hero-content { max-width: 800px; position: relative; z-index: 10; transform-style: preserve-3d; }
+    .hero-h1 { 
+      font-size: clamp(3.5rem, 8vw, 5.5rem); line-height: 1.05; letter-spacing: -1px;
+      background: linear-gradient(135deg, var(--coral), var(--lavender));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 24px; text-shadow: 0 20px 40px rgba(255,107,107,0.2);
+    }
+    .btn-hero {
+      background: var(--coral); color: white; padding: 18px 48px; border-radius: 99px;
+      font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; border: none;
+      box-shadow: 0 8px 0 var(--coral-dark), 0 15px 40px rgba(255,107,107,0.4);
+      transition: var(--tr); margin-top: 30px; display: inline-flex; align-items: center; gap: 10px;
+    }
+    .btn-hero:hover { transform: translateY(-4px); box-shadow: 0 12px 0 var(--coral-dark), 0 20px 50px rgba(255,107,107,0.5); }
 
+    /* STATS */
+    .stats-bar {
+      display: flex; justify-content: center; gap: 40px; margin-top: 60px; flex-wrap: wrap;
+    }
+    .stat-box {
+      background: white; padding: 20px 30px; border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 2px solid var(--border);
+      transform-style: preserve-3d;
+    }
+    .stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: var(--sky); line-height: 1; transform: translateZ(20px); }
+    .stat-text { font-weight: 700; color: var(--muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transform: translateZ(10px); }
 
+    /* ABOUT (Replaces Trinity focus with Playschool focus) */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-img {
+      position: relative; border-radius: 30px; overflow: visible;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+      transform-style: preserve-3d;
+    }
+    .about-img img { border-radius: 30px; transform: translateZ(30px); position: relative; z-index: 2; }
+    .about-img::before {
+      content:''; position: absolute; inset: -20px; background: var(--sun); border-radius: 40px;
+      transform: translateZ(0px); z-index: 1;
+    }
+    
+    .check-list { display: flex; flex-direction: column; gap: 15px; margin: 30px 0; }
+    .check-item { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.1rem; }
+    .check-icon { width: 32px; height: 32px; background: var(--mint); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
 
+    /* CURRICULUM (Replaces General Programs) */
+    #curriculum { background: var(--ink); color: white; }
+    #curriculum .sec-h { color: white; }
+    .curr-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 50px; perspective: 1000px; }
+    
+    .curr-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 30px; padding: 40px 24px; text-align: center;
+      backdrop-filter: blur(10px); position: relative;
+    }
+    .curr-card::before { content:''; position: absolute; top:0; left:0; width:100%; height:6px; border-radius: 10px 10px 0 0; background: var(--c-color); }
+    .curr-icon { font-size: 3.5rem; margin-bottom: 20px; color: var(--c-color); filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)); transform: translateZ(40px); }
+    .curr-age { background: rgba(255,255,255,0.1); padding: 6px 14px; border-radius: 99px; font-size: 0.8rem; font-weight: 800; letter-spacing: 1px; transform: translateZ(30px); display: inline-block; margin-bottom: 15px; }
+    .curr-card h3 { font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 10px; transform: translateZ(20px); }
+    .curr-card p { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.6; transform: translateZ(10px); }
+
+    /* WHY US (3D Floating Blocks) */
+    #why { background: var(--bg-cream); overflow: hidden; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+    .why-card {
+      background: white; border-radius: 24px; padding: 40px 30px; text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 2px solid white;
+    }
+    .why-icon { width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: white; transform: translateZ(40px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    .why-card h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 10px; transform: translateZ(30px); color: var(--ink); }
+    .why-card p { color: var(--muted); font-weight: 600; transform: translateZ(20px); }
+
+    /* CONTACT / ADMISSIONS */
+    #contact { background: linear-gradient(135deg, var(--coral), #FF8E53); color: white; position: relative; }
+    .contact-wrapper { background: white; border-radius: 40px; display: flex; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.3); transform-style: preserve-3d; }
+    .c-info { flex: 1; padding: 60px; background: var(--ink); color: white; position: relative; overflow: hidden;}
+    .c-form { flex: 1.2; padding: 60px; color: var(--ink); background: white; }
+    
+    .c-form h3 { font-family: var(--font-display); font-size: 2.2rem; color: var(--coral); margin-bottom: 10px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+    .form-group label { font-size: 0.85rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .form-group input, .form-group select { padding: 16px; border-radius: 12px; border: 2px solid var(--border); font-family: var(--font-body); font-size: 1rem; font-weight: 600; outline: none; background: #F8FAFC; transition: var(--tr); }
+    .form-group input:focus, .form-group select:focus { border-color: var(--coral); background: white; box-shadow: 0 0 0 4px rgba(255,107,107,0.15); }
+    .btn-submit { width: 100%; background: var(--sky); color: white; border: none; padding: 18px; border-radius: 12px; font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; box-shadow: 0 6px 0 var(--sky-dark); margin-top: 10px; transition: var(--tr); }
+    .btn-submit:hover { transform: translateY(-3px); box-shadow: 0 9px 0 var(--sky-dark); }
+    
+    /* Footer */
+    footer { background: #1A202C; padding: 60px 5vw; color: white; text-align: center; }
+    .f-logo { font-family: var(--font-display); font-size: 2rem; color: var(--sun); margin-bottom: 10px; }
+    .f-text { color: rgba(255,255,255,0.6); font-weight: 600; }
+
+    /* RESPONSIVE */
+    @media(max-width: 992px) {
+      .about-grid, .contact-wrapper { grid-template-columns: 1fr; flex-direction: column; }
+      .curr-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr; }
+    }
+    @media(max-width: 600px) {
+      .curr-grid { grid-template-columns: 1fr; }
+      .hero-h1 { font-size: 2.8rem; }
+      .stats-bar { flex-direction: column; gap: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-shapes"></i></div>
+      AELC Playschool
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#why">Why Us</a>
+    </div>
+    <a href="#contact" class="btn-nav">Enroll Now</a>
+  </nav>
+
+  <section id="hero">
+    <!-- CSS 3D Floating Scene -->
+    <div class="scene3d">
+      <!-- Floating Cube 1 -->
+      <div class="shape3d cube" style="top: 20%; left: 15%; animation-duration: 20s; animation-delay: -5s;">
+        <div class="face front"></div><div class="face back"></div><div class="face right"></div>
+        <div class="face left"></div><div class="face top"></div><div class="face bottom"></div>
+      </div>
+      <!-- Floating Pyramid -->
+      <div class="shape3d pyramid" style="top: 60%; right: 15%; animation-duration: 18s;">
+        <div class="pyr-face pyr-front"></div><div class="pyr-face pyr-back"></div>
+        <div class="pyr-face pyr-left"></div><div class="pyr-face pyr-right"></div>
+        <div class="pyr-bottom"></div>
+      </div>
+      <!-- Floating Cube 2 -->
+      <div class="shape3d cube" style="top: 70%; left: 25%; animation-duration: 25s; transform: scale(0.6);">
+        <div class="face front" style="background:rgba(255,217,61,0.8)"></div><div class="face back" style="background:rgba(255,217,61,0.8)"></div>
+        <div class="face right" style="background:rgba(255,217,61,0.8)"></div><div class="face left" style="background:rgba(255,217,61,0.8)"></div>
+        <div class="face top" style="background:rgba(255,217,61,0.8)"></div><div class="face bottom" style="background:rgba(255,217,61,0.8)"></div>
+      </div>
+    </div>
+
+    <div class="hero-content tilt-wrapper">
+      <div class="tilt-card">
+        <div class="tilt-card-inner">
+          <div class="sec-tag" style="background: white; border: 2px solid var(--border); margin-bottom: 24px;">✨ Admissions Open 2025-26</div>
+          <h1 class="hero-h1">A Magical 3D World<br>for Little Learners.</h1>
+          <p class="sec-sub" style="margin: 0 auto; color: var(--ink-light); font-size: 1.25rem;">
+            Vikaspuri's most loved playschool. A safe, nurturing, and hyper-interactive space designed exclusively for ages 1.5 to 6 years.
+          </p>
+          <a href="#contact" class="btn-hero"><i class="fa-solid fa-rocket"></i> Book a FREE Visit</a>
+          
+          <div class="stats-bar">
+            <div class="stat-box tilt-card">
+              <div class="tilt-card-inner">
+                <div class="stat-num">500+</div>
+                <div class="stat-text">Happy Toddlers</div>
+              </div>
+            </div>
+            <div class="stat-box tilt-card">
+              <div class="tilt-card-inner">
+                <div class="stat-num">1:10</div>
+                <div class="stat-text">Teacher Ratio</div>
+              </div>
+            </div>
+            <div class="stat-box tilt-card">
+              <div class="tilt-card-inner">
+                <div class="stat-num">4.9⭐</div>
+                <div class="stat-text">Google Rating</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="section-inner about-grid">
+      <div class="tilt-wrapper">
+        <div class="about-img tilt-card">
+          <div class="tilt-card-inner">
+            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&q=80" alt="Kids playing at AELC">
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="sec-tag">Why Playschool Matters</div>
+        <h2 class="sec-h">Their First Steps Outside Home Should Be <span style="color:var(--coral)">Extraordinary.</span></h2>
+        <p class="sec-sub">At AELC Playschool, we focus purely on Early Childhood Education. We blend Playway and Montessori methods to ensure your child builds confidence, motor skills, and a lifelong love for learning.</p>
+        
+        <div class="check-list">
+          <div class="check-item"><div class="check-icon"><i class="fa-solid fa-check"></i></div> Safe, AC & CCTV Monitored Campus</div>
+          <div class="check-item"><div class="check-icon"><i class="fa-solid fa-check"></i></div> Phonics & Sensorial Learning</div>
+          <div class="check-item"><div class="check-icon"><i class="fa-solid fa-check"></i></div> Gentle, Loving & Trained Educators</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="curriculum" class="section">
+    <div class="section-inner">
+      <div style="text-align: center;">
+        <div class="sec-tag" style="background: rgba(255,255,255,0.1); color: var(--sun);">Stages of Learning</div>
+        <h2 class="sec-h">The Playschool Curriculum</h2>
+        <p class="sec-sub" style="margin: 0 auto; color: rgba(255,255,255,0.7);">Carefully designed milestones for ages 1.5 to 6 years.</p>
+      </div>
+
+      <div class="curr-grid">
+        <div class="curr-card tilt-card" style="--c-color: var(--coral);">
+          <div class="tilt-card-inner">
+            <div class="curr-icon"><i class="fa-solid fa-baby"></i></div>
+            <div class="curr-age">1.5 - 2.5 Years</div>
+            <h3>Play Group</h3>
+            <p>Focuses on separation anxiety, basic motor skills, sensory play, and social interaction in a warm, loving space.</p>
+          </div>
+        </div>
+        
+        <div class="curr-card tilt-card" style="--c-color: var(--sky);">
+          <div class="tilt-card-inner">
+            <div class="curr-icon"><i class="fa-solid fa-shapes"></i></div>
+            <div class="curr-age">2.5 - 3.5 Years</div>
+            <h3>Pre-Nursery</h3>
+            <p>Introduction to phonics sounds, colors, shapes, vocabulary building, and structured playway activities.</p>
+          </div>
+        </div>
+
+        <div class="curr-card tilt-card" style="--c-color: var(--sun);">
+          <div class="tilt-card-inner">
+            <div class="curr-icon"><i class="fa-solid fa-palette"></i></div>
+            <div class="curr-age">3.5 - 4.5 Years</div>
+            <h3>Nursery (LKG)</h3>
+            <p>Developing fine motor skills, writing readiness, early mathematics, and creative expression through art.</p>
+          </div>
+        </div>
+
+        <div class="curr-card tilt-card" style="--c-color: var(--mint);">
+          <div class="tilt-card-inner">
+            <div class="curr-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+            <div class="curr-age">4.5 - 6.0 Years</div>
+            <h3>Prep (UKG)</h3>
+            <p>Advanced phonics reading, numeric concepts, and school-readiness to ensure a smooth transition to formal schooling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="section">
+    <!-- Background 3D Elements -->
+    <div class="scene3d" style="opacity: 0.4;">
+      <div class="shape3d cube" style="top: 10%; right: 10%; animation-duration: 12s;">
+        <div class="face front" style="background:rgba(167, 139, 250, 0.5)"></div><div class="face back" style="background:rgba(167, 139, 250, 0.5)"></div>
+        <div class="face right" style="background:rgba(167, 139, 250, 0.5)"></div><div class="face left" style="background:rgba(167, 139, 250, 0.5)"></div>
+        <div class="face top" style="background:rgba(167, 139, 250, 0.5)"></div><div class="face bottom" style="background:rgba(167, 139, 250, 0.5)"></div>
+      </div>
+    </div>
+
+    <div class="section-inner">
+      <div style="text-align: center;">
+        <div class="sec-tag">Why Choose Us</div>
+        <h2 class="sec-h">Designed for <span style="color:var(--sky)">Toddlers.</span></h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card tilt-card">
+          <div class="tilt-card-inner">
+            <div class="why-icon" style="background: var(--coral);"><i class="fa-solid fa-shield-cat"></i></div>
+            <h3>100% Safe Campus</h3>
+            <p>Soft flooring, child-safe furniture, and 24/7 CCTV monitoring to ensure your child is always protected.</p>
+          </div>
+        </div>
+        <div class="why-card tilt-card">
+          <div class="tilt-card-inner">
+            <div class="why-icon" style="background: var(--sky);"><i class="fa-solid fa-apple-whole"></i></div>
+            <h3>Hygiene & Health</h3>
+            <p>Strict sanitization protocols, clean washrooms, and guidance on nutritious toddler eating habits.</p>
+          </div>
+        </div>
+        <div class="why-card tilt-card">
+          <div class="tilt-card-inner">
+            <div class="why-icon" style="background: var(--sun);"><i class="fa-solid fa-face-smile-beam"></i></div>
+            <h3>Joyful Play Areas</h3>
+            <p>Indoor interactive play zones designed to stimulate physical growth and imaginative pretend-play.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <div class="contact-wrapper tilt-wrapper">
+        <div class="c-info tilt-card">
+          <div class="tilt-card-inner">
+            <h2 class="sec-h" style="color: white;">Let's Start This Journey Together.</h2>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 40px;">Book a free campus tour and see the magic of AELC Playschool firsthand.</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5);">Visit Us</div>
+                  <div style="font-weight: 700; font-size: 1.1rem;">DG-2/115A, Vikaspuri, Delhi</div>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5);">Call Us</div>
+                  <div style="font-weight: 700; font-size: 1.1rem;">9667897249</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="c-form tilt-card">
+          <div class="tilt-card-inner">
+            <h3>Book a FREE Visit</h3>
+            <form name="AELC_Playschool_Admission" method="POST" data-netlify="true">
+              <div class="form-group">
+                <label>Parent's Name</label>
+                <input type="text" name="parentName" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label>Child's Name</label>
+                <input type="text" name="childName" placeholder="Enter child's name" required>
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" placeholder="10-digit number" required>
+              </div>
+              <div class="form-group">
+                <label>Admission For Stage</label>
+                <select name="stage" required>
+                  <option value="">Select Age Group...</option>
+                  <option value="playgroup">Play Group (1.5 - 2.5 Yrs)</option>
+                  <option value="prenursery">Pre-Nursery (2.5 - 3.5 Yrs)</option>
+                  <option value="nursery">Nursery / LKG (3.5 - 4.5 Yrs)</option>
+                  <option value="prep">Prep / UKG (4.5 - 6 Yrs)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-submit">Submit Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="f-logo">AELC Playschool</div>
+    <p class="f-text">DG-2/115A, Vikaspuri, New Delhi - 110018</p>
+    <p class="f-text" style="margin-top: 20px; font-size: 0.8rem;">&copy; 2026 Asha Early Learning Centre. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // --- 3D TILT ENGINE ---
+    // This script calculates mouse position over cards and applies real-time 3D rotation
+    document.addEventListener('DOMContentLoaded', () => {
+      const tiltCards = document.querySelectorAll('.tilt-card');
+
+      tiltCards.forEach(card => {
+        // Only apply 3D effect on desktop to save battery/performance on mobile
+        if (window.matchMedia("(pointer: fine)").matches) {
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left; // x position within the element
+            const y = e.clientY - rect.top;  // y position within the element
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // Calculate rotation amount (max 12 degrees)
+            const rotateX = ((y - centerY) / centerY) * -12;
+            const rotateY = ((x - centerX) / centerX) * 12;
+            
+            // Apply CSS transform
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            
+            // Dynamic lighting/shadow based on mouse position
+            const shadowX = ((x - centerX) / centerX) * -20;
+            const shadowY = ((y - centerY) / centerY) * -20;
+            card.style.boxShadow = `${shadowX}px ${shadowY}px 40px rgba(0,0,0,0.15)`;
+          });
+
+          // Reset on mouse leave
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+            card.style.boxShadow = ''; // Reset to default CSS shadow
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
