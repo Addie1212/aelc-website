@@ -228,13 +228,13 @@ title: AELC - Beyond the Books
     .hero-sub strong { color: #fff; font-weight: 900; }
     
     .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; animation: fadeInUp 0.8s 0.9s both; }
-    .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--coral), #FF8C6B); color: white; border: none; border-radius: var(--r-xl); padding: 16px 40px; font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; box-shadow: 0 8px 0 #D94444, 0 12px 40px rgba(255, 107, 107, 0.4); transition: var(--tr); letter-spacing: -0.5px; position: relative; overflow: hidden; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--coral), #FF8C6B); color: white; border: none; border-radius: var(--r-xl); padding: 16px 40px; font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; box-shadow: 0 8px 0 #D94444, 0 12px 40px rgba(255, 107, 107, 0.4); transition: var(--tr); letter-spacing: -0.5px; position: relative; overflow: hidden; cursor: pointer; }
     .btn-primary::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transform: translateX(-100%); animation: btnGlow 3s infinite; }
     @keyframes btnGlow { 100% { transform: translateX(100%); } }
     .btn-primary:hover { transform: translateY(-4px); box-shadow: 0 12px 0 var(--coral-dark), 0 16px 40px rgba(255, 107, 107, 0.4); color: white; }
     .btn-primary:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--coral-dark); }
     
-    .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(10px); color: white; border: 2.5px solid rgba(255, 255, 255, 0.4); border-radius: var(--r-xl); padding: 14px 32px; font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12), 0 10px 24px rgba(0, 0, 0, 0.15); transition: var(--tr); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(10px); color: white; border: 2.5px solid rgba(255, 255, 255, 0.4); border-radius: var(--r-xl); padding: 14px 32px; font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12), 0 10px 24px rgba(0, 0, 0, 0.15); transition: var(--tr); cursor: pointer;}
     .btn-secondary:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.22); color: white; border-color: rgba(255, 255, 255, 0.6); }
 
     .hero-badges { display: flex; gap: 20px; flex-wrap: wrap; animation: fadeInUp 0.8s 1.1s both; }
@@ -328,7 +328,7 @@ title: AELC - Beyond the Books
     .prog-feat { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; font-weight: 700; color: rgba(255, 255, 255, 0.95) !important; line-height: 1.4; }
     .prog-feat i { font-size: 0.75rem; margin-top: 4px; }
     
-    .prog-cta-btn { width: 100%; border: 2px solid rgba(255, 255, 255, 0.15); background: transparent; color: #ffffff; border-radius: 99px; padding: 12px; font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; transition: var(--tr); display: flex; align-items: center; justify-content: center; gap: 8px;}
+    .prog-cta-btn { width: 100%; border: 2px solid rgba(255, 255, 255, 0.15); background: transparent; color: #ffffff; border-radius: 99px; padding: 12px; font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; transition: var(--tr); display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer;}
     .prog-card:hover .prog-cta-btn { border-color: var(--pc); background: var(--pc); color: #ffffff; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
 
     #why { background: var(--bg-cream); position: relative; }
@@ -989,8 +989,12 @@ title: AELC - Beyond the Books
                 <h3> Request a Free Demo</h3>
                 <p>We'll get back to you within 24 hours!</p>
 
-                <!-- Perfectly Valid Netlify Form -->
-                <form name="AELC_Enrollment" method="POST" data-netlify="true">
+                <!-- Perfectly Valid AJAX Netlify Form -->
+                <form id="enroll-form" name="AELC_Enrollment" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                  <input type="hidden" name="form-name" value="AELC_Enrollment" />
+                  <p class="hidden-field" style="display:none">
+                    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                  </p>
                   <div class="form-grid">
                     <div class="fg full"><label>Child's Full Name *</label><input type="text" name="childName" placeholder="Enter child's full name" required></div>
                     <div class="fg full"><label>Child's Age *</label><input type="text" name="childAge" placeholder="Enter child's age" required></div>
@@ -999,12 +1003,13 @@ title: AELC - Beyond the Books
                     
                     <div class="fg full"><label>Which Program? *</label>
                       <select name="program" required>
-                        <option>Playschool Program</option>
-                        <option>Tuitions (Class 1-8)</option>
-                        <option>Math & Science (Class 9-12)</option>
-                        <option>Music Classes</option>
-                        <option>Art & Craft</option>
-                        <option>Other / Multiple</option>
+                        <option value="">Select a program...</option>
+                        <option value="Playschool">Playschool Program</option>
+                        <option value="Tuitions">Tuitions (Class 1-8)</option>
+                        <option value="Math_Science">Math & Science (Class 9-12)</option>
+                        <option value="Music">Music Classes</option>
+                        <option value="Art_Craft">Art & Craft</option>
+                        <option value="Other">Other / Multiple</option>
                       </select>
                     </div>
 
@@ -1043,13 +1048,13 @@ title: AELC - Beyond the Books
       <div class="f-col">
         <h4>Programs</h4>
         <ul>
-          <li><a href="#programs">Playschool</a></li>
-          <li><a href="#programs">Foundation Tuitions</a></li>
-          <li><a href="#programs">Math & Science 9-12</a></li>
-          <li><a href="#programs">English Coaching</a></li>
-          <li><a href="#programs">Music Classes</a></li>
-          <li><a href="#programs">Art & Craft</a></li>
-          <li><a href="#programs">AI/IT Classes</a></li>
+          <li><a href="playschool-homepage.html">Playschool</a></li>
+          <li><a href="foundation-tuitions.html">Foundation Tuitions</a></li>
+          <li><a href="math-science.html">Math & Science 9-12</a></li>
+          <li><a href="#contact" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">English Coaching</a></li>
+          <li><a href="music-classes.html">Music Classes</a></li>
+          <li><a href="#contact" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Art & Craft</a></li>
+          <li><a href="#contact" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">AI/IT Classes</a></li>
         </ul>
       </div>
       <div class="f-col">
@@ -1092,10 +1097,12 @@ title: AELC - Beyond the Books
       { icon: '<i class="fa-solid fa-book"></i>', color: '#4ECDC4', bg: 'rgba(78,205,196,0.15)', age: 'Class 1-8', title: 'Foundation Tuitions', sub: 'All Subjects', desc: 'Strong academic foundations in Maths, Science, English, Social Studies & Hindi with notes and regular assessments.', feats: ['All CBSE subjects covered', 'Notes & Assignments', 'Periodic Tests & Assessments', 'Free Demo Class'], cta: 'Book Demo', border: '#4ECDC4', link: 'foundation-tuitions.html' },
       { icon: '<i class="fa-solid fa-flask"></i>', color: '#6BCB77', bg: 'rgba(107,203,119,0.15)', age: 'Class 9-12', title: 'Math & Science', sub: 'Senior Classes', desc: 'Highly qualified tutors with personalised learning plans for board exam preparation and beyond.', feats: ['Maths  -  Physics  -  Chemistry  -  Bio', 'Board-exam focused', 'Previous year papers', 'FREE Trial Class'], cta: 'Free Trial', border: '#6BCB77', link: 'math-science.html' },
       { icon: '<i class="fa-solid fa-music"></i>', color: '#FFD93D', bg: 'rgba(255,217,61,0.15)', age: 'All Ages', title: 'Music Classes', sub: 'Piano - Guitar - Ukulele - Harmonium', desc: 'Learn from certified musicians and sit Trinity College of London Grade exams with a 100% pass rate.', feats: ['Piano, Guitar, Mandolin, Ukulele', 'Trinity College London Exams', 'Chord Progression & Staff Notation', 'Weekend Batches'], cta: 'Book Music Demo', border: '#FFD93D', link: 'music-classes.html' },
-      { icon: '<i class="fa-solid fa-palette"></i>', color: '#FFB347', bg: 'rgba(255,179,71,0.15)', age: 'All Ages', title: 'Art & Craft', sub: 'Creative Studio', desc: 'Drawing, shading, colouring, and craft activities that develop creativity and fine motor skills.', feats: ['Basic Drawing & Shading', 'Craft & DIY Projects', 'Stage Art & Theatre Props', 'All materials provided'], cta: 'Join Art Class', border: '#FFB347', link: 'artcraft.html' },
-      { icon: '<i class="fa-solid fa-robot"></i>', color: '#A78BFA', bg: 'rgba(167,139,250,0.15)', age: 'Class 9-10', title: 'AI/IT Classes', sub: 'Future Skills', desc: 'CBSE AI & IT curriculum, coding basics, and digital literacy for the next generation of innovators.', feats: ['AI Fundamentals (CBSE)', 'Coding & Digital Literacy', 'Project-based Learning', 'Dance & Computer Workshop soon!'], cta: 'Enroll Now', border: '#A78BFA', link: 'ai-it-classes.html' },
-      { icon: '<i class="fa-solid fa-sun"></i>', color: '#FF8FAB', bg: 'rgba(255,143,171,0.15)', age: 'Ages 3-8', title: 'Summer Camp', sub: 'Seasonal Creative Camp', desc: 'A lively mix of craft, movement, storytelling, music, and hands-on activities for curious young learners.', feats: ['Fun with Colours & Craft', 'Dancing & Creative Movement', 'Healthy Cooking Sessions', 'Small, supervised batches'], cta: 'Register Interest', border: '#FF8FAB', link: 'summer-camp.html' },
-      { icon: '<i class="fa-solid fa-heart"></i>', color: '#E05555', bg: 'rgba(224,85,85,0.15)', age: 'All Ages', title: 'Life Skills', sub: 'Beyond the Classroom', desc: 'Confidence, communication, problem-solving, and leadership activities that prepare children for the real world.', feats: ['Public Speaking & Drama', 'Teamwork & Leadership', 'Emotional Intelligence', 'Role Plays & Scenarios'], cta: 'Learn More', border: '#E05555', link: 'life-skills.html' },
+      
+      /* THE FOLLOWING CARDS WILL NOW SMOOTH SCROLL DOWN TO THE CONTACT FORM */
+      { icon: '<i class="fa-solid fa-palette"></i>', color: '#FFB347', bg: 'rgba(255,179,71,0.15)', age: 'All Ages', title: 'Art & Craft', sub: 'Creative Studio', desc: 'Drawing, shading, colouring, and craft activities that develop creativity and fine motor skills.', feats: ['Basic Drawing & Shading', 'Craft & DIY Projects', 'Stage Art & Theatre Props', 'All materials provided'], cta: 'Join Art Class', border: '#FFB347', link: '#contact' },
+      { icon: '<i class="fa-solid fa-robot"></i>', color: '#A78BFA', bg: 'rgba(167,139,250,0.15)', age: 'Class 9-10', title: 'AI/IT Classes', sub: 'Future Skills', desc: 'CBSE AI & IT curriculum, coding basics, and digital literacy for the next generation of innovators.', feats: ['AI Fundamentals (CBSE)', 'Coding & Digital Literacy', 'Project-based Learning', 'Dance & Computer Workshop soon!'], cta: 'Enroll Now', border: '#A78BFA', link: '#contact' },
+      { icon: '<i class="fa-solid fa-sun"></i>', color: '#FF8FAB', bg: 'rgba(255,143,171,0.15)', age: 'Ages 3-8', title: 'Summer Camp', sub: 'Seasonal Creative Camp', desc: 'A lively mix of craft, movement, storytelling, music, and hands-on activities for curious young learners.', feats: ['Fun with Colours & Craft', 'Dancing & Creative Movement', 'Healthy Cooking Sessions', 'Small, supervised batches'], cta: 'Register Interest', border: '#FF8FAB', link: '#contact' },
+      { icon: '<i class="fa-solid fa-heart"></i>', color: '#E05555', bg: 'rgba(224,85,85,0.15)', age: 'All Ages', title: 'Life Skills', sub: 'Beyond the Classroom', desc: 'Confidence, communication, problem-solving, and leadership activities that prepare children for the real world.', feats: ['Public Speaking & Drama', 'Teamwork & Leadership', 'Emotional Intelligence', 'Role Plays & Scenarios'], cta: 'Learn More', border: '#E05555', link: '#contact' },
     ];
 
     const WHY_US = [
@@ -1144,83 +1151,14 @@ title: AELC - Beyond the Books
     ];
 
     const GALLERY_IMAGES = [
-      "photos/front/img1.jpeg",
-      "photos/front/img2.jpeg",
-      "photos/front/img3.jpeg",
-      "photos/front/img4.jpeg",
-      "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM.jpeg",
-      "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM (1).jpeg",
-      "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM (2).jpeg",
-      "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.29 AM.jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.36 AM.jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM.jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (1).jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (2).jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (3).jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.43 AM.jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.43 AM (1).jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM.jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (1).jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (2).jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (3).jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM.jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM (1).jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM (2).jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM.jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM (1).jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM (2).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM.jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (1).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (2).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (3).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM.jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM (1).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM (2).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM.jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (1).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (2).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (3).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM.jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM (1).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM (2).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.46 AM (1).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.46 AM (2).jpeg",
-      "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.22 AM.jpeg",
-      "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.26 AM.jpeg",
-      "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.27 AM.jpeg",
-      "photos/birthday/WhatsApp Image 2026-03-16 at 10.16.20 AM.jpeg",
-      "photos/birthday/WhatsApp Image 2026-03-16 at 10.16.21 AM.jpeg",
-      "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.32 AM.jpeg",
-      "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.33 AM (1).jpeg",
-      "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.34 AM.jpeg",
-      "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.35 AM.jpeg",
-      "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.38 AM.jpeg",
-      "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.38 AM (1).jpeg",
-      "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.22 AM.jpeg",
-      "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.28 AM.jpeg",
-      "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.28 AM (1).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.22 AM.jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.28 AM.jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.28 AM (1).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.29 AM (1).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.29 AM (2).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM.jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (1).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (2).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (3).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM.jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM (1).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM (2).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM.jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM (1).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM (2).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.33 AM.jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.33 AM (1).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.34 AM.jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.34 AM (1).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.35 AM.jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.35 AM (1).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.36 AM (1).jpeg"
+      "photos/front/img1.jpeg", "photos/front/img2.jpeg", "photos/front/img3.jpeg", "photos/front/img4.jpeg",
+      "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM.jpeg", "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM (1).jpeg", "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM (2).jpeg", "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.29 AM.jpeg",
+      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.36 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (2).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (3).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.43 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.43 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (2).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (3).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM (2).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM (2).jpeg",
+      "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (3).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (3).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.46 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.46 AM (2).jpeg",
+      "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.22 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.26 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.27 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.16.20 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.16.21 AM.jpeg",
+      "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.32 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.33 AM (1).jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.34 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.35 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.38 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.38 AM (1).jpeg",
+      "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.22 AM.jpeg", "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.28 AM.jpeg", "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.28 AM (1).jpeg",
+      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.22 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.28 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.28 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.29 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.29 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (3).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.33 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.33 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.34 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.34 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.35 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.35 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.36 AM (1).jpeg"
     ];
 
     function renderPrograms() {
@@ -1237,7 +1175,7 @@ title: AELC - Beyond the Books
         ${p.feats.map(f => `<li class="prog-feat" style="color:rgba(255,255,255,0.95) !important;"><i class="fa-solid fa-check" style="color:${p.color}"></i> ${f}</li>`).join('')}
       </ul>
       <div class="prog-cta-row" style="width:100%">
-        <button class="prog-cta-btn" aria-label="${p.cta} for ${p.title}" onmouseover="this.style.backgroundColor='${p.border}'; this.style.borderColor='${p.border}'" onmouseout="this.style.backgroundColor='transparent'; this.style.borderColor='rgba(255,255,255,0.15)'" onclick="window.location.href='${p.link}'">${p.cta}</button>
+        <button class="prog-cta-btn" aria-label="${p.cta} for ${p.title}" onmouseover="this.style.backgroundColor='${p.border}'; this.style.borderColor='${p.border}'" onmouseout="this.style.backgroundColor='transparent'; this.style.borderColor='rgba(255,255,255,0.15)'" onclick="event.preventDefault(); if('${p.link}'.startsWith('#')) { document.querySelector('${p.link}').scrollIntoView({behavior:'smooth'}); } else { window.location.href='${p.link}'; }">${p.cta}</button>
       </div>
     </article>`).join('');
     }
@@ -1439,6 +1377,45 @@ title: AELC - Beyond the Books
       galleryTimer = setInterval(() => setGalleryImage(galleryIndex + 1), 3200);
     }
 
+    /* NETLIFY AJAX FORM SUBMISSION */
+    const enrollForm = document.getElementById('enroll-form');
+    if(enrollForm) {
+      enrollForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const submitBtn = form.querySelector('.btn-form');
+        
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+
+        fetch('/', {
+          method: 'POST',
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        })
+        .then(() => {
+          document.getElementById('form-inner-wrapper').style.display = 'none';
+          
+          const successDiv = document.createElement('div');
+          successDiv.className = 'form-success';
+          successDiv.style.display = 'block';
+          successDiv.style.textAlign = 'center';
+          successDiv.innerHTML = `
+            <div style="font-size: 4.5rem; margin-bottom: 16px;">🎉</div>
+            <h3 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 900; margin-bottom: 8px; color: var(--ink);">You're all set!</h3>
+            <p style="font-size: 1rem; font-weight: 600; color: var(--muted); line-height: 1.6;">We received your request! Our team will call you back within <strong>24 hours</strong>.<br><br>For immediate help, call <a href="tel:9667897249" style="color:var(--coral);font-weight:900">9667897249</a> or <a href="https://wa.me/919667897249" target="_blank" style="color:#25D366;font-weight:900">WhatsApp us</a>.</p>
+          `;
+          document.querySelector('.form-card').appendChild(successDiv);
+        })
+        .catch((error) => {
+          alert('Submission failed. Please try again or contact us via WhatsApp.');
+          submitBtn.innerHTML = 'Book Free Demo';
+          submitBtn.disabled = false;
+        });
+      });
+    }
+
     /* NAVIGATION LOGIC */
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => { if (nav) nav.classList.toggle('scrolled', scrollY > 60); });
@@ -1457,8 +1434,12 @@ title: AELC - Beyond the Books
       a.addEventListener('click', e => {
         const targetId = a.getAttribute('href');
         if (targetId === '#') return;
-        const t = document.querySelector(targetId);
-        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); closeMob(); }
+        
+        // Let JS handle scroll, unless it's a programmatic trigger from the form
+        if(!a.hasAttribute('onclick')) {
+          const t = document.querySelector(targetId);
+          if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); closeMob(); }
+        }
       });
     });
 
@@ -1466,13 +1447,10 @@ title: AELC - Beyond the Books
     let heroCurrentSlide = 0;
     function heroGoTo(idx) {
       const slides = document.querySelectorAll('#hero-slides-bg .hero-slide-bg');
-      const dots = document.querySelectorAll('#hero-dots .hero-slide-dot');
       if (!slides.length) return;
       slides[heroCurrentSlide].classList.remove('active');
-      if (dots[heroCurrentSlide]) dots[heroCurrentSlide].classList.remove('active');
       heroCurrentSlide = (idx + slides.length) % slides.length;
       slides[heroCurrentSlide].classList.add('active');
-      if (dots[heroCurrentSlide]) dots[heroCurrentSlide].classList.add('active');
     }
     function heroSlide(dir) { heroGoTo(heroCurrentSlide + dir); }
 
