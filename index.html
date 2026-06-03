@@ -10,8 +10,8 @@ title: AELC - Beyond the Books
   
   <!-- Primary Meta Tags -->
   <title>AELC - Playschool, Tuitions & Music | Vikaspuri, New Delhi</title>
-  <meta name="description" content="AELC Beyond the Books - Vikaspuri's most-loved playschool and tuition centre. Holistic learning, Trinity-certified music, safe AC classrooms, and joyful childhoods. Book your FREE demo class today!">
-  <meta name="keywords" content="playschool Vikaspuri, best preschool Delhi, AELC, early learning, toddler classes, KG admission, music classes Delhi, tuitions Vikaspuri, CBSE coaching, Trinity music exam">
+  <meta name="description" content="AELC Beyond the Books - Vikaspuri's most-loved playschool and tuition centre. Holistic learning, music, safe AC classrooms, and joyful childhoods. Book your FREE demo class today!">
+  <meta name="keywords" content="playschool Vikaspuri, best preschool Delhi, AELC, early learning, toddler classes, KG admission, music classes Delhi, tuitions Vikaspuri, CBSE coaching">
   <meta name="author" content="Asha Early Learning Centre">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://aelc.in/">
@@ -36,7 +36,7 @@ title: AELC - Beyond the Books
     "@context": "https://schema.org",
     "@type": ["EducationalOrganization", "Preschool", "LocalBusiness"],
     "name": "Asha Early Learning Centre (AELC)",
-    "description": "Vikaspuri's most trusted playschool, tuition centre, and Trinity-certified music academy.",
+    "description": "Vikaspuri's trusted playschool, tuition centre, and music academy.",
     "url": "https://aelc.in",
     "logo": "https://i.ibb.co/Cp79n1N6/image-2026-03-13-120621551-Photoroom-upscayl-4x-upscayl-standard-4x.png",
     "image": "https://i.ibb.co/Cp79n1N6/image-2026-03-13-120621551-Photoroom-upscayl-4x-upscayl-standard-4x.png",
@@ -120,6 +120,7 @@ title: AELC - Beyond the Books
     html { scroll-behavior: smooth; font-size: 16px; }
     body { font-family: var(--font-body); background: var(--bg-warm); color: var(--ink); overflow-x: hidden; line-height: 1.6; }
     img { max-width: 100%; display: block; }
+    video { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
     button { cursor: pointer; font-family: var(--font-body); }
     ul { list-style: none; }
@@ -144,6 +145,7 @@ title: AELC - Beyond the Books
     .sec-tag-mint { background: rgba(107, 203, 119, 0.12); color: var(--mint-dark); }
     .sec-tag-sun { background: rgba(255, 217, 61, 0.2); color: #b38a00; }
     .sec-tag-lav { background: rgba(167, 139, 250, 0.14); color: #7c5fe6; }
+    .sec-tag-rose { background: rgba(255, 143, 171, 0.15); color: var(--rose); }
     .sec-h { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.1; letter-spacing: -1px; margin-bottom: 16px; }
     .sec-sub { font-size: 1.05rem; font-weight: 600; color: var(--muted); line-height: 1.8; max-width: 560px; }
 
@@ -237,30 +239,15 @@ title: AELC - Beyond the Books
     .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(10px); color: white; border: 2.5px solid rgba(255, 255, 255, 0.4); border-radius: var(--r-xl); padding: 14px 32px; font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; box-shadow: 0 6px 0 rgba(0, 0, 0, 0.12), 0 10px 24px rgba(0, 0, 0, 0.15); transition: var(--tr); cursor: pointer;}
     .btn-secondary:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.22); color: white; border-color: rgba(255, 255, 255, 0.6); }
 
-    .hero-badges { display: flex; gap: 20px; flex-wrap: wrap; animation: fadeInUp 0.8s 1.1s both; }
-    .hero-badge { display: flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(12px); border-radius: var(--r); padding: 12px 18px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); border: 1.5px solid rgba(255, 255, 255, 0.2); }
-    .hbadge-icon { font-size: 1.5rem; }
-    .hbadge-num { font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; line-height: 1; color: white;}
-    .hbadge-lbl { font-size: 0.65rem; font-weight: 800; color: rgba(255, 255, 255, 0.8); text-transform: uppercase; letter-spacing: 1.5px; }
-
     .hero-float-pills { position: absolute; bottom: 110px; right: 5vw; display: flex; flex-direction: column; gap: 12px; z-index: 5; animation: fadeInUp 1s 1.2s both; }
     .hfp { display: flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.14); backdrop-filter: blur(12px); border: 1.5px solid rgba(255, 255, 255, 0.25); border-radius: 99px; padding: 9px 18px; font-size: 0.82rem; font-weight: 800; color: white; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); white-space: nowrap; }
-
-    .hero-slide-btn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 10; width: 48px; height: 48px; border-radius: 50%; background: rgba(255, 255, 255, 0.18); backdrop-filter: blur(8px); border: 2px solid rgba(255, 255, 255, 0.35); color: white; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--tr); }
-    .hero-slide-btn:hover { background: rgba(255, 255, 255, 0.32); transform: translateY(-50%) scale(1.1); }
-    .hero-slide-prev { left: 20px; }
-    .hero-slide-next { right: 20px; }
-    .hero-slide-dots { position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 10; }
-    .hero-slide-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, 0.4); border: 2px solid rgba(255, 255, 255, 0.6); cursor: pointer; transition: all 0.3s; }
-    .hero-slide-dot.active { background: white; transform: scale(1.3); border-color: white; }
 
     #stats { background: linear-gradient(135deg, var(--ink) 0%, #2d3045 100%); padding: 0; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); position: relative; z-index: 10;}
     .admissions-banner { background: var(--sun); color: var(--ink); text-align: center; padding: 8px; font-size: 0.85rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 8px; }
     .admissions-dot { width: 8px; height: 8px; background: var(--coral); border-radius: 50%; animation: pillPulse 1.5s infinite; }
     
-    .stats-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); padding: 0 5vw; }
+    .stats-inner { max-width: 400px; margin: 0 auto; display: grid; grid-template-columns: 1fr; padding: 0 5vw; }
     .stat-block { text-align: center; padding: 32px 16px; position: relative; animation: fadeInUp 0.6s both; }
-    .stat-block+.stat-block::before { content: ''; position: absolute; left: 0; top: 20%; bottom: 20%; width: 1px; background: rgba(255, 255, 255, 0.08); }
     .stat-icon { font-size: 1.8rem; margin-bottom: 8px; display: block; }
     .stat-num { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; line-height: 1; margin-bottom: 4px; color: white; }
     .stat-lbl { font-size: 0.7rem; font-weight: 800; color: rgba(255, 255, 255, 0.5); text-transform: uppercase; letter-spacing: 2px; }
@@ -281,10 +268,6 @@ title: AELC - Beyond the Books
     .about-mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .amg-item { background: white; border-radius: var(--r-sm); padding: 12px; font-size: 0.85rem; font-weight: 800; color: var(--ink-light); display: flex; align-items: center; gap: 8px; box-shadow: var(--sh-sm); transition: var(--tr); }
     .amg-item:hover { color: var(--coral); transform: translateY(-2px); box-shadow: var(--sh); }
-    
-    .about-float-badge { position: absolute; background: white; border-radius: 99px; padding: 10px 16px; font-size: 0.82rem; font-weight: 900; box-shadow: var(--sh); display: flex; align-items: center; gap: 8px; white-space: nowrap; z-index: 10; }
-    .afb-1 { top: -16px; left: 10%; transform: rotate(-4deg); }
-    .afb-2 { bottom: -16px; right: 10%; transform: rotate(3deg); }
 
     #director { background: linear-gradient(135deg, #fff7ee 0%, #fff 45%, #effaf8 100%); position: relative; overflow: hidden; }
     #director::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255, 107, 107, 0.08) 1.5px, transparent 1.5px); background-size: 28px 28px; pointer-events: none; }
@@ -353,45 +336,21 @@ title: AELC - Beyond the Books
     .cert-logo-card img { height: 36px; object-fit: contain; mix-blend-mode: multiply; }
     .cert-logo-card span { font-weight: 800; font-size: 0.95rem; color: var(--ink); }
 
-    #tour { background: linear-gradient(135deg, #FFFBF5 0%, #FFF0F0 100%); position: relative; padding-bottom: 120px; }
-    .tour-header { margin-bottom: 56px; text-align: center;}
+    /* Instagram Video Feed specific styling */
+    #instagram { background: linear-gradient(135deg, #FFFBF5 0%, #FFF0F0 100%); position: relative; padding-bottom: 120px; }
+    .ig-header { margin-bottom: 56px; text-align: center;}
+    .ig-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 1000px; margin: 0 auto; position: relative; z-index: 2;}
+    .ig-post { position: relative; aspect-ratio: 9/16; border-radius: 16px; overflow: hidden; background: #E8EBF5; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
     
-    .auto-gallery { max-width: 960px; margin: 0 auto; background: white; padding: 20px; border-radius: 24px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08); border: 1px solid var(--border); position: relative; z-index: 2;}
-    .gallery-stage { position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; background: #E8EBF5; cursor: zoom-in; }
-    .gallery-stage img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.4s ease; transform: scale(1.01); }
-    .gallery-stage:hover img { transform: scale(1.03); transition: transform 0.6s ease; }
+    /* Apply styles to both images and videos so they behave exactly the same */
+    .ig-post img, .ig-post video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; border: none; outline: none;}
+    .ig-post:hover img, .ig-post:hover video { transform: scale(1.05); }
     
-    .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 60px 24px 24px; background: linear-gradient(to top, rgba(30,34,53,0.9), transparent); color: white; display: flex; flex-direction: column; pointer-events: none; }
-    #gallery-kicker { font-size: 0.8rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: var(--sun); margin-bottom: 4px;}
-    #gallery-title { font-family: var(--font-display); font-size: 1.4rem; }
-    
-    .gallery-control { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.25); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.5); color: white; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; transition: var(--tr); cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
-    .gallery-control:hover { background: var(--coral); border-color: var(--coral); transform: translateY(-50%) scale(1.1); }
-    .gallery-prev { left: 20px; }
-    .gallery-next { right: 20px; }
-
-    .gallery-strip { display: flex; gap: 12px; overflow-x: auto; margin-top: 20px; padding-bottom: 12px; scroll-behavior: smooth; }
-    .gallery-strip::-webkit-scrollbar { height: 6px; }
-    .gallery-strip::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-    
-    .gallery-thumb { flex-shrink: 0; width: 90px; height: 68px; border-radius: 10px; overflow: hidden; border: 3px solid transparent; padding: 0; background: none; cursor: pointer; opacity: 0.5; transition: var(--tr); }
-    .gallery-thumb:hover { opacity: 1; transform: translateY(-2px); }
-    .gallery-thumb.active { opacity: 1; border-color: var(--coral); transform: scale(1.05); }
-    .gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
-
-    .tour-lightbox-overlay { display: none; position: fixed; inset: 0; background: rgba(15, 18, 30, 0.98); z-index: 9999; align-items: center; justify-content: center; flex-direction: column; gap: 24px; padding: 40px 2vw; backdrop-filter: blur(12px); animation: fadeIn 0.3s ease; }
-    .tour-lightbox-overlay.open { display: flex; }
-    
-    .tour-lb-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: white; text-align: center; }
-    .tour-lb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; width: 100%; max-width: 1200px; max-height: 75vh; overflow-y: auto; padding-right: 8px; }
-    .tour-lb-grid::-webkit-scrollbar { width: 8px; }
-    .tour-lb-grid::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
-    
-    .tour-lb-img { width: 100%; height: 240px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; cursor: pointer; border: 1px solid rgba(255,255,255,0.1); }
-    .tour-lb-img:hover { transform: scale(1.04); box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8); border-color: rgba(255,255,255,0.3); z-index: 2; position: relative;}
-    
-    .tour-lb-close { position: absolute; top: 24px; right: 32px; background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255, 255, 255, 0.2); color: white; border-radius: 50%; width: 54px; height: 54px; font-size: 1.6rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--tr); z-index: 10000; }
-    .tour-lb-close:hover { background: var(--coral); border-color: var(--coral); transform: rotate(90deg); }
+    .ig-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); opacity: 0; transition: var(--tr); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; pointer-events: none;}
+    .ig-post:hover .ig-overlay { opacity: 1; }
+    .ig-cta-wrapper { text-align: center; margin-top: 40px; position: relative; z-index: 2; }
+    .btn-ig { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; border-radius: 99px; padding: 16px 32px; font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; transition: var(--tr); box-shadow: 0 10px 30px rgba(220, 39, 67, 0.3); }
+    .btn-ig:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(220, 39, 67, 0.4); color: white; }
 
     #process { background: linear-gradient(135deg, var(--coral), #FF8E53); overflow: hidden; position: relative; }
     #process::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 2px, transparent 2px); background-size: 32px 32px; pointer-events: none; }
@@ -571,7 +530,7 @@ title: AELC - Beyond the Books
       #ham { display: flex; }
       .two-col, .contact-layout, .faq-layout, .director-wrap { display: flex !important; flex-direction: column !important; gap: 48px; }
       .blog-header { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
-      .stats-inner { grid-template-columns: repeat(3, 1fr); }
+      .ig-grid { grid-template-columns: repeat(2, 1fr); }
       .steps-track { grid-template-columns: 1fr; gap: 40px; }
       .steps-track::before { display: none; }
       .why-grid { grid-template-columns: 1fr; }
@@ -582,11 +541,8 @@ title: AELC - Beyond the Books
     @media(max-width:600px) {
       .section { padding: 60px 5vw; }
       .hero-h1 { font-size: 3.2rem; letter-spacing: -1px; }
-      .hero-badges { gap: 12px; }
-      .hero-badge { padding: 10px 14px; }
       .hero-ctas { gap: 12px; flex-direction: column; }
       .btn-primary, .btn-secondary { padding: 16px 24px; font-size: 1.05rem; width: 100%; text-align: center; justify-content: center; }
-      .stats-inner { grid-template-columns: repeat(2, 1fr); }
       .testi-grid, .blog-grid { grid-template-columns: 1fr; }
       #sticky-enroll { bottom: 16px; right: 16px; }
       .footer-bottom { flex-direction: column; text-align: center; }
@@ -596,7 +552,7 @@ title: AELC - Beyond the Books
 
 <body>
   <div id="sticky-enroll">
-    <a href="https://wa.me/919667897249" target="_blank" class="sticky-wa" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://wa.me/919667897249" target="_blank" rel="noopener noreferrer" class="sticky-wa" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
     <a href="#contact" class="sticky-call"><i class="fa-solid fa-calendar-check"></i> Book Free Demo</a>
   </div>
 
@@ -609,7 +565,7 @@ title: AELC - Beyond the Books
       </div>
     </a>
     <div class="nav-links">
-      <a href="#about">About</a><a href="#director">Director</a><a href="#programs">Programs</a><a href="#tour">Tour</a>
+      <a href="#about">About</a><a href="#director">Director</a><a href="#programs">Programs</a><a href="#instagram">Instagram</a>
       <a href="#testimonials">Reviews</a><a href="#blog">Blog</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
     </div>
     <div class="nav-right">
@@ -626,7 +582,7 @@ title: AELC - Beyond the Books
       <a href="#about" onclick="closeMob()"> About Us</a>
       <a href="#director" onclick="closeMob()"> Director Message</a>
       <a href="#programs" onclick="closeMob()"> Programs</a>
-      <a href="#tour" onclick="closeMob()"> Virtual Tour</a>
+      <a href="#instagram" onclick="closeMob()"> Instagram</a>
       <a href="#testimonials" onclick="closeMob()"> Parent Reviews</a>
       <a href="#blog" onclick="closeMob()"> Blog & Tips</a>
       <a href="#faq" onclick="closeMob()">FAQs</a>
@@ -659,28 +615,12 @@ title: AELC - Beyond the Books
           <a href="#contact" class="btn-primary"><i class="fa-solid fa-calendar-check"></i> Book FREE Demo Class</a>
           <a href="#programs" class="btn-secondary"><i class="fa-solid fa-compass"></i> Explore Programs</a>
         </div>
-        <div class="hero-badges">
-          <div class="hero-badge">
-            <div class="hbadge-icon">💖</div>
-            <div><div class="hbadge-num" style="color:var(--coral)" data-target="500">0</div><div class="hbadge-lbl">Happy Students</div></div>
-          </div>
-          <div class="hero-badge">
-            <div class="hbadge-icon">⭐</div>
-            <div><div class="hbadge-num" style="color:var(--sky)" data-target="12">0</div><div class="hbadge-lbl">Years of Joy</div></div>
-          </div>
-          <div class="hero-badge">
-            <div class="hbadge-icon">🎵</div>
-            <div><div class="hbadge-num" style="color:var(--mint)" data-target="100">0</div><div class="hbadge-lbl">% Trinity Pass</div></div>
-          </div>
-        </div>
       </div>
     </section>
 
     <div id="stats">
       <div class="admissions-banner"><span class="admissions-dot"></span><span>Admissions Open 2026-27 - Vikaspuri, New Delhi</span></div>
       <div class="stats-inner">
-        <div class="stat-block rv d1"><span class="stat-icon">🎓</span><div class="stat-num" style="color:var(--coral)" data-target="500">0</div><div class="stat-lbl">Students Enrolled</div></div>
-        <div class="stat-block rv d2"><span class="stat-icon">📅</span><div class="stat-num" style="color:var(--sky)" data-target="10">0</div><div class="stat-lbl">Years Serving</div></div>
         <div class="stat-block rv d3"><span class="stat-icon">⭐</span><div class="stat-num" style="color:var(--lavender)" data-target="4.9">0</div><div class="stat-lbl">Google Rating</div></div>
       </div>
     </div>
@@ -689,12 +629,12 @@ title: AELC - Beyond the Books
       <div class="section-inner two-col">
         <div class="about-left rv-l">
           <div class="sec-tag"> Our Story</div>
-          <h2 class="sec-h">Nurturing futures since <span style="color:var(--coral)">2016</span>, one child at a time.</h2>
+          <h2 class="sec-h">Nurturing futures, one child at a time.</h2>
           <div class="about-checkmarks">
             <div class="about-check float-note d1"><div class="ac-icon" style="background:rgba(255,107,107,0.12); color:var(--coral);"><i class="fa-solid fa-shield-halved"></i></div>Safe, CCTV-monitored, fully air-conditioned classrooms</div>
             <div class="about-check float-note d2"><div class="ac-icon" style="background:rgba(78,205,196,0.12); color:var(--sky);"><i class="fa-solid fa-clipboard-check"></i></div>Structured timetable, notes & periodic assessments</div>
             <div class="about-check float-note d3"><div class="ac-icon" style="background:rgba(107,203,119,0.12); color:var(--mint);"><i class="fa-solid fa-chalkboard-user"></i></div>Low student-to-teacher ratio - every child seen</div>
-            <div class="about-check float-note d4"><div class="ac-icon" style="background:rgba(255,217,61,0.15); color:var(--sun-dark);"><i class="fa-solid fa-music"></i></div>Trinity College London music exam centre</div>
+            <div class="about-check float-note d4"><div class="ac-icon" style="background:rgba(255,217,61,0.15); color:var(--sun-dark);"><i class="fa-solid fa-music"></i></div>Learn instruments professionally</div>
             <div class="about-check float-note d5"><div class="ac-icon" style="background:rgba(167,139,250,0.14); color:var(--lavender);"><i class="fa-solid fa-gift"></i></div>FREE Demo Class before any commitment</div>
           </div>
           <div class="about-quote">
@@ -706,8 +646,6 @@ title: AELC - Beyond the Books
           </div>
         </div>
         <div class="about-visual rv-r">
-          <div class="about-float-badge afb-1">10+ Years of Excellence</div>
-          <div class="about-float-badge afb-2">500+ Happy Families</div>
           <div class="about-card-big">
             <img class="about-front-img" src="photos/front/img1.jpeg" alt="AELC Vikaspuri front entrance" loading="lazy" onerror="this.src='https://placehold.co/600x400/FFF0F0/FF6B6B?text=AELC+Campus'">
             <div class="about-location-panel">
@@ -716,9 +654,9 @@ title: AELC - Beyond the Books
             </div>
             <div class="about-mini-grid">
               <a class="amg-item" href="tel:9667897249"><i class="fa-solid fa-phone"></i> 9667897249</a>
-              <a class="amg-item" href="https://wa.me/919318320049" target="_blank"><i class="fa-brands fa-whatsapp"></i> 9318320049</a>
+              <a class="amg-item" href="https://wa.me/919318320049" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> 9318320049</a>
               <div class="amg-item"><i class="fa-solid fa-calendar-days"></i> Mon-Sat</div>
-              <a class="amg-item" href="https://maps.app.goo.gl/BtctNnuGdwRdb3SWA" target="_blank"><i class="fa-solid fa-map-location-dot"></i> View Maps</a>
+              <a class="amg-item" href="https://maps.app.goo.gl/BtctNnuGdwRdb3SWA" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-location-dot"></i> View Maps</a>
             </div>
           </div>
         </div>
@@ -741,17 +679,17 @@ title: AELC - Beyond the Books
             <div class="director-role"><i class="fa-solid fa-user-graduate"></i> Director, AELC</div>
           </div>
           <div class="director-socials">
-            <a class="director-social" href="https://www.instagram.com/aelc.beyond.the.book_?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a class="director-social" href="https://www.facebook.com/profile.php?id=61574368472582" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="director-social" href="https://www.instagram.com/aelc.beyond.the.book_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="director-social" href="https://www.facebook.com/profile.php?id=61574368472582" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
         </div>
         <div class="director-message rv-r">
-          <p>At AELC &ndash; Beyond the School, we believe education is not confined to textbooks or classrooms. It is about nurturing curiosity, creativity, and confidence in every child.</p>
+          <p>At AELC – Beyond the School, we believe education is not confined to textbooks or classrooms. It is about nurturing curiosity, creativity, and confidence in every child.</p>
           <p>As Director, my vision is to create a safe, joyful, and inspiring environment where children can explore, learn, and grow holistically. From our play school and tuition centre to our activity classes in guitar, art, and English, every program is designed to balance academic excellence with real-life learning experiences.</p>
           <p>Located in the heart of Vikaspuri, AELC is more than just a centre it is a community where teachers, parents, and students come together to celebrate growth. With AC classrooms, CCTV security, and a low student-teacher ratio, we ensure personalized attention.</p>
           <p>Our mission is simple: to prepare children not only for exams, but for life. By blending academics with creativity, values, and practical skills, we empower them to become confident learners and compassionate individuals.</p>
           <div class="director-signoff">
-            <span>&ndash; Taru Bharadwaaj</span>
+            <span>– Taru Bharadwaaj</span>
             Director, AELC Beyond the School
           </div>
         </div>
@@ -790,7 +728,7 @@ title: AELC - Beyond the Books
       <div class="section-inner">
         <div class="text-center rv">
           <div class="sec-tag sec-tag-mint"> Why AELC</div>
-          <h2 class="sec-h">Why 500+ Vikaspuri families <span style="color:var(--coral)">trust us.</span></h2>
+          <h2 class="sec-h">Why Vikaspuri families <span style="color:var(--coral)">trust us.</span></h2>
           <p class="sec-sub" style="margin:0 auto">We don't just teach - we care, guide, and grow with your child every step of the way.</p>
         </div>
         <div class="why-grid" id="why-grid"></div>
@@ -799,14 +737,14 @@ title: AELC - Beyond the Books
 
     <section class="cert-strip" aria-label="AELC certifications and registrations">
       <div class="cert-inner">
-        <span class="cert-label">Certifications &amp; Registrations</span>
+        <span class="cert-label">Certifications & Registrations</span>
         <div class="cert-logos">
           <div class="cert-logo-card">
             <img src="https://www.legalraasta.com/blog/wp-content/uploads/2018/09/Importance-1-e1536998812445.png" alt="MSME certification logo" loading="lazy" onerror="this.style.display='none'">
             <span>MSME</span>
           </div>
           <div class="cert-logo-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZHoelDg7WCcbIwE4IMbnb1sMqbg7NmGJpGA&amp;s" alt="Udyam registration logo" loading="lazy" onerror="this.style.display='none'">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZHoelDg7WCcbIwE4IMbnb1sMqbg7NmGJpGA&s" alt="Udyam registration logo" loading="lazy" onerror="this.style.display='none'">
             <span>Udyam</span>
           </div>
           <div class="cert-logo-card">
@@ -817,25 +755,37 @@ title: AELC - Beyond the Books
       </div>
     </section>
 
-    <section id="tour" class="section">
+    <section id="instagram" class="section">
       <div class="section-inner">
-        <div class="tour-header rv">
-          <div class="sec-tag sec-tag-sky"> Virtual Tour</div>
-          <h2 class="sec-h">Explore our <span style="color:var(--sky)">inspiring</span> spaces.</h2>
-          <p class="sec-sub" style="margin:0 auto">Click to view our full campus, activities, and celebrations gallery.</p>
+        <div class="ig-header rv">
+          <div class="sec-tag sec-tag-rose"> Follow Our Journey</div>
+          <h2 class="sec-h">Catch the latest smiles on <span style="background: -webkit-linear-gradient(45deg, #f09433, #dc2743, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Instagram</span>.</h2>
+          <p class="sec-sub" style="margin:0 auto">Daily updates, reels, and behind-the-scenes joy straight from our classrooms!</p>
         </div>
         
-        <div class="auto-gallery rv" id="auto-gallery">
-          <div class="gallery-stage" onclick="openTourLightbox(event)" aria-label="Open Full Gallery">
-            <img id="gallery-main" src="photos/front/img1.jpeg" alt="AELC campus gallery main view" loading="lazy" onerror="this.src='https://placehold.co/900x500/E8EBF5/1E2235?text=Gallery+Loading...'">
-            <div class="gallery-caption">
-              <span id="gallery-kicker">Campus</span>
-              <strong id="gallery-title">1 / 74</strong>
-            </div>
-            <button class="gallery-control gallery-prev" type="button" onclick="event.stopPropagation(); galleryStep(-1)" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="gallery-control gallery-next" type="button" onclick="event.stopPropagation(); galleryStep(1)" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
-          </div>
-          <div class="gallery-strip" id="gallery-strip" aria-label="AELC photo thumbnails"></div>
+        <div class="ig-grid rv">
+          <!-- Videos linking directly to Instagram using local videos -->
+          <!-- Make sure to replace these placeholder filenames with your actual .mp4 files inside the photos folder -->
+          <a href="https://www.instagram.com/aelc.beyond.the.book_" target="_blank" rel="noopener noreferrer" class="ig-post">
+            <video autoplay muted loop playsinline src="photos/videos/reel1.mp4" poster="https://placehold.co/400x600/E8EBF5/1E2235?text=Video+Loading..."></video>
+            <div class="ig-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </a>
+          <a href="https://www.instagram.com/aelc.beyond.the.book_" target="_blank" rel="noopener noreferrer" class="ig-post">
+            <video autoplay muted loop playsinline src="photos/videos/reel2.mp4" poster="https://placehold.co/400x600/E8EBF5/1E2235?text=Video+Loading..."></video>
+            <div class="ig-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </a>
+          <a href="https://www.instagram.com/aelc.beyond.the.book_" target="_blank" rel="noopener noreferrer" class="ig-post">
+            <video autoplay muted loop playsinline src="photos/videos/reel3.mp4" poster="https://placehold.co/400x600/E8EBF5/1E2235?text=Video+Loading..."></video>
+            <div class="ig-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </a>
+          <a href="https://www.instagram.com/aelc.beyond.the.book_" target="_blank" rel="noopener noreferrer" class="ig-post">
+            <video autoplay muted loop playsinline src="photos/videos/reel4.mp4" poster="https://placehold.co/400x600/E8EBF5/1E2235?text=Video+Loading..."></video>
+            <div class="ig-overlay"><i class="fa-brands fa-instagram"></i></div>
+          </a>
+        </div>
+
+        <div class="ig-cta-wrapper rv">
+          <a href="https://www.instagram.com/aelc.beyond.the.book_" target="_blank" rel="noopener noreferrer" class="btn-ig"><i class="fa-brands fa-instagram"></i> Follow @aelc.beyond.the.book_</a>
         </div>
       </div>
       
@@ -845,13 +795,6 @@ title: AELC - Beyond the Books
         </svg>
       </div>
     </section>
-
-    <!-- Lightbox -->
-    <div class="tour-lightbox-overlay" id="tour-lightbox" onclick="closeTourLightbox(event)">
-      <button class="tour-lb-close" onclick="closeTourLightbox(event)" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
-      <div class="tour-lb-title" id="tour-lb-title">AELC Photo Gallery</div>
-      <div class="tour-lb-grid" id="tour-lb-grid"></div>
-    </div>
 
     <section id="process" class="section">
       <div class="section-inner">
@@ -886,13 +829,6 @@ title: AELC - Beyond the Books
             </div>
           </div>
           <div style="width:1px;height:60px;background:var(--border)"></div>
-          <div class="ts-rating">
-            <div class="ts-big-num" style="color:var(--coral)">500+</div>
-            <div>
-              <div class="ts-label" style="font-size:0.88rem">Happy Families<br><span style="font-size:0.78rem">enrolled since 2016</span></div>
-            </div>
-          </div>
-          <div style="width:1px;height:60px;background:var(--border)"></div>
           <a href="#contact" class="btn-primary"><i class="fa-solid fa-star"></i> Join Happy Families</a>
         </div>
       </div>
@@ -903,7 +839,7 @@ title: AELC - Beyond the Books
         <div class="blog-header rv">
           <div>
             <div class="sec-tag sec-tag-sun"> Parenting Corner</div>
-            <h2 class="sec-h">Tips, insights &amp; <span style="color:var(--peach)">stories</span> for parents.</h2>
+            <h2 class="sec-h">Tips, insights & <span style="color:var(--peach)">stories</span> for parents.</h2>
           </div>
           <a href="#" class="btn-link" style="flex-shrink:0">View all articles <i class="fa-solid fa-arrow-right"></i></a>
         </div>
@@ -928,7 +864,7 @@ title: AELC - Beyond the Books
               <p>Our team is available Monday-Saturday. Drop us a message or book a free visit!</p>
               <div class="faq-cta-buttons">
                 <a href="#contact" class="btn-faq btn-faq-outline"><i class="fa-solid fa-calendar-check"></i> Book Free Demo</a>
-                <a href="https://wa.me/919667897249" target="_blank" class="btn-faq btn-faq-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+                <a href="https://wa.me/919667897249" target="_blank" rel="noopener noreferrer" class="btn-faq btn-faq-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
               </div>
             </div>
             <div class="visit-card">
@@ -971,15 +907,15 @@ title: AELC - Beyond the Books
               <div class="ci-item">
                 <div class="ci-icon" style="background:rgba(107,203,119,0.15); color:var(--mint)">⏰</div>
                 <div class="ci-text">
-                  <h4>Hours</h4><span>Monday - Saturday - Morning &amp; Evening Batches</span>
+                  <h4>Hours</h4><span>Monday - Saturday - Morning & Evening Batches</span>
                 </div>
               </div>
             </div>
 
             <div class="contact-socials">
-              <a href="https://www.instagram.com/aelc.beyond.the.book_?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" class="c-social" aria-label="AELC Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.facebook.com/profile.php?id=61574368472582" target="_blank" rel="noreferrer" class="c-social" aria-label="AELC Facebook"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://wa.me/919667897249" target="_blank" class="c-social" aria-label="AELC WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://www.instagram.com/aelc.beyond.the.book_" target="_blank" rel="noopener noreferrer" class="c-social" aria-label="AELC Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61574368472582" target="_blank" rel="noopener noreferrer" class="c-social" aria-label="AELC Facebook"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://wa.me/919667897249" target="_blank" rel="noopener noreferrer" class="c-social" aria-label="AELC WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
           </div>
 
@@ -989,7 +925,6 @@ title: AELC - Beyond the Books
                 <h3> Request a Free Demo</h3>
                 <p>We'll get back to you within 24 hours!</p>
 
-                <!-- Perfectly Valid AJAX Netlify Form -->
                 <form id="enroll-form" name="AELC_Enrollment" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                   <input type="hidden" name="form-name" value="AELC_Enrollment" />
                   <p class="hidden-field" style="display:none">
@@ -1038,11 +973,11 @@ title: AELC - Beyond the Books
           <div class="f-brand-name">AELC</div>
         </div>
         <p class="f-tagline">Learning Beyond School, Growing Beyond Boundaries</p>
-        <p class="f-desc">Asha Early Learning Centre - Vikaspuri's most trusted home for playschool, tuitions, music, art, and life skills since 2016.</p>
+        <p class="f-desc">Asha Early Learning Centre - Vikaspuri's most trusted home for playschool, tuitions, music, art, and life skills.</p>
         <div class="f-socials">
-          <a href="https://www.instagram.com/aelc.beyond.the.book_?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" class="f-soc" aria-label="AELC Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=61574368472582" target="_blank" rel="noreferrer" class="f-soc" aria-label="AELC Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://wa.me/919667897249" target="_blank" class="f-soc" aria-label="AELC WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/aelc.beyond.the.book_" target="_blank" rel="noopener noreferrer" class="f-soc" aria-label="AELC Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61574368472582" target="_blank" rel="noopener noreferrer" class="f-soc" aria-label="AELC Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/919667897249" target="_blank" rel="noopener noreferrer" class="f-soc" aria-label="AELC WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="f-col">
@@ -1063,7 +998,7 @@ title: AELC - Beyond the Books
           <li><a href="#about">About AELC</a></li>
           <li><a href="#director">Director Message</a></li>
           <li><a href="#why">Why Choose Us</a></li>
-          <li><a href="#tour">Virtual Tour</a></li>
+          <li><a href="#instagram">Instagram</a></li>
           <li><a href="#testimonials">Parent Reviews</a></li>
           <li><a href="#blog">Blog & Tips</a></li>
           <li><a href="#faq">FAQs</a></li>
@@ -1074,11 +1009,10 @@ title: AELC - Beyond the Books
         <ul style="margin-bottom:16px">
           <li><a href="tel:9667897249">📞 9667897249</a></li>
           <li><a href="tel:9318320049">📞 9318320049</a></li>
-          <li><a href="https://wa.me/919667897249" target="_blank">💬 WhatsApp Us</a></li>
-          <li><a href="https://maps.app.goo.gl/BtctNnuGdwRdb3SWA" target="_blank">📍 DG-2/115A, Vikaspuri, Delhi</a></li>
+          <li><a href="https://wa.me/919667897249" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a></li>
+          <li><a href="https://maps.app.goo.gl/BtctNnuGdwRdb3SWA" target="_blank" rel="noopener noreferrer">📍 DG-2/115A, Vikaspuri, Delhi</a></li>
         </ul>
         <div class="f-accreditation">
-          <span class="f-acc">🏆 Trinity College London</span>
           <span class="f-acc">📚 CBSE Aligned</span>
           <span class="f-acc">📷 CCTV Secured</span>
           <span class="f-acc">❄️ Fully AC</span>
@@ -1096,9 +1030,8 @@ title: AELC - Beyond the Books
       { icon: '<i class="fa-solid fa-child"></i>', color: '#FF6B6B', bg: 'rgba(255,107,107,0.12)', age: 'Ages 1.5-6', title: 'Playschool', sub: 'Jr Nursery  -  Sr Nursery  -  KG', desc: 'Play-based learning in a safe, warm classroom with personalized attention and structured phonics curriculum.', feats: ['Phonics & Early Numeracy', 'Art, Craft & Music daily', 'CCTV + AC Classrooms', 'Low student-teacher ratio'], cta: 'Enroll Now', border: '#FF6B6B', link: 'playschool-homepage.html' },
       { icon: '<i class="fa-solid fa-book"></i>', color: '#4ECDC4', bg: 'rgba(78,205,196,0.15)', age: 'Class 1-8', title: 'Foundation Tuitions', sub: 'All Subjects', desc: 'Strong academic foundations in Maths, Science, English, Social Studies & Hindi with notes and regular assessments.', feats: ['All CBSE subjects covered', 'Notes & Assignments', 'Periodic Tests & Assessments', 'Free Demo Class'], cta: 'Book Demo', border: '#4ECDC4', link: 'foundation-tuitions.html' },
       { icon: '<i class="fa-solid fa-flask"></i>', color: '#6BCB77', bg: 'rgba(107,203,119,0.15)', age: 'Class 9-12', title: 'Math & Science', sub: 'Senior Classes', desc: 'Highly qualified tutors with personalised learning plans for board exam preparation and beyond.', feats: ['Maths  -  Physics  -  Chemistry  -  Bio', 'Board-exam focused', 'Previous year papers', 'FREE Trial Class'], cta: 'Free Trial', border: '#6BCB77', link: 'math-science.html' },
-      { icon: '<i class="fa-solid fa-music"></i>', color: '#FFD93D', bg: 'rgba(255,217,61,0.15)', age: 'All Ages', title: 'Music Classes', sub: 'Piano - Guitar - Ukulele - Harmonium', desc: 'Learn from certified musicians and sit Trinity College of London Grade exams with a 100% pass rate.', feats: ['Piano, Guitar, Mandolin, Ukulele', 'Trinity College London Exams', 'Chord Progression & Staff Notation', 'Weekend Batches'], cta: 'Book Music Demo', border: '#FFD93D', link: 'music-classes.html' },
+      { icon: '<i class="fa-solid fa-music"></i>', color: '#FFD93D', bg: 'rgba(255,217,61,0.15)', age: 'All Ages', title: 'Music Classes', sub: 'Piano - Guitar - Ukulele - Harmonium', desc: 'Learn from certified musicians and get a diploma from Trinity College of London.', feats: ['Piano, Guitar, Mandolin, Ukulele', 'Professional Diploma Preparation', 'Chord Progression & Staff Notation', 'Weekend Batches'], cta: 'Book Music Demo', border: '#FFD93D', link: 'music-classes.html' },
       
-      /* THE FOLLOWING CARDS WILL NOW SMOOTH SCROLL DOWN TO THE CONTACT FORM */
       { icon: '<i class="fa-solid fa-palette"></i>', color: '#FFB347', bg: 'rgba(255,179,71,0.15)', age: 'All Ages', title: 'Art & Craft', sub: 'Creative Studio', desc: 'Drawing, shading, colouring, and craft activities that develop creativity and fine motor skills.', feats: ['Basic Drawing & Shading', 'Craft & DIY Projects', 'Stage Art & Theatre Props', 'All materials provided'], cta: 'Join Art Class', border: '#FFB347', link: '#contact' },
       { icon: '<i class="fa-solid fa-robot"></i>', color: '#A78BFA', bg: 'rgba(167,139,250,0.15)', age: 'Class 9-10', title: 'AI/IT Classes', sub: 'Future Skills', desc: 'CBSE AI & IT curriculum, coding basics, and digital literacy for the next generation of innovators.', feats: ['AI Fundamentals (CBSE)', 'Coding & Digital Literacy', 'Project-based Learning', 'Dance & Computer Workshop soon!'], cta: 'Enroll Now', border: '#A78BFA', link: '#contact' },
       { icon: '<i class="fa-solid fa-sun"></i>', color: '#FF8FAB', bg: 'rgba(255,143,171,0.15)', age: 'Ages 3-8', title: 'Summer Camp', sub: 'Seasonal Creative Camp', desc: 'A lively mix of craft, movement, storytelling, music, and hands-on activities for curious young learners.', feats: ['Fun with Colours & Craft', 'Dancing & Creative Movement', 'Healthy Cooking Sessions', 'Small, supervised batches'], cta: 'Register Interest', border: '#FF8FAB', link: '#contact' },
@@ -1109,11 +1042,11 @@ title: AELC - Beyond the Books
       { icon: '<i class="fa-solid fa-shield-alt"></i>', color: 'rgba(255,107,107,0.12)', border: '#FF6B6B', title: 'Safe & Secure', desc: 'Fully AC, CCTV-monitored classrooms. Safe study guidance, counselling, and background-checked staff.', tag: 'Top Priority', tagColor: 'rgba(255,107,107,0.12)', tagTxt: '#c0392b' },
       { icon: '<i class="fa-solid fa-clipboard-list"></i>', color: 'rgba(78,205,196,0.12)', border: '#4ECDC4', title: 'Structured Learning', desc: 'Proper timetable, comprehensive notes, assignments, and periodic tests keep every student organised.', tag: 'Proven Method', tagColor: 'rgba(78,205,196,0.12)', tagTxt: '#36b5ac' },
       { icon: '<i class="fa-solid fa-chalkboard-teacher"></i>', color: 'rgba(107,203,119,0.12)', border: '#6BCB77', title: 'Low Student:Teacher Ratio', desc: 'Small batches mean every child receives individual attention, guidance, and encouragement.', tag: 'Personal Attention', tagColor: 'rgba(107,203,119,0.12)', tagTxt: '#50a85a' },
-      { icon: '<i class="fa-solid fa-music"></i>', color: 'rgba(255,217,61,0.2)', border: '#FFD93D', title: 'Trinity Music Centre', desc: '100% pass rate in Trinity College of London exams. Internationally recognised music certifications.', tag: 'Internationally Certified', tagColor: 'rgba(255,217,61,0.2)', tagTxt: '#b38a00' },
+      { icon: '<i class="fa-solid fa-music"></i>', color: 'rgba(255,217,61,0.2)', border: '#FFD93D', title: 'Learn instruments professionally', desc: 'Learn professionally and get a diploma from Trinity College of London.', tag: 'Internationally Certified', tagColor: 'rgba(255,217,61,0.2)', tagTxt: '#b38a00' },
       { icon: '<i class="fa-solid fa-handshake"></i>', color: 'rgba(167,139,250,0.12)', border: '#A78BFA', title: 'FREE Demo First', desc: 'No pressure. Try a class first, meet the teachers, and see the classroom before making any commitment.', tag: 'Zero Pressure', tagColor: 'rgba(167,139,250,0.12)', tagTxt: '#6d4fe0' },
       { icon: '<i class="fa-solid fa-globe"></i>', color: 'rgba(255,179,71,0.15)', border: '#FFB347', title: 'Beyond Exams', desc: 'We prepare children for the real world with life skills, communication, and critical thinking programs.', tag: 'Holistic Growth', tagColor: 'rgba(255,179,71,0.15)', tagTxt: '#b85a00' },
       { icon: '<i class="fa-solid fa-mobile-alt"></i>', color: 'rgba(78,205,196,0.12)', border: '#4ECDC4', title: 'Parent Communication', desc: 'Regular updates, feedback, and open communication so parents are always part of the learning journey.', tag: 'Transparent', tagColor: 'rgba(78,205,196,0.12)', tagTxt: '#36b5ac' },
-      { icon: '<i class="fa-solid fa-trophy"></i>', color: 'rgba(255,143,171,0.12)', border: '#FF8FAB', title: '10+ Years of Trust', desc: 'Serving Vikaspuri families since 2016 with consistent quality, warmth, and academic excellence.', tag: 'Trusted Legacy', tagColor: 'rgba(255,143,171,0.12)', tagTxt: '#cc4477' },
+      { icon: '<i class="fa-solid fa-trophy"></i>', color: 'rgba(255,143,171,0.12)', border: '#FF8FAB', title: 'Trusted Legacy', desc: 'Serving Vikaspuri families with consistent quality, warmth, and academic excellence.', tag: 'Trusted Legacy', tagColor: 'rgba(255,143,171,0.12)', tagTxt: '#cc4477' },
     ];
 
     const STEPS = [
@@ -1146,19 +1079,8 @@ title: AELC - Beyond the Books
 
     const BLOGS = [
       { img: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=250&fit=crop', tag: 'Child Development', tagClr: '#FF6B6B', tagBg: 'rgba(255,107,107,0.1)', title: '7 Signs Your Child is Ready for Preschool', excerpt: 'Most parents wonder: when exactly is the right time? Here are the developmental milestones that tell you your toddler is ready to take that exciting first step. From social skills to basic motor coordination, we break down what to look for and how to prepare.', date: 'Mar 2026', read: '4 min read' },
-      { img: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop', tag: 'Music Education', tagClr: '#2DC653', tagBg: 'rgba(45,198,83,0.1)', title: 'Why Every Child Should Learn a Musical Instrument', excerpt: 'Research shows that music learning boosts language skills, maths ability, and emotional intelligence. Here\'s how to get started - even for complete beginners. Discover the benefits and our Trinity-certified programs.', date: 'Feb 2026', read: '5 min read' },
+      { img: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop', tag: 'Music Education', tagClr: '#2DC653', tagBg: 'rgba(45,198,83,0.1)', title: 'Why Every Child Should Learn a Musical Instrument', excerpt: 'Research shows that music learning boosts language skills, maths ability, and emotional intelligence. Here\'s how to get started - even for complete beginners. Discover the benefits and our certified programs.', date: 'Feb 2026', read: '5 min read' },
       { img: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop', tag: 'Study Tips', tagClr: '#0077B6', tagBg: 'rgba(0,119,182,0.1)', title: 'How to Build a Study Habit in Class 5-8 Students', excerpt: 'The middle school years are critical. These 6 evidence-based strategies help children build lasting study habits that carry through board exams and beyond. Tips from our experienced educators.', date: 'Jan 2026', read: '6 min read' },
-    ];
-
-    const GALLERY_IMAGES = [
-      "photos/front/img1.jpeg", "photos/front/img2.jpeg", "photos/front/img3.jpeg", "photos/front/img4.jpeg",
-      "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM.jpeg", "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM (1).jpeg", "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.28 AM (2).jpeg", "photos/classroom/WhatsApp Image 2026-03-18 at 10.54.29 AM.jpeg",
-      "photos/activities/WhatsApp Image 2026-03-16 at 10.16.36 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (2).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.42 AM (3).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.43 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.43 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (2).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.44 AM (3).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM (2).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM.jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM (1).jpeg", "photos/activities/WhatsApp Image 2026-03-16 at 10.16.46 AM (2).jpeg",
-      "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM (3).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.43 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.44 AM (3).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM.jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM (2).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.46 AM (1).jpeg", "photos/art/WhatsApp Image 2026-03-16 at 10.16.46 AM (2).jpeg",
-      "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.22 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.26 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.14.27 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.16.20 AM.jpeg", "photos/birthday/WhatsApp Image 2026-03-16 at 10.16.21 AM.jpeg",
-      "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.32 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.33 AM (1).jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.34 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.35 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.38 AM.jpeg", "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.38 AM (1).jpeg",
-      "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.22 AM.jpeg", "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.28 AM.jpeg", "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.28 AM (1).jpeg",
-      "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.22 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.28 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.28 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.29 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.29 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (3).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.32 AM (2).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.33 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.33 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.34 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.34 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.35 AM.jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.35 AM (1).jpeg", "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.36 AM (1).jpeg"
     ];
 
     function renderPrograms() {
@@ -1297,86 +1219,6 @@ title: AELC - Beyond the Books
       document.querySelectorAll('[data-target]').forEach(el => obs.observe(el.closest('.hero-badge,.stat-block') || el));
     }
 
-    /* VIRTUAL TOUR GALLERY LOGIC */
-    let galleryIndex = 0;
-    let galleryTimer;
-    function galleryLabel(src) {
-      const section = decodeURIComponent(src.split('/')[1] || 'campus').replace('-', ' ');
-      return section.replace(/\b\w/g, c => c.toUpperCase());
-    }
-
-    function openTourLightbox(event) {
-      if (event) event.preventDefault();
-      const lb = document.getElementById('tour-lightbox');
-      const grid = document.getElementById('tour-lb-grid');
-      const title = document.getElementById('tour-lb-title');
-      if (title) title.textContent = "AELC Photo Gallery";
-
-      if (grid && !grid.innerHTML.trim()) {
-        grid.innerHTML = GALLERY_IMAGES.map((src, index) => `
-          <img class="tour-lb-img" loading="lazy" src="${src}" alt="AELC Gallery Image ${index + 1}" 
-               onerror="this.src='https://placehold.co/300x200/4ECDC4/FFFFFF?text=Photo+${index+1}'" 
-               onclick="setGalleryImage(${index}); closeTourLightbox(event); window.location.hash='#tour';">
-        `).join('');
-      }
-      
-      if (lb) lb.classList.add('open');
-      clearInterval(galleryTimer);
-    }
-
-    function closeTourLightbox(e) {
-      if (e && e.target && e.target.tagName === 'IMG' && e.target.classList.contains('tour-lb-img')) return;
-      const lb = document.getElementById('tour-lightbox');
-      if (lb) lb.classList.remove('open');
-      clearInterval(galleryTimer);
-      galleryTimer = setInterval(() => setGalleryImage(galleryIndex + 1), 3200);
-    }
-
-    function setGalleryImage(index) {
-      if (!GALLERY_IMAGES.length) return;
-      galleryIndex = (index + GALLERY_IMAGES.length) % GALLERY_IMAGES.length;
-      const src = GALLERY_IMAGES[galleryIndex];
-      const main = document.getElementById('gallery-main');
-      const kicker = document.getElementById('gallery-kicker');
-      const title = document.getElementById('gallery-title');
-      if (!main) return;
-      main.classList.remove('loaded');
-      main.src = src;
-      main.alt = `AELC ${galleryLabel(src)} photo`;
-      kicker.textContent = galleryLabel(src);
-      title.textContent = `${galleryIndex + 1} / ${GALLERY_IMAGES.length}`;
-      document.querySelectorAll('.gallery-thumb').forEach((btn, i) => {
-        btn.classList.toggle('active', i === galleryIndex);
-      });
-      const active = document.querySelector('.gallery-thumb.active');
-      const strip = document.getElementById('gallery-strip');
-      if (active && strip) {
-        strip.scrollTo({
-          left: active.offsetLeft - (strip.clientWidth / 2) + (active.clientWidth / 2),
-          behavior: 'smooth'
-        });
-      }
-    }
-
-    function galleryStep(dir) {
-      setGalleryImage(galleryIndex + dir);
-      clearInterval(galleryTimer);
-      galleryTimer = setInterval(() => setGalleryImage(galleryIndex + 1), 3200);
-    }
-
-    function initTourGallery() {
-      const strip = document.getElementById('gallery-strip');
-      const main = document.getElementById('gallery-main');
-      if (!strip || !main) return;
-      strip.innerHTML = GALLERY_IMAGES.map((src, i) => `
-        <button type="button" class="gallery-thumb" onclick="setGalleryImage(${i})" aria-label="Show photo ${i + 1}">
-          <img src="${src}" alt="Thumbnail ${i + 1}" loading="lazy">
-        </button>`).join('');
-      main.addEventListener('load', () => main.classList.add('loaded'));
-      setGalleryImage(0);
-      galleryTimer = setInterval(() => setGalleryImage(galleryIndex + 1), 3200);
-    }
-
     /* NETLIFY AJAX FORM SUBMISSION */
     const enrollForm = document.getElementById('enroll-form');
     if(enrollForm) {
@@ -1462,13 +1304,8 @@ title: AELC - Beyond the Books
       renderBlog(); 
       renderFAQ();
       observe();
-      initTourGallery();
       
       setInterval(() => heroSlide(1), 5000);
-      
-      document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') closeTourLightbox(e);
-      });
     });
   </script>
 </body>
