@@ -340,7 +340,8 @@ title: AELC - Beyond the Books
     
     .auto-gallery { max-width: 960px; margin: 0 auto; background: white; padding: 20px; border-radius: 24px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08); border: 1px solid var(--border); position: relative; z-index: 2;}
     .gallery-stage { position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; background: #000; }
-    .gallery-stage video { width: 100%; height: 100%; object-fit: contain; }
+    .gallery-stage video,
+    .gallery-stage img { width: 100%; height: 100%; object-fit: contain; display: block; }
     
     .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 60px 24px 24px; background: linear-gradient(to top, rgba(30,34,53,0.9), transparent); color: white; display: flex; flex-direction: column; pointer-events: none; transition: opacity 0.3s; }
     #gallery-kicker { font-size: 0.8rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: var(--sun); margin-bottom: 4px;}
@@ -361,8 +362,9 @@ title: AELC - Beyond the Books
     .gallery-thumb { flex-shrink: 0; width: 120px; height: 80px; border-radius: 10px; overflow: hidden; border: 3px solid transparent; padding: 0; background: #000; cursor: pointer; opacity: 0.5; transition: var(--tr); position: relative; }
     .gallery-thumb:hover { opacity: 1; transform: translateY(-2px); }
     .gallery-thumb.active { opacity: 1; border-color: var(--coral); transform: scale(1.05); }
-    .gallery-thumb video { width: 100%; height: 100%; object-fit: cover; }
-    .gallery-thumb::after { content:'\f04b'; font-family:'Font Awesome 6 Free'; font-weight:900; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:white; font-size:1.2rem; opacity:0.8;}
+    .gallery-thumb video,
+    .gallery-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-thumb.video::after { content:'\f04b'; font-family:'Font Awesome 6 Free'; font-weight:900; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:white; font-size:1.2rem; opacity:0.8; }
 
     .tour-lightbox-overlay { display: none; position: fixed; inset: 0; background: rgba(15, 18, 30, 0.98); z-index: 9999; align-items: center; justify-content: center; flex-direction: column; gap: 24px; padding: 40px 2vw; backdrop-filter: blur(12px); animation: fadeIn 0.3s ease; }
     .tour-lightbox-overlay.open { display: flex; }
@@ -374,7 +376,8 @@ title: AELC - Beyond the Books
     
     .tour-lb-vid-wrap { position:relative; width:100%; height:200px; border-radius:12px; overflow:hidden; cursor:pointer; background:#000; border: 1px solid rgba(255,255,255,0.1); transition:all 0.3s; }
     .tour-lb-vid-wrap:hover { transform: scale(1.04); box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8); border-color: rgba(255,255,255,0.3); z-index: 2; }
-    .tour-lb-vid-wrap video { width:100%; height:100%; object-fit:cover; pointer-events: none;}
+    .tour-lb-vid-wrap video,
+    .tour-lb-vid-wrap img { width:100%; height:100%; object-fit:cover; pointer-events: none; }
     
     .tour-lb-close { position: absolute; top: 24px; right: 32px; background: rgba(255, 255, 255, 0.1); border: 2px solid rgba(255, 255, 255, 0.2); color: white; border-radius: 50%; width: 54px; height: 54px; font-size: 1.6rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--tr); z-index: 10000; }
     .tour-lb-close:hover { background: var(--coral); border-color: var(--coral); transform: rotate(90deg); }
@@ -791,14 +794,15 @@ title: AELC - Beyond the Books
         </div>
         
         <div class="auto-gallery rv" id="auto-gallery">
-          <div class="gallery-stage" aria-label="AELC Video Player">
-            <!-- Main Video Player -->
-            <video id="gallery-main" controls autoplay muted playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
+          <div class="gallery-stage" aria-label="AELC Media Player">
+            <!-- Main Gallery Player -->
+            <video id="gallery-main-video" controls autoplay muted playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;"></video>
+            <img id="gallery-main-image" alt="Gallery image" style="display:none; width:100%; height:100%; object-fit:contain;" />
             
-            <button onclick="openTourLightbox(event)" class="expand-btn" aria-label="View All Videos"><i class="fa-solid fa-table-cells"></i> View All</button>
+            <button onclick="openTourLightbox(event)" class="expand-btn" aria-label="View All Media"><i class="fa-solid fa-table-cells"></i> View All</button>
 
             <div class="gallery-caption">
-              <span id="gallery-kicker">AELC Videos</span>
+              <span id="gallery-kicker">AELC Moments</span>
               <strong id="gallery-title">1 / X</strong>
             </div>
 
@@ -1110,22 +1114,23 @@ title: AELC - Beyond the Books
       { img: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop', tag: 'Study Tips', tagClr: '#0077B6', tagBg: 'rgba(0,119,182,0.1)', title: 'How to Build a Study Habit in Class 5-8 Students', excerpt: 'The middle school years are critical. These 6 evidence-based strategies help children build lasting study habits that carry through board exams and beyond. Tips from our experienced educators.', date: 'Jan 2026', read: '6 min read' },
     ];
 
-    // Array of your videos. A server endpoint will replace this list when available.
-    const DEFAULT_GALLERY_VIDEOS = [
-      "photos/activities/WhatsApp Video 2026-03-16 at 10.06.19 AM.mp4",
-      "photos/activities/WhatsApp Video 2026-03-16 at 10.16.20 AM.mp4",
-      "photos/classroom/WhatsApp Video 2026-03-18 at 10.54.29 AM.mp4",
-      "photos/art/WhatsApp Video 2026-03-16 at 10.07.35 AM.mp4"
+    // Gallery media list: images and videos. A server endpoint will replace this fallback list when available.
+    const DEFAULT_GALLERY_MEDIA = [
+      { path: "photos/front/img1.jpeg", type: "image" },
+      { path: "photos/front/img2.jpeg", type: "image" },
+      { path: "photos/activities/WhatsApp Video 2026-03-16 at 10.06.19 AM.mp4", type: "video" },
+      { path: "photos/classroom/WhatsApp Video 2026-03-18 at 10.54.29 AM.mp4", type: "video" }
     ];
-    let GALLERY_VIDEOS = [...DEFAULT_GALLERY_VIDEOS];
+    let GALLERY_MEDIA = [...DEFAULT_GALLERY_MEDIA];
+    let galleryImageAdvanceTimeout = null;
 
-    async function loadGalleryVideos() {
+    async function loadGalleryMedia() {
       try {
-        const res = await fetch('/api/gallery-videos');
+        const res = await fetch('/api/gallery-media');
         if (!res.ok) return;
         const payload = await res.json();
-        if (payload && Array.isArray(payload.videos) && payload.videos.length) {
-          GALLERY_VIDEOS = payload.videos;
+        if (payload && Array.isArray(payload.media) && payload.media.length) {
+          GALLERY_MEDIA = payload.media;
         }
       } catch (err) {
         // If the API is not available, keep the fallback list.
@@ -1273,16 +1278,20 @@ title: AELC - Beyond the Books
       if (event) event.preventDefault();
       const lb = document.getElementById('tour-lightbox');
       const grid = document.getElementById('tour-lb-grid');
-      const mainVid = document.getElementById('gallery-main');
+      const mainVideo = document.getElementById('gallery-main-video');
       
       // Pause main video while lightbox is open
-      if (mainVid) mainVid.pause();
+      if (mainVideo) mainVideo.pause();
 
       if (grid && !grid.innerHTML.trim()) {
-        grid.innerHTML = GALLERY_VIDEOS.map((src, index) => `
+        grid.innerHTML = GALLERY_MEDIA.map((item, index) => `
           <div class="tour-lb-vid-wrap" onclick="setGalleryMedia(${index}); closeTourLightbox(event); window.location.hash='#tour';">
-            <video loading="lazy" src="${src}#t=0.1" preload="metadata" muted playsinline></video>
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:white;font-size:2rem;background:rgba(0,0,0,0.3);"><i class="fa-solid fa-play"></i></div>
+            ${item.type === 'video' ? `
+              <video loading="lazy" src="${encodeURI(item.path)}#t=0.1" preload="metadata" muted playsinline></video>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:white;font-size:2rem;background:rgba(0,0,0,0.3);"><i class="fa-solid fa-play"></i></div>
+            ` : `
+              <img loading="lazy" src="${encodeURI(item.path)}" alt="Gallery image" />
+            `}
           </div>
         `).join('');
       }
@@ -1298,32 +1307,46 @@ title: AELC - Beyond the Books
       if (lb) lb.classList.remove('open');
       
       // Resume the main video
-      const mainVid = document.getElementById('gallery-main');
-      if (mainVid && mainVid.paused) {
-          mainVid.play().catch(()=>{});
+      const mainVideo = document.getElementById('gallery-main-video');
+      if (mainVideo && mainVideo.paused) {
+          mainVideo.play().catch(()=>{});
       }
     }
 
     function setGalleryMedia(index) {
-      if (!GALLERY_VIDEOS.length) return;
-      galleryIndex = (index + GALLERY_VIDEOS.length) % GALLERY_VIDEOS.length;
+      if (!GALLERY_MEDIA.length) return;
+      galleryIndex = (index + GALLERY_MEDIA.length) % GALLERY_MEDIA.length;
       
-      const src = GALLERY_VIDEOS[galleryIndex];
-      const main = document.getElementById('gallery-main');
+      const item = GALLERY_MEDIA[galleryIndex];
+      const mainVideo = document.getElementById('gallery-main-video');
+      const mainImage = document.getElementById('gallery-main-image');
       const title = document.getElementById('gallery-title');
       
-      if (!main) return;
-      const uri = encodeURI(src);
-      if (main.src !== uri) {
-        main.src = uri;
-        main.load();
+      if (!mainVideo || !mainImage) return;
+      if (galleryImageAdvanceTimeout) {
+        clearTimeout(galleryImageAdvanceTimeout);
+        galleryImageAdvanceTimeout = null;
       }
-      main.muted = true;
-      main.playsInline = true;
-      main.autoplay = true;
-      main.play().catch(() => {});
 
-      title.textContent = `${galleryIndex + 1} / ${GALLERY_VIDEOS.length}`;
+      if (item.type === 'video') {
+        mainImage.style.display = 'none';
+        mainVideo.style.display = 'block';
+        mainVideo.src = encodeURI(item.path);
+        mainVideo.muted = true;
+        mainVideo.playsInline = true;
+        mainVideo.autoplay = true;
+        mainVideo.load();
+        mainVideo.play().catch(() => {});
+      } else {
+        mainVideo.pause();
+        mainVideo.style.display = 'none';
+        mainImage.style.display = 'block';
+        mainImage.src = encodeURI(item.path);
+        mainImage.alt = item.name || `Gallery image ${galleryIndex + 1}`;
+        galleryImageAdvanceTimeout = setTimeout(() => galleryStep(1), 8000);
+      }
+
+      title.textContent = `${galleryIndex + 1} / ${GALLERY_MEDIA.length}`;
       
       // Update Active Thumbnail
       document.querySelectorAll('.gallery-thumb').forEach((btn, i) => {
@@ -1346,28 +1369,26 @@ title: AELC - Beyond the Books
     }
 
     async function initTourGallery() {
-      await loadGalleryVideos();
+      await loadGalleryMedia();
       const strip = document.getElementById('gallery-strip');
-      const main = document.getElementById('gallery-main');
-      if (!strip || !main) return;
-
-      main.muted = true;
-      main.playsInline = true;
-      main.autoplay = true;
-      main.preload = 'metadata';
-      main.addEventListener('loadedmetadata', () => {
-        main.play().catch(() => {});
-      });
-
-      strip.innerHTML = GALLERY_VIDEOS.map((src, i) => `
-        <button type="button" class="gallery-thumb" onclick="setGalleryMedia(${i})" aria-label="Play video ${i + 1}">
-          <video src="${encodeURI(src)}#t=0.1" preload="metadata" muted playsinline></video>
-        </button>`).join('');
+      const mainVideo = document.getElementById('gallery-main-video');
+      const mainImage = document.getElementById('gallery-main-image');
+      if (!strip || !mainVideo || !mainImage) return;
       
-      // Auto-play the next video when the current one finishes
-      main.addEventListener('ended', () => {
+      mainVideo.muted = true;
+      mainVideo.playsInline = true;
+      mainVideo.autoplay = true;
+      mainVideo.preload = 'metadata';
+      mainVideo.addEventListener('ended', () => {
         galleryStep(1);
       });
+
+      strip.innerHTML = GALLERY_MEDIA.map((item, i) => `
+        <button type="button" class="gallery-thumb ${item.type}" onclick="setGalleryMedia(${i})" aria-label="Play media ${i + 1}">
+          ${item.type === 'video'
+            ? `<video src="${encodeURI(item.path)}#t=0.1" preload="metadata" muted playsinline></video>`
+            : `<img src="${encodeURI(item.path)}" loading="lazy" alt="Gallery thumbnail" />`}
+        </button>`).join('');
 
       setGalleryMedia(0);
     }
