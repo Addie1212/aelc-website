@@ -355,7 +355,7 @@ title: AELC - Beyond the Books
     .gallery-prev { left: 20px; }
     .gallery-next { right: 20px; }
 
-    .gallery-strip { display: flex; gap: 12px; overflow-x: auto; margin-top: 20px; padding-bottom: 12px; scroll-behavior: smooth; }
+    .gallery-strip { display: flex; gap: 12px; overflow-x: auto; margin-top: 20px; padding-bottom: 12px; scroll-behavior: smooth; max-height: 100px; }
     .gallery-strip::-webkit-scrollbar { height: 6px; }
     .gallery-strip::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
     
@@ -1127,12 +1127,17 @@ title: AELC - Beyond the Books
     async function loadGalleryMedia() {
       try {
         const res = await fetch('/api/gallery-media');
-        if (!res.ok) return;
+        if (!res.ok) {
+          console.warn('Gallery media API failed:', res.status);
+          return;
+        }
         const payload = await res.json();
         if (payload && Array.isArray(payload.media) && payload.media.length) {
           GALLERY_MEDIA = payload.media;
+          console.log('Loaded', GALLERY_MEDIA.length, 'gallery items');
         }
       } catch (err) {
+        console.warn('Gallery media fetch error:', err);
         // If the API is not available, keep the fallback list.
       }
     }
