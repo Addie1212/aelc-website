@@ -1114,32 +1114,52 @@ title: AELC - Beyond the Books
       { img: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=250&fit=crop', tag: 'Study Tips', tagClr: '#0077B6', tagBg: 'rgba(0,119,182,0.1)', title: 'How to Build a Study Habit in Class 5-8 Students', excerpt: 'The middle school years are critical. These 6 evidence-based strategies help children build lasting study habits that carry through board exams and beyond. Tips from our experienced educators.', date: 'Jan 2026', read: '6 min read' },
     ];
 
-    // Gallery media list: images and videos. A server endpoint will replace this fallback list when available.
+    // Gallery media: 17 random videos + 20 random photos (Netlify compatible)
     const DEFAULT_GALLERY_MEDIA = [
-      { path: "photos/front/img1.jpeg", type: "image" },
-      { path: "photos/front/img2.jpeg", type: "image" },
-      { path: "photos/activities/WhatsApp Video 2026-03-16 at 10.06.19 AM.mp4", type: "video" },
-      { path: "photos/classroom/WhatsApp Video 2026-03-18 at 10.54.29 AM.mp4", type: "video" }
+      { path: "photos/art/WhatsApp Video 2026-03-16 at 10.07.35 AM.mp4", type: "video" },
+      { path: "photos/aelc.beyond.the.book__1774426870_3860492627540691023_79798559993.mp4", type: "video" },
+      { path: "photos/aelc.beyond.the.book__1779973217_3907020099614015597_79798559993.mp4", type: "video" },
+      { path: "photos/activities/WhatsApp Video 2026-03-16 at 10.07.30 AM.mp4", type: "video" },
+      { path: "photos/aelc.beyond.the.book__1774675123_3862577241952323822_79798559993.mp4", type: "video" },
+      { path: "photos/activities/WhatsApp Video 2026-03-16 at 10.16.29 AM.mp4", type: "video" },
+      { path: "photos/activities/WhatsApp Video 2026-03-16 at 10.16.21 AM.mp4", type: "video" },
+      { path: "photos/activities/WhatsApp Video 2026-03-16 at 10.16.20 AM.mp4", type: "video" },
+      { path: "photos/aelc.beyond.the.book__1775535878_3869796928104667716_79798559993.mp4", type: "video" },
+      { path: "photos/aelc.beyond.the.book__1775729767_3871405964856105005_79798559993.mp4", type: "video" },
+      { path: "photos/aelc.beyond.the.book__1773739269_3854726036567862731_79798559993.mp4", type: "video" },
+      { path: "photos/aelc.beyond.the.book__1780041283_3907591516013436191_79798559993.mp4", type: "video" },
+      { path: "photos/art/WhatsApp Video 2026-03-16 at 10.07.42 AM.mp4", type: "video" },
+      { path: "photos/aelc.beyond.the.book__1778773968_3896960279230008676_79798559993.mp4", type: "video" },
+      { path: "photos/aelc.beyond.the.book__1779535112_3903345119848244595_79798559993.mp4", type: "video" },
+      { path: "photos/aelc.beyond.the.book__1776323922_3876408169325619750_79798559993.mp4", type: "video" },
+      { path: "photos/aelc.beyond.the.book__1779268820_3901107619171778572_79798559993.mp4", type: "video" },
+      { path: "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.22 AM.jpeg", type: "image" },
+      { path: "photos/front/img3.jpeg", type: "image" },
+      { path: "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (2).jpeg", type: "image" },
+      { path: "photos/art/WhatsApp Image 2026-03-16 at 10.16.45 AM (2) - Copy.jpeg", type: "image" },
+      { path: "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.35 AM (1).jpeg", type: "image" },
+      { path: "photos/graduation/WhatsApp Image 2026-03-16 at 10.07.33 AM (1).jpeg", type: "image" },
+      { path: "photos/art/WhatsApp Image 2026-03-16 at 10.16.42 AM.jpeg", type: "image" },
+      { path: "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.33 AM (1).jpeg", type: "image" },
+      { path: "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.28 AM (1).jpeg", type: "image" },
+      { path: "photos/birthday/WhatsApp Image 2026-03-16 at 10.16.20 AM.jpeg", type: "image" },
+      { path: "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.31 AM (2).jpeg", type: "image" },
+      { path: "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.33 AM.jpeg", type: "image" },
+      { path: "photos/activities/WhatsApp Image 2026-03-16 at 10.16.45 AM - Copy.jpeg", type: "image" },
+      { path: "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.35 AM.jpeg", type: "image" },
+      { path: "photos/front/img4.jpeg", type: "image" },
+      { path: "photos/achievement/WhatsApp Image 2026-03-16 at 10.16.28 AM.jpeg", type: "image" },
+      { path: "photos/art/WhatsApp Image 2026-03-16 at 10.16.46 AM (2).jpeg", type: "image" },
+      { path: "photos/art/WhatsApp Image 2026-03-16 at 10.16.46 AM (1).jpeg", type: "image" },
+      { path: "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.30 AM (3).jpeg", type: "image" },
+      { path: "photos/independence day/WhatsApp Image 2026-03-16 at 10.16.34 AM.jpeg", type: "image" }
     ];
     let GALLERY_MEDIA = [...DEFAULT_GALLERY_MEDIA];
     let galleryImageAdvanceTimeout = null;
 
     async function loadGalleryMedia() {
-      try {
-        const res = await fetch('/api/gallery-media');
-        if (!res.ok) {
-          console.warn('Gallery media API failed:', res.status);
-          return;
-        }
-        const payload = await res.json();
-        if (payload && Array.isArray(payload.media) && payload.media.length) {
-          GALLERY_MEDIA = payload.media;
-          console.log('Loaded', GALLERY_MEDIA.length, 'gallery items');
-        }
-      } catch (err) {
-        console.warn('Gallery media fetch error:', err);
-        // If the API is not available, keep the fallback list.
-      }
+      // Netlify-compatible: uses static list above
+      // (API endpoint is only available on local Node.js server)
     }
 
     function renderPrograms() {
