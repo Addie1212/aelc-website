@@ -679,6 +679,12 @@ async function start() {
     res.json({ media, categories: categoriesFromMedia(media) });
   });
 
+  app.get('/api/gallery-videos', async (req, res) => {
+    const media = await walkMedia();
+    const videos = media.filter((item) => item.type === 'video').map((item) => item.path);
+    res.json({ videos });
+  });
+
   app.get('/', (req, res) => {
     res.sendFile(path.join(ROOT, 'index.html'));
   });
